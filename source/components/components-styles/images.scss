@@ -6,10 +6,10 @@
 }
 
 .image {
-  .mixin_absolute_alignment ();
-  .mixin_max-stretching();
+  //.mixin_absolute_alignment ();
+  //.mixin_max-stretching();
 }
 
 .image--responsive {
-  .mixin_image-responsive ( width; );
+  //.mixin_image-responsive ( width; );
 }
