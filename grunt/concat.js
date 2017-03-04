@@ -4,6 +4,7 @@ module.exports = {
   },
   sourceLayoutStyles: {
     src: [
+      'source/components/components-styles/variables.scss',
       'source/components/components-styles/*.scss',
       'source/modules/**/*.scss'
     ],
@@ -13,7 +14,7 @@ module.exports = {
     src: [
       'source/components/components-libs/normalize-css-5.0.0/normalize-5.0.0.css',
     ],
-        dest: 'source/global_styles_components/collected_styles/css/vendor.css'
+        dest: 'source/components/components-styles/collected-styles/css/vendor.css'
   },
   sourceLayoutScripts: {
     src: ['source/components/components-scripts/layout_inception.js', 'source/modules/**/*.js', 'source/components/components-scripts/layout_completion.js'],
