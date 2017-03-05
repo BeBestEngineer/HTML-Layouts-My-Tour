@@ -1,0 +1,58 @@
+.HolyGrail {
+  /*для обёртки <div class="page-wrapper  HolyGrail" id="page-wrapper-id">*/
+  /*Создаём главны flex контейнер для раскладки блоков внутри него*/
+  display: flex;
+  /*Растягиваем flex контейнер на всю высоту*/
+  min-height: 100%;
+  /*Задаём напровление раскладки блоков
+  header,
+  <div class="HolyGrail-body">,
+  footer,
+   внутри .HolyGrail*/
+  flex-direction: column;
+}
+
+.HolyGrail-body {
+/*Обёртка для main*/
+  /*Создаём flex контейнер 1го уровня для раскладки блоков внутри него*/
+  display: flex;
+  /*Говорим чтобы он растянулся на оставшуюся часть родителя по
+  заданному направлению заданному в .HolyGrail ( flex-direction: column; )*/
+  flex-grow: 1;
+  //justify-content: space-between;
+}
+
+
+.HolyGrail-content {
+  /*это класс для тега main*/
+  /*Создаём flex контейнер 2го уровня для раскладки блоков внутри него*/
+  display: flex;
+  /*Говорим чтобы он растянулся на оставшуюся часть родителя по
+  заданному направлению заданнному в .HolyGrail-body( flex-direction: row; )*/
+  //flex-grow: 1;
+  /*Говорим как блоки внутри .HolyGrail-content должны располагаться*/
+  /*Задаём ширину по макету*/
+  width: 960px;
+}
+
+.HolyGrail-nav, .HolyGrail-ads {
+  /*Говорим чтобы крайние блоки растянулись на оставшуюся часть родителя по
+  заданному направлению заданнному в .HolyGrail-body( flex-direction: row; )*/
+  flex-grow: 1;
+}
+
+
+.HolyGrail-nav {
+  /*Ставим блок на -1 позицию по направлению заданнному
+  в .HolyGrail-body( flex-direction: row; )*/
+  order: -1;
+}
+
+.Grid-cell {
+  flex-grow: 1;
+  flex-basis: 1px;
+}
+
+
+
+
