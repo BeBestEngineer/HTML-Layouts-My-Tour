@@ -1,3 +1,6 @@
+html, body {
+  height: 100%;
+}
 .links {
   text-decoration: none;
 }
@@ -19,56 +22,27 @@
 }
 
 
-.main-modules {
-
-}
-
-/*Sections ( begin )*/
-.section {
-  margin-bottom: 60px;
-}
-
-.section-desc {
-  margin-bottom: $section-desc-margin-bottom;
-}
-/*Sections ( end )*/
-
-
-/*Sticky footer ( begin )*/
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-.page-wrapper {
-  //if js failed
-  //margin-bottom: $footer-height;
-}
-/*Sticky footer ( end )*/
-
-
 /*Allign elements (begin)*/
 .allign-middle {
-  //.mixin_inline-vertical-allign ( middle )
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .allign-top {
-  //.mixin_inline-vertical-allign ( top );
+  display: inline-block;
+  vertical-align: top;
 }
 /*Allign elements (end)*/
 
 
-/*Theme margins ( begin )*/
-.theme-margin {
-  &__right-small {
-    margin-right: 7px;
-  }
-  &__right-normal {
-    margin-right: 15px;
-  }
-  &__right-double {
-    margin-right: 30px;
+
+
+.main-nav {
+  &__link {
+    display: inline-block;
+    padding: 10px;
   }
 }
-/*Theme margins ( begin )*/
+
+
 
