@@ -5,6 +5,7 @@ module.exports = {
   sourceLayoutStyles: {
     src: [
       'source/components/components-styles/variables.scss',
+      'source/components/components-styles/mixins.scss',
       'source/components/components-styles/*.scss',
       'source/modules/**/*.scss'
     ],
