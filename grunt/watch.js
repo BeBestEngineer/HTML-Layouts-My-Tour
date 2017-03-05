@@ -2,18 +2,22 @@ module.exports = {
   options: {
     livereload: true
   },
+  markup: {
+    files: ['source/modules/**/*.php'],
+    tasks: []
+  },
   styles: {
-    files: ['source/**/*.less'],
-        tasks: [
+    files: ['source/**/*.scss'],
+    tasks: [
       'clean:sourceLayoutStyles', 'clean:buildLayoutStyles',
       'concat:sourceLayoutStyles',
-      'less',
-      'postcss',
-      'cmq',
-      'csscomb',
-      'copy:buildStyles',
-      'replace:pathBackgroundIcons', 'replace:pathBackgroundImages', 'replace:pathFonts',
-      'cssmin:buildLayoutStyles'
+      'sass',
+      // 'postcss',
+      // 'cmq',
+      // 'csscomb',
+      // 'copy:buildStyles',
+      // 'replace:pathBackgroundIcons', 'replace:pathBackgroundImages', 'replace:pathFonts',
+      // 'cssmin:buildLayoutStyles'
     ]
   },
   scripts: {
@@ -21,8 +25,8 @@ module.exports = {
         tasks: [
       'clean:sourceLayoutScripts', 'clean:buildLayoutScripts',
       'concat:sourceLayoutScripts',
-      'copy:buildScripts',
-      'uglify:buildLayoutScripts'
+      // 'copy:buildScripts',
+      // 'uglify:buildLayoutScripts'
     ]
   }
 };
