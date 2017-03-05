@@ -13,3 +13,6 @@ default:
 #- 'cssmin'
 #- 'uglify'
 #- 'imagemin'
+
+watch:
+- 'watch'
