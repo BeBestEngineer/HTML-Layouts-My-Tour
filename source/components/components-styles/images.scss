@@ -6,10 +6,18 @@
 }
 
 .image {
-  //.mixin_absolute_alignment ();
-  //.mixin_max-stretching();
+  position: absolute;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
 }
 
-.image--responsive {
-  //.mixin_image-responsive ( width; );
+.logo-link {
+  height: 50px;
+  width: 150px;
 }
