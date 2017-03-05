@@ -1,5 +1,4 @@
+@include font-face( $body--font-family, '/myTour.loc/source/fonts/Open-Sans/OpenSans-Regular-webfont/OpenSans-Regular-webfont', normal, normal, eot woff svg);
 
+@include font-face( $font-family-3-semi-bold-typeface, '/myTour.loc/source/fonts/Open-Sans/OpenSans-Semibold-webfont/OpenSans-Semibold-webfont', normal, normal, eot woff svg);
 
-@font-face {
-  //.font-face( $font-family-3-bold-typeface, "${fonts-path}/Open-Sans/OpenSans-Bold-webfont/OpenSans-Bold-webfont" );
-}
