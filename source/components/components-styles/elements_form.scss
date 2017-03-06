@@ -1,0 +1,46 @@
+.form {
+  /*Position ( begin )*/
+  &__label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  &__input {
+    display: block;
+    width: 100%;
+    height: 50px;
+    //line-height: 50px;
+  }
+  &__container {
+    margin-bottom: 30px;
+  }
+  &__area {
+    padding: 15px;
+  }
+  /*Position ( end )*/
+  /*Fonts ( begin )*/
+  &__button {
+    @include font( $size: 15px, $text-transform: 'up' );
+  }
+  &__label {
+    @include font( $size: 12px);
+  }
+  &__input {
+    @include font( $size: 15px);
+  }
+  &__region-name {
+    @include font( $size: 15px);
+  }
+
+  /*Fonts ( end )*/
+  /*Colors ( begin )*/
+
+  /*Colors ( end )*/
+  /*Decorate ( begin )*/
+  &__area {
+    border: 1px solid #2b2b2b;
+  }
+  /*Decorate ( end )*/
+
+}
+
+
