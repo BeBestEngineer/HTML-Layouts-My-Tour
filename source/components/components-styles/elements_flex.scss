@@ -1,0 +1,33 @@
+.flex__page-wrapper {
+  display: flex;
+  min-height: 100%;
+}
+
+.flex__container {
+  display: flex;
+}
+
+.flex__item {
+
+}
+
+.flex__item--equal-width {
+  flex-grow: 1;
+  flex-basis: 1px;
+}
+
+.flex__item--stretch {
+  flex-grow: 1;
+}
+
+.flex__item--order-1 {
+  order: 1;
+}
+
+.flex__item--order--1 {
+  order: -1;
+}
+
+.flex__direction--column {
+  flex-direction: column;
+}
