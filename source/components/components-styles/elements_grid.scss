@@ -56,28 +56,66 @@
 
 
 
-.flex-container {
+.flex__page-wrapper {
   display: flex;
-  padding-left:  $grid-gutter;
-  padding-right: $grid-gutter;
+  min-height: 100%;
 }
 
-.flex-container--fluid {
+.flex__container {
   display: flex;
-  padding-left:  $grid-gutter;
-  padding-right: $grid-gutter;
 }
 
-.flex-row {
-  display: flex;
+.flex__item {
+  /*Для задания order и других свойств (задаём через каскад)*/
+}
+
+.flex__item--equal-width {
+  flex-grow: 1;
+  flex-basis: 1px;
+}
+
+.flex__item--stretch {
+  flex-grow: 1;
+}
+
+.flex__item--order-1 {
+  order: 1;
+}
+
+.flex__item--order--1 {
+  order: -1;
+}
+
+.flex__direction--column {
+  flex-direction: column;
+}
+
+
+
+.grid__container-center {
+  margin: auto;
+}
+
+.grid__container--medium {
+  width: 960px;
+}
+
+.grid__container--large {
+  width: 1200px;
+}
+
+.grid__row {
   margin-left:  -$grid-gutter;
   margin-right: -$grid-gutter;
 }
 
-.flex-col {
+.grid__col {
   padding-left:  $grid-gutter;
   padding-right: $grid-gutter;
 }
+
+
+
 
 
 
