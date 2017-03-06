@@ -43,3 +43,8 @@
   }
 }
 
+
+@mixin font($size, $family:$body--font-family, $contour:'sans-serif') {
+  font-size:   $size;
+  font-family: $family, unquote($contour);
+}
