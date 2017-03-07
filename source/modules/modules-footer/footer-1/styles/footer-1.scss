@@ -1,0 +1,16 @@
+.footer-1 {
+  /*Position ( begin )*/
+  .social-links-list__icon {
+    width: 12px;
+    height: 12px;
+  }
+  /*Position ( end )*/
+  /*Fonts ( begin )*/
+  .company-name {
+    @include font( $size: 13px, $text-transform: 'up' );
+  }
+  /*Fonts ( end )*/
+  /*Colors ( begin )*/
+
+  /*Colors ( end )*/
+}
