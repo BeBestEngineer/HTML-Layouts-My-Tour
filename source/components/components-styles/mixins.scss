@@ -116,3 +116,113 @@
     flex-basis: 0;
   }
 }
+
+
+// =============================================================================
+// Buttons ( text + icon with background )
+// =============================================================================
+@mixin buttons__text-and-icon-with-bg (
+  $height: '50px',
+  $padding: '0px 10px',
+  $border: '1px solid #000000',
+  $borderRadius: '4px',
+  $color: $color-4-layout,
+  $backgroundColor: $color-3-layout,
+  $widthIconWrapper: '20px',
+  $heightIconWrapper: '20px',
+  $widthIcon: '10px',
+  $heightIcon: '10px',
+  $marginIconWrapper: '0px',
+  $borderRadiusIconWrapper: '50%',
+  $iconWrapperColor: $color-7-layout,
+  $iconColor: $color-4-layout
+)
+{
+  /*Position ( begin )*/
+  height: unquote( $height );
+  padding: unquote( $padding );
+  /*Position ( end )*/
+  /*Colors ( begin )*/
+  color: $color;
+  background-color: $backgroundColor;
+
+  .icons__wrapper {
+    display: inline-block;
+    width:  unquote( $widthIconWrapper );
+    height: unquote( $heightIconWrapper );
+    margin: unquote( $marginIconWrapper );
+    background-color: $iconWrapperColor;
+    border-radius: unquote( $borderRadiusIconWrapper );
+  }
+  .icons {
+    width:  unquote( $widthIcon );
+    height: unquote( $heightIcon );
+    color: $iconColor;
+    fill:  $iconColor;
+  }
+  /*Colors ( end )*/
+  /*Decorate ( begin )*/
+  border: unquote( $border );
+  border-radius: unquote( $borderRadius );
+  /*Decorate ( end )*/
+}
+
+
+// =============================================================================
+// Pills with image and icon
+// =============================================================================
+@mixin pills__image-and-icon (
+  $height: 'auto',
+  $padding: '0px 10px',
+  $border: '1px solid #000000',
+  $borderRadius: '25px',
+  $color: $color-4-layout,
+  $backgroundColor: $color-3-layout,
+  $widthIconWrapper: '20px',
+  $heightIconWrapper: '20px',
+  $widthIcon: '10px',
+  $heightIcon: '10px',
+  $marginIconWrapper: '0px',
+  $borderRadiusIconWrapper: '0px',
+  $iconWrapperColor: $color-7-layout,
+  $iconColor: $color-4-layout,
+
+  $widthImageWrapper: '30px',
+  $heightImageWrapper: '15px'
+)
+{
+  /*Position ( begin )*/
+  height: unquote( $height );
+  padding: unquote( $padding );
+
+  .pills__image-wrapper {
+    width: unquote( $widthImageWrapper );
+    height: unquote( $heightImageWrapper );
+  }
+  /*Position ( end )*/
+  /*Colors ( begin )*/
+  color: $color;
+  background-color: $backgroundColor;
+
+  .icons__wrapper {
+    display: inline-block;
+    width:  unquote( $widthIconWrapper );
+    height: unquote( $heightIconWrapper );
+    margin: unquote( $marginIconWrapper );
+    background-color: $iconWrapperColor;
+    border-radius: unquote( $borderRadiusIconWrapper );
+  }
+  .icons {
+    width:  unquote( $widthIcon );
+    height: unquote( $heightIcon );
+    color: $iconColor;
+    fill:  $iconColor;
+  }
+  /*Colors ( end )*/
+  /*Decorate ( begin )*/
+  border: unquote( $border );
+  border-radius: unquote( $borderRadius );
+  /*Decorate ( end )*/
+
+
+}
