@@ -44,7 +44,75 @@
 }
 
 
-@mixin font($size, $family:$body--font-family, $contour:'sans-serif') {
-  font-size:   $size;
-  font-family: $family, unquote($contour);
+// =============================================================================
+// Font
+// =============================================================================
+
+@mixin font( $family: $body--font-family,
+             $contour:        'sans-serif',
+             $size:           13px,
+             $text-transform: none,
+             $line-height:    normal,
+             $letter-spacing: normal
+           ) {
+  font-family: $family, unquote( $contour );
+  font-size:   ( $size );
+
+  @if ( $text-transform == 'up' ) {
+    text-transform: uppercase;
+  }
+  @if ( $text-transform == 'cap' ) {
+    text-transform: capitalize;
+  }
+
+  @if ( type_of( $line-height ) == number ) {
+    line-height: $line-height;
+  }
+
+  @if ( type_of( $letter-spacing ) == number ) {
+    letter-spacing: $letter-spacing;
+  }
+
+}
+
+
+// =============================================================================
+// Absolute stretching
+// =============================================================================
+
+@mixin absolute_stretching {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+// =============================================================================
+// Absolute alignment
+// =============================================================================
+@mixin absolute_alignment {
+  @include absolute_stretching;
+  margin: auto;
+}
+
+
+// =============================================================================
+// Absolute max stretching
+// =============================================================================
+@mixin max_stretching {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+// =============================================================================
+// Custom width flex items
+// =============================================================================
+@mixin flex__item--custom-width( $integerPart: 1, $fractionalPart: 5 ) {
+  .flex__item--custom-width-#{$integerPart}-#{$fractionalPart} {
+    flex-grow: unquote( $integerPart + '.' + $fractionalPart );
+    flex-basis: 0;
+  }
 }
