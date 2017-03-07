@@ -1,4 +1,7 @@
 body {
-  font-size:   $body--font-size;
-  font-family: $body--font-family;
+  @include font( $size: 13px, $line-height: 20px );
+}
+
+.links {
+  text-decoration: none;
 }
