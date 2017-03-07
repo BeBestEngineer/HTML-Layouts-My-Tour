@@ -30,10 +30,10 @@
 
 
                   <div class="flex__container  flex__direction--row-reverse  flex__align-items--flex-end  flex__item--custom-width-2-0">
-                    <button class="form__button  form__button--submit" type="submit">
+                    <button class="buttons__interests-form--submit" type="submit">
                       <span class="allign-middle">Смотреть результаты</span>
-                      <span class="allign-middle  icons__arrow--180-deg">
-                        <svg class="" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="12" height="12">
+                      <span class="allign-middle  icons__wrapper">
+                        <svg class="icons  icons__svg" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="12" height="12">
                           <path d="M16.7,22.7l9-9c0.2-0.2,0.3-0.5,0.3-0.7c0-0.3-0.1-0.5-0.3-0.7l-9-9C16.5,3.1,16.3,3,16,3s-0.5,0.1-0.7,0.3l-1.4,1.4  c-0.4,0.4-0.4,1,0,1.4l4,4c0.3,0.3,0.1,0.9-0.4,0.9H1c-0.6,0-1,0.4-1,1v2c0,0.6,0.4,1,1,1h16.6c0.4,0,0.7,0.5,0.4,0.9l-4,4  c-0.4,0.4-0.4,1,0,1.4l1.4,1.4c0.2,0.2,0.4,0.3,0.7,0.3C16.3,23,16.5,22.9,16.7,22.7z"/>
                         </svg>
                       </span>
@@ -51,25 +51,39 @@
                 <div class="flex__container  flex__direction--column  form__area">
                   <span class="form__region-name">Европа</span>
                   <div class="flex__container">
-                    <div    class="pills">
-                      <div class="image-wrapper  pills__image--flag  allign-middle">
+                    <div    class="pills__interests-form--country">
+                      <div class="image-wrapper  pills__image-wrapper  allign-middle">
                         <img class="image" src="/myTour.loc/source/images/flags/flag-france.png" alt="flag-france" >
                       </div>
-                      <span  class="pills__text          allign-middle">Франция</span>
-                      <a     class="pills__icon-wrapper  allign-middle" href="#"></a>
+                      <span  class="allign-middle">Франция</span>
+                      <a class="allign-middle  icons__wrapper" href="#">
+                        <svg class="icons  icons__svg" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
+                          <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "/>
+                        </svg>
+                      </a>
                     </div>
-                    <div    class="pills">
-                      <div class="image-wrapper  pills__image--flag  allign-middle">
+<!--                    -->
+                    <div    class="pills__interests-form--country">
+                      <div class="image-wrapper  pills__image-wrapper  allign-middle">
                         <img class="image" src="/myTour.loc/source/images/flags/flag-germany.png" alt="flag-germany" >
                       </div>
-                      <span  class="pills__text          allign-middle">Германия</span>
-                      <a     class="pills__icon-wrapper  allign-middle" href="#"></a>
+                      <span  class="allign-middle">Германия</span>
+                      <a class="allign-middle  icons__wrapper" href="#">
+                        <svg class="icons  icons__svg" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
+                          <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "/>
+                        </svg>
+                      </a>
                     </div>
+<!--                    -->
                   </div>
                 </div>
-                <div class="flex__container">
-                  <button class="form__button  form__button--select-region" type="button">Добавить регион</button>
-                  <button class="form__button  form__button--select-region" type="button">Добавить страну</button>
+                <div class="flex__container">                  
+                  <button class="buttons__interests-form--add" type="button">
+                    <span class="allign-middle">Добавить регион</span>
+                  </button>
+                  <button class="buttons__interests-form--add" type="button">
+                    <span class="allign-middle">Добавить страну</span>
+                  </button>
                 </div>
               </div>
               
@@ -127,7 +141,7 @@
                     <div class="flex__container  flex__direction--column  flex__item--custom-width-160-0">
                       <label class="form__label"  for="hotel-stars">Категория отелей от</label>
                       <input class="form__input"  type="text"  id="hotel-stars" placeholder="" value="5 stars">
-                      <span class="icons__chevron icons__chevron--bottom"></span>
+<!--                      <span class="icons__chevron icons__chevron--bottom"></span>-->
                     </div>
                     <div class="flex__container  flex__direction--column  flex__item--custom-width-185-0">
                       <label class="form__label"  for="hotel-rating">Рейтинг TopHotels</label>
@@ -146,8 +160,13 @@
                       todo: скрыть инпут и добавить readonly="readonly", значения вставлять в div
                      -->
                     <div class="flex__container  flex__direction--row-reverse  flex__align-items--flex-end  flex__item--custom-width-225-0">
-                      <button class="form__button  form__button--clear-selection" type="button">
-                        <span class="icons__cross-in-circle  allign-middle"></span>
+
+                      <button class="buttons__interests-form--clear-selection" type="button">
+                        <span class="allign-middle  icons__wrapper">
+                          <svg class="icons  icons__svg" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
+                            <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "/>
+                          </svg>
+                        </span>
                         <span class="allign-middle">Удалить подборку</span>
                       </button>
                     </div>
