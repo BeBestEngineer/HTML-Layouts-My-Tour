@@ -1,0 +1,54 @@
+.tab {
+  overflow: hidden;
+  border: 1px solid $color-5-layout;
+}
+.tablinks {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+.tabcontent {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10000px;
+  display: block;
+  padding: 20px;
+  border: 1px solid $color-5-layout;
+  border-top: none;
+}
+.tabs-wrapper {
+  position: relative;
+}
+
+.tabcontent--active {
+  display: block;
+  top: 0;
+}
+
+
+
+
+
+.interests {
+/*Position ( begin )*/
+  position: relative;
+  .title {
+    position: absolute;
+    top: -70px;
+  }
+/*Position ( end )*/
+/*Fonts ( begin )*/
+  .title {
+    @include font( $size: 22px );
+  }
+  .tablinks {
+    @include font( $size: 15px, $text-transform: 'up' );
+  }
+/*Fonts ( end )*/
+/*Colors ( begin )*/
+
+/*Colors ( end )*/
+}
