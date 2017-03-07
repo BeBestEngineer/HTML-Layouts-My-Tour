@@ -1,1 +1,39 @@
-
+.buttons {
+  &__interests-form {
+    &--submit {
+      @include  font( $size: 15px, $text-transform: 'up' );
+      @include  buttons__text-and-icon-with-bg (
+                $border: '1px solid transparent',
+                $padding: '0px 0px 0px 10px',
+                $marginIconWrapper: '0px 15px',
+                $backgroundColor: $color-9-layout,
+                $iconWrapperColor: $color-4-layout,
+                $iconColor: $color-9-layout
+      );
+    }
+    &--clear-selection {
+      @include  font( $size: 15px, $text-transform: 'up' );
+      @include  buttons__text-and-icon-with-bg (
+                $border: '1px solid transparent',
+                $padding: '0px 0px 0px 0px',
+                $marginIconWrapper: '0px 5px',
+                $color: $color-8-layout,
+                $backgroundColor: $color-tr-layout,
+                $iconWrapperColor: $color-8-layout,
+                $iconColor: $color-4-layout
+      );
+    }
+    &--add {
+      @include  font( $size: 15px, $text-transform: 'up' );
+      @include  buttons__text-and-icon-with-bg (
+                $height: 'auto,',
+                $border: '1px solid #{$color-10-layout}',
+                $padding: '5px 15px',
+                $color: $color-10-layout,
+                $backgroundColor: $color-tr-layout,
+                $borderRadius: '25px'
+      );
+      margin-right: 15px;
+    }
+  }
+}
