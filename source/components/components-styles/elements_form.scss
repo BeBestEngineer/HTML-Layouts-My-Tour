@@ -8,13 +8,54 @@
     display: block;
     width: 100%;
     height: 50px;
-    //line-height: 50px;
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    box-sizing: border-box;
+    border: 1px solid $color-5-layout;
+  }
+  &__input--passengers-parents {
+    width: 50%;
+  }
+  &__input--passengers-childs {
+    width: 50%;
+  }
+  &__input--departure-date {
+    width: 50%;
+  }
+  &__input--arrival-date {
+    width: 50%;
+  }
+  &__input--regions {
+    display: none;
   }
   &__container {
     margin-bottom: 30px;
   }
   &__area {
     padding: 15px;
+  }
+  &__button--submit {
+    height: 50px;
+    padding: 0 15px;
+  }
+  &__button--clear-selection {
+    height: 50px;
+    padding: 0 15px;
+  }
+  &__button--select-region {
+    margin-right: 15px;
+    padding: 10px 20px;
+  }
+  &__selection-name-container {
+    margin-right: 30px;
+  }
+  &__area {
+    margin-bottom: 25px;
+  }
+  &__region-name {
+    display: block;
+    margin-bottom: 15px;
   }
   /*Position ( end )*/
   /*Fonts ( begin )*/
@@ -33,12 +74,32 @@
 
   /*Fonts ( end )*/
   /*Colors ( begin )*/
-
+  &__button--submit {
+    background-color: #ff8e41;
+  }
   /*Colors ( end )*/
   /*Decorate ( begin )*/
   &__area {
-    border: 1px solid #2b2b2b;
+    border: 1px solid $color-5-layout;
   }
+  &__button--submit {
+    border-radius: 4px;
+  }
+  &__button--select-region {
+    border-radius: 20px;
+    border: 2px solid #2d9cdb;
+  }
+  &__input--departure-date,
+  &__input--arrival-date,
+  &__input--passengers-parents,
+  &__input--passengers-childs {
+    //border: none;
+  }
+  &__arrival-and-departure-date-wrapper,
+  &__passengers-wrapper {
+    //border: 1px solid #2b2b2b;
+  }
+
   /*Decorate ( end )*/
 
 }
