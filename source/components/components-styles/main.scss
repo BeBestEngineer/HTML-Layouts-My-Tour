@@ -1,16 +1,13 @@
 html, body {
   height: 100%;
 }
-.links {
-  text-decoration: none;
-}
 
 
 .icons {
   &__svg {
 
     &--text {
-      margin-right: 7px;
+      margin-right: 0px;
     }
   }
   &__svg-color {
@@ -38,11 +35,153 @@ html, body {
 
 
 .main-nav {
+  &__item {
+    display: inline-block;
+  }
+  &__item:first-child {
+    margin-left: -20px;
+  }
   &__link {
     display: inline-block;
-    padding: 10px;
+    padding: 15px;
   }
 }
 
+.main-wrapper {
+  margin-bottom: 90px;
+}
 
+
+.pills {
+  padding: 5px 10px 5px 15px;
+  border-radius: 20px;
+  border: 1px solid #2b2b2b;
+  margin-right: 15px;
+
+  &__text {
+    @include font( $size: 15px);
+  }
+  
+  &__icon-wrapper {
+    position: relative;
+    width: 20px;
+    height: 20px;
+  }
+  &__icon-wrapper:before, &__icon-wrapper:after {
+    position: absolute;
+    left: 10px;
+    content: ' ';
+    height: 20px;
+    width: 2px;
+    background-color: #2b2b2b;
+  }
+  &__icon-wrapper:before {
+    transform: rotate(45deg);
+  }
+  &__icon-wrapper:after {
+    transform: rotate(-45deg);
+  }
+  
+  &__icon {
+    @include absolute_alignment;
+    @include max_stretching;
+  }
+/*
+  &__text:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 20px;
+    margin-right: 5px;
+    //background: url("/myTour.loc/source/images/flags/Flag_of_France.svg.png") 100% 100% no-repeat;
+    background-size: cover;
+  }
+  */
+  &__image--flag {
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+  }
+}
+
+.hide {
+  &__label {
+    display: none;
+  }
+}
+
+.icons {
+  &__cross-in-circle {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #ff583d;
+    border-radius: 50%;
+  }
+  &__cross-in-circle:before, &__cross-in-circle:after {
+    content: '';
+    @include absolute_alignment;
+
+    height: 10px;
+    width: 2px;
+    background-color: $color-4-layout;
+  }
+  &__cross-in-circle:before {
+    transform: rotate(45deg);
+  }
+  &__cross-in-circle:after {
+    transform: rotate(-45deg);
+  }
+
+
+  &__chevron:before {
+    content: '';
+    position: relative;
+    left: 2px;
+    top: 1px;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-style: solid;
+    border-width: 2px 2px 0 0;
+    vertical-align: top;
+    transform: rotate(-45deg);
+  }
+  &__chevron--bottom:before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__arrow:before {
+    content: '';
+    position: relative;
+    left: 2px;
+    top: 1px;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-style: solid;
+    border-width: 2px 2px 0 0;
+    border-color: $color-4-layout;
+    vertical-align: top;
+    transform: rotate(-45deg);
+  }
+  &__arrow--180-deg:before {
+    left: 0;
+    transform: rotate(45deg);
+  }
+  &__arrow--180-deg:after {
+    content: '';
+    display: inline-block;
+    height: 15px;
+    width: 2px;
+    background-color: $color-4-layout;
+    transform: rotate(90deg);
+    position: relative;
+    top: -3px;
+    right: 8px;
+  }
+}
 
