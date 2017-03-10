@@ -2,15 +2,22 @@ module.exports = {
   options: {
     livereload: true
   },
+  gruntModulesSettings: {
+    files: ['grunt/*.js'],
+    tasks: []
+  },
   markup: {
     files: ['source/modules/**/*.php'],
     tasks: []
   },
   styles: {
-    files: ['source/**/*.scss'],
+    files: [
+      'source/**/*.scss'
+    ],
     tasks: [
-      'clean:sourceLayoutStyles', 'clean:buildLayoutStyles',
+      'clean:sourceLayoutStyles', 'clean:buildLayoutStyles', 'clean:sourcePikADayStyles', 
       'concat:sourceLayoutStyles',
+      'concat:sourcePikADayStyles',
       'sass',
       // 'postcss',
       // 'cmq',
@@ -21,8 +28,11 @@ module.exports = {
     ]
   },
   scripts: {
-    files: ['source/**/*.js'],
-        tasks: [
+    files: [
+      'source/**/*.js',
+      '!source/components/components-scripts/collected-scripts/layout.js'
+    ],
+    tasks: [
       'clean:sourceLayoutScripts', 'clean:buildLayoutScripts',
       'concat:sourceLayoutScripts',
       // 'copy:buildScripts',
