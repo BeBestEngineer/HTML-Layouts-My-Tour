@@ -1,3 +1,18 @@
 .links {
   color: inherit;
 }
+
+.page-wrapper {
+  @include block__colors (
+    $backgroundColor: $color-11-layout
+  );
+}
+
+.rating .icons__svg {
+  &--color {
+    fill: $color-6-layout;
+  }
+  &--nocolor {
+    fill: $color-15-layout;
+  }
+}
