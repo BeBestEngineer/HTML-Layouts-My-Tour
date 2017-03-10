@@ -1,0 +1,36 @@
+.links {
+  transition:
+  color $transition-duration-links,
+  background-color $transition-duration-links;
+}
+
+.icons {
+  transition:
+  fill $transition-duration-links,
+  background-color $transition-duration-links;
+}
+
+.buttons {
+  transition:
+  color $transition-duration-links,
+  fill $transition-duration-links,
+  background-color $transition-duration-links,
+  opacity $transition-duration-links;
+}
+
+.tabs__content,
+.tabs__title-marker--bottom {
+  transition: opacity 1.5s linear;
+}
+
+.icons__svg-color {
+  transition: fill $transition-duration-svgs;
+}
+
+.main-nav {
+  &__item {
+    transition:
+    color $transition-duration-links,
+    background-color $transition-duration-links;
+  }
+}
