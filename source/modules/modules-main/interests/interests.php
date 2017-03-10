@@ -135,23 +135,36 @@
                     <div class="flex__container  flex__direction--column  flex__item--custom-width-170-0">
 <!--                      todo: вместо flex__direction--column указать flex__direction т.е. без --column-->
 <!--                      960px / 170px = 5.647-->
-                      <label class="form__label"  for="dates">На сколько</label>
-                      <div class="dates__dropdown-menu-wrapper">
-                        <input class="form__input  form__input--dates  dates__dropdown-menu--button"  type="text"  id="dates__dropdown-menu--button" onclick="openDropdownMenu( event, 'dates__dropdown-menu--content-id', 'dates__dropdown-menu--content' )" placeholder="7-14 ночей">
-                        <div id="dates__dropdown-menu--content-id" class="dates__dropdown-menu--content">
+                      <label class="form__label"  for="dates__dropdown-menu--button">На сколько</label>
+                      <input class="form__input  form__input--dates  dropdown-menu__button"  
+                             id="dates__dropdown-menu--button"  
+                             onclick="openDropdownMenu( event, 'dates__dropdown-menu--content-id', 'dropdown-menu__content' )"
+                             type="text"  
+                             placeholder="7-14 ночей">
+                      <div class="dropdown-menu__wrapper">
+                        <div id="dates__dropdown-menu--content-id" class="dropdown-menu__content">
 
                           <div class="widget__dates-range">
                             <span class="allign-middle">Взрослые:</span>
 
-                            <button class="allign-middle  widget__dates-range--button" id="widget__dates-range--button-more" type="button" onclick="ChangeInputValueMore( event, 'widget__dates-range--input' )">
+                            <button class="allign-middle  widget__dates-range--button" 
+                                    id="widget__dates-range--button-more"  
+                                    onclick="ChangeInputValueMore( event, 'widget__dates-range--input' )" 
+                                    type="button">
                               <svg width="20" height="20" viewBox="0 0 1792 1792">
                                 <path class="icons__svg-color" d="M1395 1184q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"></path>
                               </svg>
                             </button>
 
-                            <input class="allign-middle  widget__dates-range--input" id="widget__dates-range--input" value="1" type="text">
+                            <input class="allign-middle  widget__dates-range--input" 
+                                   id="widget__dates-range--input" 
+                                   value="1" 
+                                   type="text">
 
-                            <button class="allign-middle  widget__dates-range--button" id="widget__dates-range--button-less" type="button" onclick="ChangeInputValueLess( event, 'widget__dates-range--input' )">
+                            <button class="allign-middle  widget__dates-range--button" 
+                                    id="widget__dates-range--button-less"  
+                                    onclick="ChangeInputValueLess( event, 'widget__dates-range--input' )" 
+                                    type="button">
                               <svg width="20" height="20" viewBox="0 0 1792 1792">
                                 <path class="icons__svg-color" d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"></path>
                               </svg>
@@ -170,9 +183,47 @@
                         <label class="form__label" for="passengers">Количество пассажиров</label>
                         <label class="form__label  hide__label" for="passengers-childs">Количество пассажиров</label>
                       </div>
-                      <div class="flex__container  ">
-                        <input class="form__input  form__input--passengers-parents" type="text" id="passengers-parents" placeholder="взрослые" value="1 взрослый"  onclick="openDropdownMenu()">
-                        <input class="form__input  form__input--passengers-childs"  type="text" id="passengers-childs"  placeholder="дети"     value="0 детей"     onclick="openDropdownMenu()">
+                      <div class="">
+                        <input class="form__input  form__input--passengers  dropdown-menu__button"
+                               id="passengers__dropdown-menu--button"
+                               onclick="openDropdownMenu( event, 'passengers__dropdown-menu--content-id', 'dropdown-menu__content' )"
+                               type="text"
+                               placeholder=Пассажиры">
+                      </div>
+                      <div class="">
+                        <div class="dropdown-menu__wrapper">
+                          <div id="passengers__dropdown-menu--content-id" class="dropdown-menu__content">
+
+                            <div class="widget__passengers-range">
+                              <span class="allign-middle">Взрослые:</span>
+
+                              <button class="allign-middle  widget__passengers-range--button"
+                                      id="widget__passengers-range--button-more"
+                                      onclick="ChangeInputValueMore( event, 'widget__passengers-range--input' )"
+                                      type="button">
+                                <svg width="20" height="20" viewBox="0 0 1792 1792">
+                                  <path class="icons__svg-color" d="M1395 1184q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"></path>
+                                </svg>
+                              </button>
+
+                              <input class="allign-middle  widget__passengers-range--input"
+                                     id="widget__passengers-range--input"
+                                     value="1"
+                                     type="text">
+
+                              <button class="allign-middle  widget__passengers-range--button"
+                                      id="widget__passengers-range--button-less"
+                                      onclick="ChangeInputValueLess( event, 'widget__passengers-range--input' )"
+                                      type="button">
+                                <svg width="20" height="20" viewBox="0 0 1792 1792">
+                                  <path class="icons__svg-color" d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"></path>
+                                </svg>
+                              </button>
+
+                            </div>
+
+                          </div>
+                        </div>
                       </div>
                     </div>
 
