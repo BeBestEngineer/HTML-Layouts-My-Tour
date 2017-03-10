@@ -14,17 +14,36 @@
     position: absolute;
     background-color: #f9f9f9;
     width: 100%;
-    overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    overflow: hidden;
   }
 
   .show {
     display:block;
   }
 
+  .sliders__time-between-boardings-wrapper {
+    padding: 30px;
+    padding-top: 60px;
+  }
+  .dates__dropdown-menu--content {
+    left: 0;
+    width: 300px;
+  }
 
+  .sliders__interests-prices-wrapper {
+    padding: 30px;
+    padding-top: 60px;
+  }
+  .prices__dropdown-menu--content {
+    right: 0;
+    width: 300px;
+  }
 
+  .noUi-handle-upper {
+
+  }
 
   /*Position ( end )*/
 /*Fonts ( begin )*/
