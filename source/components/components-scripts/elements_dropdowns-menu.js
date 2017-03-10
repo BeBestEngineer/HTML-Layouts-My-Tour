@@ -11,18 +11,8 @@ function openDropdownMenu( event, menuId, menuClass ) {
 
 
 
-
-
-
 // Close the dropdown if the user clicks outside of it
 window.onclick = function( event ) {
-	console.log( event.target.offsetParent.id );
-	console.log( openDropdownMenu.MENU_ID );
-	// console.log( openDropdownMenu.EVENT.target.id );
-	// console.log( event.target.matches( '#' + openDropdownMenu.EVENT.target.id ) );
-	// console.log( openDropdownMenu.MENU_CLASS );
-
-	// не является элементом openDropdownMenu.MENU_CLASS
 	if ( !event.target.matches( '#' + openDropdownMenu.EVENT.target.id ) && ( event.target.offsetParent.id !== openDropdownMenu.MENU_ID ) ) {
 
 		var dropdowns = document.getElementsByClassName( openDropdownMenu.MENU_CLASS );
