@@ -5,11 +5,6 @@ function openDropdownMenu( event, menuId, menuClass ) {
 	openDropdownMenu.MENU_ID = menuId;
 	openDropdownMenu.MENU_CLASS = menuClass;
 
-	//Закрыть все открытые dropdown меню
-  console.log('start closeDropdownMenu... from openDropdownMenu');
-
-	// если сделан клик по кнопке под которой открыто выпадающее меню( присвоен класс show ) то не выполнять closeDropdownMenu
-	//иначе если сделан клик по кнопке под которой не открыто меню то выполнить closeDropdownMenu
 	if ( !document.getElementById( openDropdownMenu.MENU_ID ).classList.contains('show')) {
 		closeDropdownMenu();
 	}
@@ -29,7 +24,6 @@ window.onclick = function( event ) {
 	}
   if ( !event.target.matches( '#' + openDropdownMenu.EVENT.target.id ) && ( event.target.offsetParent.id !== openDropdownMenu.MENU_ID ) ) {
 
-		console.log('start closeDropdownMenu... from window.onclick');
     closeDropdownMenu();
 
   }
@@ -43,8 +37,6 @@ function closeDropdownMenu () {
 	}
 
   var dropdowns = document.getElementsByClassName( openDropdownMenu.MENU_CLASS );
-
-  console.log( openDropdownMenu.MENU_ID );
 
   var i;
   for (i = 0; i < dropdowns.length; i++) {
