@@ -143,35 +143,9 @@
                              placeholder="7-14 ночей">
                       <div class="dropdown-menu__wrapper">
                         <div id="dates__dropdown-menu--content-id" class="dropdown-menu__content">
-
-                          <div class="widget__dates-range">
-                            <span class="allign-middle">Взрослые:</span>
-
-                            <button class="allign-middle  widget__dates-range--button" 
-                                    id="widget__dates-range--button-more"  
-                                    onclick="ChangeInputValueMore( event, 'widget__dates-range--input' )" 
-                                    type="button">
-                              <svg width="20" height="20" viewBox="0 0 1792 1792">
-                                <path class="icons__svg-color" d="M1395 1184q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"></path>
-                              </svg>
-                            </button>
-
-                            <input class="allign-middle  widget__dates-range--input" 
-                                   id="widget__dates-range--input" 
-                                   value="1" 
-                                   type="text">
-
-                            <button class="allign-middle  widget__dates-range--button" 
-                                    id="widget__dates-range--button-less"  
-                                    onclick="ChangeInputValueLess( event, 'widget__dates-range--input' )" 
-                                    type="button">
-                              <svg width="20" height="20" viewBox="0 0 1792 1792">
-                                <path class="icons__svg-color" d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"></path>
-                              </svg>
-                            </button>
-
-                          </div>                          
-
+start
+<!--                          <div class="sliders__time-between-boardings" id="slider__time-between-boardings"></div>-->
+end
                         </div>
                       </div>
                     </div>
