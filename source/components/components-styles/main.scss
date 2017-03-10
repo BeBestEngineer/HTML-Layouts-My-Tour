@@ -4,6 +4,9 @@ html, body {
 
 
 .icons {
+  @include absolute_alignment;
+  display: block;
+
   &__svg {
 
     &--text {
@@ -16,98 +19,10 @@ html, body {
   &__img {
 
   }
-}
 
-
-/*Allign elements (begin)*/
-.allign-middle {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.allign-top {
-  display: inline-block;
-  vertical-align: top;
-}
-/*Allign elements (end)*/
-
-
-
-
-.main-nav {
-  &__item {
-    display: inline-block;
-  }
-  &__item:first-child {
-    margin-left: -20px;
-  }
-  &__link {
-    display: inline-block;
-    padding: 15px;
-  }
-}
-
-.main-wrapper {
-  margin-bottom: 90px;
-}
-
-
-.pills {
-  padding: 5px 10px 5px 15px;
-  border-radius: 20px;
-  border: 1px solid #2b2b2b;
-  margin-right: 15px;
-
-  &__text {
-    @include font( $size: 15px);
-  }
-  
-  &__icon-wrapper {
+  &__wrapper {
     position: relative;
-    width: 20px;
-    height: 20px;
-  }
-  &__icon-wrapper:before, &__icon-wrapper:after {
-    position: absolute;
-    left: 10px;
-    content: ' ';
-    height: 20px;
-    width: 2px;
-    background-color: #2b2b2b;
-  }
-  &__icon-wrapper:before {
-    transform: rotate(45deg);
-  }
-  &__icon-wrapper:after {
-    transform: rotate(-45deg);
-  }
-  
-  &__icon {
-    @include absolute_alignment;
-    @include max_stretching;
-  }
-/*
-  &__text:before {
-    content: '';
     display: inline-block;
-    vertical-align: middle;
-    width: 30px;
-    height: 20px;
-    margin-right: 5px;
-    //background: url("/myTour.loc/source/images/flags/Flag_of_France.svg.png") 100% 100% no-repeat;
-    background-size: cover;
-  }
-  */
-  &__image--flag {
-    display: inline-block;
-    width: 30px;
-    height: 20px;
-  }
-}
-
-.hide {
-  &__label {
-    display: none;
   }
 }
 
@@ -154,34 +69,152 @@ html, body {
     transform: rotate(135deg);
   }
 
-  &__arrow:before {
-    content: '';
-    position: relative;
-    left: 2px;
-    top: 1px;
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    border-style: solid;
-    border-width: 2px 2px 0 0;
-    border-color: $color-4-layout;
-    vertical-align: top;
-    transform: rotate(-45deg);
-  }
-  &__arrow--180-deg:before {
-    left: 0;
-    transform: rotate(45deg);
-  }
-  &__arrow--180-deg:after {
-    content: '';
-    display: inline-block;
-    height: 15px;
-    width: 2px;
+  &__arrow--180-deg {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
     background-color: $color-4-layout;
-    transform: rotate(90deg);
-    position: relative;
-    top: -3px;
-    right: 8px;
+
+    .icons {
+      //fill: $color-4-layout;
+      //todo: сделать миксину для кнопки
+    }
   }
 }
+
+
+
+
+/*Allign elements (begin)*/
+.allign-middle {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.allign-top {
+  display: inline-block;
+  vertical-align: top;
+}
+/*Allign elements (end)*/
+
+
+
+
+.main-nav {
+  font-size: 0px;
+  //todo пределать main-nav на flex элементах
+
+  &__item {
+    display: inline-block;
+  }
+  &__item:first-child {
+    margin-left: -20px;
+  }
+  &__link {
+    display: inline-block;
+    padding: 15px;
+  }
+  &__item {
+    //todo: разделить слили на position fonts colors decoration. animation - в отдельный файл
+    .links {
+      @include font( $size: 15px );
+    }
+  }
+  &__item:hover {
+    background-color: $color-11-layout;
+
+    .links {
+      color: $color-10-layout;
+    }
+  }
+  &__item--active {
+    .links {
+      @include font( $family: $font-family-3-bold-typeface, $size: 15px );
+    }
+  }
+}
+
+.main-wrapper {
+  margin-bottom: 90px;
+}
+
+/*
+.pills {
+  padding: 5px 10px 5px 15px;
+  border-radius: 20px;
+  border: 1px solid #2b2b2b;
+  margin-right: 15px;
+
+  &__text {
+    @include font( $size: 15px);
+  }
+  
+  &__icon-wrapper {
+    position: relative;
+    width: 20px;
+    height: 20px;
+  }
+  &__icon-wrapper:before, &__icon-wrapper:after {
+    position: absolute;
+    left: 10px;
+    content: ' ';
+    height: 20px;
+    width: 2px;
+    background-color: #2b2b2b;
+  }
+  &__icon-wrapper:before {
+    transform: rotate(45deg);
+  }
+  &__icon-wrapper:after {
+    transform: rotate(-45deg);
+  }
+  
+  &__icon {
+    @include absolute_alignment;
+    @include max_stretching;
+  }
+
+  &__image--wrapper {
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+  }
+}
+*/
+
+
+.pills {
+  &__interests-form {
+    &--country {
+      @include  font( $size: 15px );
+      @include  pills__image-and-icon (
+                $border: '1px solid #{$color-tr-layout}',
+                $padding: '2px 10px',
+                $color: $color-2-layout,
+                $backgroundColor: $color-11-layout,
+                $iconWrapperColor: transparent,
+                $iconColor: $color-13-layout
+      );
+      margin-right: 15px;
+
+      .links:hover .icons {
+        fill: $color-8-layout;
+      }
+    }
+  }
+}
+
+
+.hide {
+  &__label {
+    display: none;
+  }
+}
+
+
+.show {
+  display:block;
+  opacity: 1;
+}
+//todo: сделать класс с opacity 0
 
