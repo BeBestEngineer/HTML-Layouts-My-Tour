@@ -1,0 +1,18 @@
+.social-links-list {
+  &__icon {
+    width: 12px;
+    height: 12px;
+  }
+  &__icon-wrapper {
+    width: 20px;
+    height: 20px;
+  }
+
+  .links:hover {
+    color: $color-9-layout;
+
+    .icons {
+      fill: $color-9-layout;
+    }
+  }
+}
