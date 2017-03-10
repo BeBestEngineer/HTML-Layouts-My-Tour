@@ -10,30 +10,66 @@
                 $iconWrapperColor: $color-4-layout,
                 $iconColor: $color-9-layout
       );
+      &:hover {
+        background-color: $color-tr-layout;
+        border-color:  $color-9-layout;
+        color: $color-9-layout;
+      }
     }
     &--clear-selection {
       @include  font( $size: 15px, $text-transform: 'up' );
       @include  buttons__text-and-icon-with-bg (
                 $border: '1px solid transparent',
-                $padding: '0px 0px 0px 0px',
+                $padding: '0px 15px 0px 0px',
                 $marginIconWrapper: '0px 5px',
                 $color: $color-8-layout,
                 $backgroundColor: $color-tr-layout,
                 $iconWrapperColor: $color-8-layout,
-                $iconColor: $color-4-layout
+                $iconColor: $color-4-layout,
+                $widthIcon: '8px',
+                $heightIcon: '8px'
       );
+      &:hover {
+        background-color: $color-8-layout;
+        color: $color-4-layout;
+      }
     }
     &--add {
       @include  font( $size: 15px, $text-transform: 'up' );
       @include  buttons__text-and-icon-with-bg (
-                $height: 'auto,',
+                $height: 'auto',
                 $border: '1px solid #{$color-10-layout}',
                 $padding: '5px 15px',
                 $color: $color-10-layout,
                 $backgroundColor: $color-tr-layout,
                 $borderRadius: '25px'
       );
+      &:hover {
+        background-color: $color-10-layout;
+        color: $color-4-layout;
+      }
       margin-right: 15px;
+    }
+    &--add-selection {
+      @include  font( $size: 15px, $text-transform: 'up' );
+      @include  buttons__text-and-icon-with-bg (
+                $height: '100%',
+                $border: '1px solid #{$color-tr-layout}',
+                $padding: '0px 15px 0px 0px',
+                $color: $color-10-layout,
+                $backgroundColor: $color-tr-layout,
+                $iconWrapperColor: $color-10-layout,
+                $widthIcon: '8px',
+                $heightIcon: '8px',
+                $marginIconWrapper: '5px'
+      );
+      &:hover {
+
+      }
+      margin-left: 15px;
+      .icons {
+        transform: rotate(45deg);;
+      }
     }
   }
 }
