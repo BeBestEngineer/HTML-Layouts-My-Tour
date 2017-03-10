@@ -1,0 +1,7 @@
+.border {
+  &__bottom {
+    &--dotted {
+      border-bottom: 1px dotted ;
+    }
+  }
+}
