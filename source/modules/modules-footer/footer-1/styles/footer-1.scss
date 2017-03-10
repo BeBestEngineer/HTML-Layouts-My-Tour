@@ -1,9 +1,8 @@
 .footer-1 {
   /*Position ( begin )*/
-  .social-links-list__icon {
-    width: 12px;
-    height: 12px;
-  }
+  padding: 50px 0px;
+
+
   /*Position ( end )*/
   /*Fonts ( begin )*/
   .company-name {
@@ -11,6 +10,19 @@
   }
   /*Fonts ( end )*/
   /*Colors ( begin )*/
+  @include block__colors (
+           $backgroundColor: $color-4-layout,
+           $textColor: $color-14-layout,
+           $iconsColor: $color-14-layout,
+           $linksColor: $color-14-layout
+  );
 
+  .company-name {
+    color: $color-2-layout;
+  }
+
+  .links:hover {
+    color: $color-9-layout;
+  }
   /*Colors ( end )*/
 }
