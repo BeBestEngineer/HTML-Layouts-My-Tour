@@ -142,10 +142,12 @@
                              type="text"  
                              placeholder="7-14 ночей">
                       <div class="dropdown-menu__wrapper">
-                        <div id="dates__dropdown-menu--content-id" class="dropdown-menu__content">
-start
-<!--                          <div class="sliders__time-between-boardings" id="slider__time-between-boardings"></div>-->
-end
+                        <div id="dates__dropdown-menu--content-id" class="dropdown-menu__content  dates__dropdown-menu--content">
+
+                          <div class="sliders__time-between-boardings-wrapper">
+                            <div class="sliders__time-between-boardings"  id="slider__time-between-boardings"></div>
+                          </div>
+
                         </div>
                       </div>
                     </div>
@@ -204,8 +206,21 @@ end
 
                     <div class="flex__container  flex__direction--column  flex__item--custom-width-265-0">
 <!--                      960px / 265px = 3.623-->
-                      <label class="form__label"  for="price">Стоимость тура</label>
-                      <input class="form__input"  type="text"  id="price" placeholder="Укажите стоимость тура" value="50 000 Р - 150 000 Р">
+                      <label class="form__label"  for="price">Стоимость тура</label>                      
+                      <input class="form__input  form__input--prices  dropdown-menu__button"
+                             id="prices__dropdown-menu--button"
+                             onclick="openDropdownMenu( event, 'prices__dropdown-menu--content-id', 'dropdown-menu__content' )"
+                             type="text"
+                             placeholder="Укажите стоимость тура">
+                      <div class="dropdown-menu__wrapper">
+                        <div id="prices__dropdown-menu--content-id" class="dropdown-menu__content  prices__dropdown-menu--content">
+
+                          <div class="sliders__interests-prices-wrapper">
+                            <div class="sliders__interests-prices"  id="slider__interests-prices"></div>
+                          </div>
+
+                        </div>
+                      </div>
                     </div>
                   </div>
 
@@ -213,8 +228,35 @@ end
                   <div class="flex__container">
                     <div class="flex__container  flex__direction--column  flex__item--custom-width-160-0">
                       <label class="form__label"  for="hotel-stars">Категория отелей от</label>
-                      <input class="form__input"  type="text"  id="hotel-stars" placeholder="" value="5 stars">
-<!--                      <span class="icons__chevron icons__chevron--bottom"></span>-->
+<!--                      todo: синхронизироать id для input и label-->
+                      <input class="form__input  form__input--prices  dropdown-menu__button"
+                             id="hotels__dropdown-menu--button"
+                             onclick="openDropdownMenu( event, 'hotels__dropdown-menu--content-id', 'dropdown-menu__content' )"
+                             type="text"
+                             placeholder="Выберите уровень отеля">
+                      <div class="dropdown-menu__wrapper">
+                        <div id="hotels__dropdown-menu--content-id" class="dropdown-menu__content  hotels__dropdown-menu--content">
+
+                          <div class="rating  rating--5-stars">
+                            <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
+                              <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
+                            </svg>                            
+                          </div>
+
+                          <div class="rating  rating--4-stars">
+                            <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
+                              <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
+                            </svg>
+                          </div>
+
+                          <div class="rating  rating--3-stars">
+                            <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
+                              <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
+                            </svg>
+                          </div>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="flex__container  flex__direction--column  flex__item--custom-width-185-0">
                       <label class="form__label"  for="hotel-rating">Рейтинг TopHotels</label>
