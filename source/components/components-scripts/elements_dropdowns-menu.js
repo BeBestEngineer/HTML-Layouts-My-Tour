@@ -18,10 +18,6 @@ function openDropdownMenu( event, menuId, menuClass ) {
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function( event ) {
-	console.log( document.getElementById( openDropdownMenu.MENU_ID ).contains( event.target ) );
-	console.log( event.target.offsetParent.id );
-
-  //todo: переделать через Методы contains или compareDocumentPosition
 	if ( !openDropdownMenu.EVENT && !openDropdownMenu.MENU_ID ) {
 		return false;
 	}
