@@ -3,6 +3,7 @@ module.exports = {
 
   sourceLayoutStyles:  ['source/components/components-styles/collected-styles/css/layout.css', 'source/components/components-styles/collected-styles/scss/layout.scss'],
   sourceVendorStyles:  ['source/components/components-styles/collected-styles/css/vendor.css'],
+  sourcePikADayStyles: ['source/components/components-libs/pikaday/pikaday.css', 'source/components/components-libs/pikaday/pikaday-with-variables.scss'],
   sourceLayoutScripts: ['source/components/components-scripts/collected-scripts/layout.js'],
   sourceVendorScripts: ['source/components/components-scripts/collected-scripts/vendor.js'],
 
