@@ -1,15 +1,38 @@
 <div class="flex__container  flex__item--stretch  main-wrapper">
-  <main class="main-modules  interests  grid__container--medium">
+  <div class="  grid__container--medium">
+    <!--        todo: проверить ширину контейнера-->
     <div class="grid__col">
-      <b class="title">Настройка интересов</b>
+      <main class="main-modules  interests">
+
+        <b class="title">Настройка интересов</b>
 
 
-      <div class="tab">
-        <a class="links  tablinks"  href="javascript:void(0)"  onclick="openCity(event, 'selection-1')">Подборка</a>
-        <a class="links  tablinks"  href="javascript:void(0)"  onclick="openCity(event, 'selection-2')">Подборка 2</a>
-      </div>
-      <div   class="tabs-wrapper"                    id="tabs-wrapper-id">
-        <div class="tabcontent  tabcontent--active"  id="selection-1">
+        <div class="flex__container  tabs">
+          <div class="flex__container  flex__item--custom-width-1-0  tabs__titles-wrapper">
+            <a class="links  tabs__title  active"  href="javascript:void(0)"  onclick="openTab(event, 'selection-1')">
+              Подборка
+              <span class="tabs__title-marker--bottom"></span>
+            </a>
+            <a class="links  tabs__title"          href="javascript:void(0)"  onclick="openTab(event, 'selection-2')">
+              Подборка 2
+              <i></i>
+              <i></i>
+              <span class="tabs__title-marker--bottom"></span>
+            </a>
+          </div>
+          <div class="tabs__buttons  flex__container  flex__direction--row-reverse  ">
+            <button class="buttons  buttons__interests-form--add-selection" type="button">
+              <span class="allign-middle  icons__wrapper">
+                <svg class="icons  icons__svg" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
+                  <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "/>
+                </svg>
+              </span>
+              <span class="allign-middle">Добавить подборку</span>
+            </button>
+          </div>
+        </div>
+        <div   class="tabs-wrapper"  id="tabs-wrapper-id">
+        <div class="tabs__content  active"  id="selection-1">
           <div class="interests__form-wrapper">
             <form action="" class="interests__form">
 
@@ -30,7 +53,7 @@
 
 
                   <div class="flex__container  flex__direction--row-reverse  flex__align-items--flex-end  flex__item--custom-width-2-0">
-                    <button class="buttons__interests-form--submit" type="submit">
+                    <button class="buttons  buttons__interests-form--submit" type="submit">
                       <span class="allign-middle">Смотреть результаты</span>
                       <span class="allign-middle  icons__wrapper">
                         <svg class="icons  icons__svg" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="12" height="12">
@@ -56,7 +79,7 @@
                         <img class="image" src="/myTour.loc/source/images/flags/flag-france.png" alt="flag-france" >
                       </div>
                       <span  class="allign-middle">Франция</span>
-                      <a class="allign-middle  icons__wrapper" href="#">
+                      <a class="links  allign-middle  icons__wrapper" href="#">
                         <svg class="icons  icons__svg" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
                           <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "/>
                         </svg>
@@ -68,7 +91,7 @@
                         <img class="image" src="/myTour.loc/source/images/flags/flag-germany.png" alt="flag-germany" >
                       </div>
                       <span  class="allign-middle">Германия</span>
-                      <a class="allign-middle  icons__wrapper" href="#">
+                      <a class="links  allign-middle  icons__wrapper" href="#">
                         <svg class="icons  icons__svg" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
                           <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "/>
                         </svg>
@@ -78,10 +101,10 @@
                   </div>
                 </div>
                 <div class="flex__container">                  
-                  <button class="buttons__interests-form--add" type="button">
+                  <button class="buttons  buttons__interests-form--add" type="button">
                     <span class="allign-middle">Добавить регион</span>
                   </button>
-                  <button class="buttons__interests-form--add" type="button">
+                  <button class="buttons  buttons__interests-form--add" type="button">
                     <span class="allign-middle">Добавить страну</span>
                   </button>
                 </div>
@@ -96,14 +119,15 @@
                     <div class="flex__container  flex__direction--column  flex__item--custom-width-270-0">
                       <div class="flex__container">
 <!--                      960px / 135px = 7.111-->
+<!--                        todo: добавить плавное появление для datepicker-->
                         <label class="form__label"  for="departure-date">Дата вылета</label>
                         <label class="form__label  hide__label"  for="arrival-date">Дата прилёта</label>
                       </div>
 
                       <div class="flex__container">
 <!--                      135px -->
-                        <input class="form__input  form__input--departure-date"  type="text"  id="departure-date" placeholder="дата вылета">
-                        <input class="form__input  form__input--arrival-date"  type="text"  id="arrival-date" placeholder="дата прилёта">
+                        <input class="form__input  form__input--departure-date"  id="departure-date"  type="text"  placeholder="дата вылета">
+                        <input class="form__input  form__input--arrival-date"  id="arrival-date"  type="text"  placeholder="дата прилёта">
                       </div>
                     </div>
 
@@ -112,7 +136,31 @@
 <!--                      todo: вместо flex__direction--column указать flex__direction т.е. без --column-->
 <!--                      960px / 170px = 5.647-->
                       <label class="form__label"  for="dates">На сколько</label>
-                      <input class="form__input"  type="text"  id="dates" placeholder="7-14 ночей">
+                      <div class="dates__dropdown-menu-wrapper">
+                        <input class="form__input  form__input--dates  dates__dropdown-menu--button"  type="text"  id="dates__dropdown-menu--button" onclick="openDropdownMenu( event, 'dates__dropdown-menu--content-id', 'dates__dropdown-menu--content' )" placeholder="7-14 ночей">
+                        <div id="dates__dropdown-menu--content-id" class="dates__dropdown-menu--content">
+
+                          <div class="widget__dates-range">
+                            <span class="allign-middle">Взрослые:</span>
+
+                            <button class="allign-middle  widget__dates-range--button" id="widget__dates-range--button-more" type="button" onclick="ChangeInputValueMore( event, 'widget__dates-range--input' )">
+                              <svg width="20" height="20" viewBox="0 0 1792 1792">
+                                <path class="icons__svg-color" d="M1395 1184q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"></path>
+                              </svg>
+                            </button>
+
+                            <input class="allign-middle  widget__dates-range--input" id="widget__dates-range--input" value="1" type="text">
+
+                            <button class="allign-middle  widget__dates-range--button" id="widget__dates-range--button-less" type="button" onclick="ChangeInputValueLess( event, 'widget__dates-range--input' )">
+                              <svg width="20" height="20" viewBox="0 0 1792 1792">
+                                <path class="icons__svg-color" d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"></path>
+                              </svg>
+                            </button>
+
+                          </div>                          
+
+                        </div>
+                      </div>
                     </div>
 
 
@@ -123,8 +171,8 @@
                         <label class="form__label  hide__label" for="passengers-childs">Количество пассажиров</label>
                       </div>
                       <div class="flex__container  ">
-                        <input class="form__input  form__input--passengers-parents" type="text" id="passengers-parents" placeholder="взрослые" value="1 взрослый">
-                        <input class="form__input  form__input--passengers-childs" type="text" id="passengers-childs" placeholder="дети" value="0 детей">
+                        <input class="form__input  form__input--passengers-parents" type="text" id="passengers-parents" placeholder="взрослые" value="1 взрослый"  onclick="openDropdownMenu()">
+                        <input class="form__input  form__input--passengers-childs"  type="text" id="passengers-childs"  placeholder="дети"     value="0 детей"     onclick="openDropdownMenu()">
                       </div>
                     </div>
 
@@ -161,7 +209,7 @@
                      -->
                     <div class="flex__container  flex__direction--row-reverse  flex__align-items--flex-end  flex__item--custom-width-225-0">
 
-                      <button class="buttons__interests-form--clear-selection" type="button">
+                      <button class="buttons  buttons__interests-form--clear-selection" type="button">
                         <span class="allign-middle  icons__wrapper">
                           <svg class="icons  icons__svg" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
                             <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "/>
@@ -176,14 +224,14 @@
             </form>
           </div>
         </div>
-        <div class="tabcontent"                      id="selection-2">
+        <div class="tabs__content"                      id="selection-2">
           Подборка 2
         </div>
       </div>
 
-
+      </main>
     </div>
-  </main>
+  </div>
 
 <!--todo: hovers? colors? backgrounds? js?-->
   <aside class="flex__item--equal-width  grid__col    flex__item--order--1">
