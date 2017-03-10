@@ -223,6 +223,56 @@
   border: unquote( $border );
   border-radius: unquote( $borderRadius );
   /*Decorate ( end )*/
+}
 
 
+// =============================================================================
+// Block colors
+// =============================================================================
+@mixin block__colors (
+  $textColor:       $color-2-layout,
+  $backgroundColor: $color-4-layout,
+  $linksColor:      $color-2-layout,
+  $iconsColor:      $color-2-layout
+)
+{
+  color: $textColor;
+  background-color: $backgroundColor;
+
+  .links {
+    color: $linksColor;
+  }
+
+  .icons {
+    color: $iconsColor;
+    fill: $iconsColor;
+  }
+}
+
+
+// =============================================================================
+// Tabs
+// =============================================================================
+@mixin tabs__titles (
+  $paddingTopBottom: '14px',
+  $paddingLeftRight: '16px',
+  $paddingTabs: '20px'
+)
+{
+  .tabs {
+    padding-left:  unquote( $paddingTabs );
+    padding-right: unquote( $paddingTabs );
+  }
+  .tabs__title {
+    padding: unquote( $paddingTopBottom + ' ' + $paddingLeftRight );
+  }
+  .tabs__title:first-child {
+    margin-left: - unquote( $paddingLeftRight );
+  }
+  .tabs__title.active {
+    .tabs__title-marker--bottom {
+      left: unquote( $paddingLeftRight );
+      right: unquote( $paddingLeftRight );
+    }
+  }
 }
