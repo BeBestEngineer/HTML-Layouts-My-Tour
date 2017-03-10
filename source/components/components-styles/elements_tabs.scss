@@ -1,0 +1,62 @@
+.tabs {
+  overflow: hidden;
+  border-bottom: 1px solid $color-13-layout;
+}
+.tabs__title {
+  //todo заверстать на flexbox
+  position: relative;
+  @include font( $size: 15px, $text-transform: 'up' );
+  color: $color-13-layout;
+}
+.tabs__titles-wrapper .tabs__title:hover {
+  color: $color-10-layout;
+}
+
+.tabs__title-marker--bottom {
+  opacity: 0;
+}
+
+.tabs__title.active {
+
+  .tabs__title-marker--bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    height: 5px;
+    background-color: $color-10-layout;
+    opacity: 1;
+  }
+}
+
+@include tabs__titles (
+        $paddingTopBottom: '14px',
+        $paddingLeftRight: '16px'
+);
+
+
+
+.tabs__content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10000px;
+  display: block;
+  padding: 20px;
+  border-top: none;
+  opacity: 0;
+}
+.tabs__content.active {
+  display: block;
+  top: 0;
+  opacity: 1;
+}
+
+
+.tabs-wrapper {
+  position: relative;
+}
+
+
+
