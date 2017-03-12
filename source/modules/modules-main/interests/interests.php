@@ -34,7 +34,15 @@
         <div   class="tabs-wrapper"  id="tabs-wrapper-id">
         <div class="tabs__content  active"  id="selection-1">
           <div class="interests__form-wrapper">
-            <form action="" class="interests__form">
+
+<!--            <p><iframe name="area" width="500" height="200"></iframe></p>-->
+<!--            method="post"-->
+
+
+            
+
+
+            <form action="" class="interests__form" method="post">
 
 
               <div class="form__container">
@@ -42,18 +50,18 @@
 
                   <div class="flex__container  flex__direction--column  flex__item--custom-width-1-0  form__selection-name-container">
                     <label class="form__label" for="selection-name">Название подборки</label>
-                    <input class="form__input" type="text" id="selection-name" placeholder="Введите название подборки">
+                    <input class="form__input" type="text" id="selection-name" name="selection-name" placeholder="Введите название подборки">
                   </div>
 
 
                   <div class="flex__container  flex__direction--column  flex__item--custom-width-1-0">
                     <label class="form__label" for="selection-name">Ваш город</label>
-                    <input class="form__input" type="text" id="selection-name" placeholder="Введите название вашего города">
+                    <input class="form__input" type="text" id="selection-name" name="selection-client-city" placeholder="Введите название вашего города">
                   </div>
 
 
                   <div class="flex__container  flex__direction--row-reverse  flex__align-items--flex-end  flex__item--custom-width-2-0">
-                    <button class="buttons  buttons__interests-form--submit" type="submit">
+                    <button class="buttons  buttons__interests-form--submit" type="submit" name="Button_pressed">
                       <span class="allign-middle">Смотреть результаты</span>
                       <span class="allign-middle  icons__wrapper">
                         <svg class="icons  icons__svg" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="12" height="12">
@@ -69,7 +77,7 @@
 
               <div class="form__container">
                   <label class="form__label">Вы можете задать несколько стран или регионов для подборки</label>
-                  <input class="form__input  form__input--regions" type="text" placeholder="Выберите регион мира и страну для добавления к подборке" value="Франция Германия">
+                  <input class="form__input  form__input--regions" type="text" name="selection-regions" placeholder="Выберите регион мира и страну для добавления к подборке" value="Франция Германия">
 
                 <div class="flex__container  flex__direction--column  form__area">
                   <span class="form__region-name">Европа</span>
@@ -126,8 +134,8 @@
 
                       <div class="flex__container">
 <!--                      135px -->
-                        <input class="form__input  form__input--departure-date"  id="departure-date"  type="text"  placeholder="дата вылета">
-                        <input class="form__input  form__input--arrival-date"  id="arrival-date"  type="text"  placeholder="дата прилёта">
+                        <input class="form__input  form__input--departure-date"  id="departure-date"   name="selection-departure-date"  type="text"  placeholder="дата вылета">
+                        <input class="form__input  form__input--arrival-date"  id="arrival-date"   name="selection-arrival-date"  type="text"  placeholder="дата прилёта">
                       </div>
                     </div>
 
@@ -139,6 +147,7 @@
                       <input class="form__input  form__input--dates  dropdown-menu__button"  
                              id="dates__dropdown-menu--button"  
                              onclick="openDropdownMenu( event, 'dates__dropdown-menu--content-id', 'dropdown-menu__content' )"
+                             name="selection-dates"
                              type="text"  
                              placeholder="7-14 ночей">
                       <div class="dropdown-menu__wrapper">
@@ -163,6 +172,7 @@
                         <input class="form__input  form__input--passengers  dropdown-menu__button"
                                id="passengers__dropdown-menu--button"
                                onclick="openDropdownMenu( event, 'passengers__dropdown-menu--content-id', 'dropdown-menu__content' )"
+                               name="selection-passengers"
                                type="text"
                                placeholder=Пассажиры">
                       </div>
@@ -198,6 +208,36 @@
 
                             </div>
 
+
+                            <div class="widget__passengers-range">
+                              <span class="allign-middle">Дети:</span>
+
+                              <button class="allign-middle  widget__passengers-range--button"
+                                      id="widget__passengers-range--button-more"
+                                      onclick="ChangeInputValueMore( event, 'widget__passengers-range--input' )"
+                                      type="button">
+                                <svg width="20" height="20" viewBox="0 0 1792 1792">
+                                  <path class="icons__svg-color" d="M1395 1184q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"></path>
+                                </svg>
+                              </button>
+
+                              <input class="allign-middle  widget__passengers-range--input"
+                                     id="widget__passengers-range--input"
+                                     value="1"
+                                     type="text">
+
+                              <button class="allign-middle  widget__passengers-range--button"
+                                      id="widget__passengers-range--button-less"
+                                      onclick="ChangeInputValueLess( event, 'widget__passengers-range--input' )"
+                                      type="button">
+                                <svg width="20" height="20" viewBox="0 0 1792 1792">
+                                  <path class="icons__svg-color" d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"></path>
+                                </svg>
+                              </button>
+
+                            </div>
+
+
                           </div>
                         </div>
                       </div>
@@ -210,6 +250,7 @@
                       <input class="form__input  form__input--prices  dropdown-menu__button"
                              id="prices__dropdown-menu--button"
                              onclick="openDropdownMenu( event, 'prices__dropdown-menu--content-id', 'dropdown-menu__content' )"
+                             name="selection-prices"
                              type="text"
                              placeholder="Укажите стоимость тура">
                       <div class="dropdown-menu__wrapper">
@@ -232,6 +273,7 @@
                       <input class="form__input  form__input--hotels  dropdown-menu__button"
                              id="hotels__dropdown-menu--button"
                              onclick="openDropdownMenu( event, 'hotels__dropdown-menu--content-id', 'dropdown-menu__content' )"
+                             name="selection-hotels-stars"
                              type="text"
                              placeholder="Выберите уровень отеля">
                       <div class="dropdown-menu__wrapper">
@@ -273,6 +315,7 @@
                       <input class="form__input  form__input--hotel-rating  dropdown-menu__button"
                              id="hotel-rating__dropdown-menu--button"
                              onclick="openDropdownMenu( event, 'hotel-rating__dropdown-menu--content-id', 'dropdown-menu__content' )"
+                             name="selection-hotels-rating"
                              type="text"
                              placeholder="Рейтинг отеля">
                       <div class="dropdown-menu__wrapper">
@@ -297,6 +340,7 @@
                       <input class="form__input  form__input--nutrition  dropdown-menu__button"
                              id="nutrition__dropdown-menu--button"
                              onclick="openDropdownMenu( event, 'nutrition__dropdown-menu--content-id', 'dropdown-menu__content' )"
+                             name="selection-nutrition"
                              type="text"
                              placeholder="Выберите питание">
                       <div class="dropdown-menu__wrapper">
@@ -338,6 +382,7 @@
                       <input class="form__input  form__input--location  dropdown-menu__button"
                              id="location__dropdown-menu--button"
                              onclick="openDropdownMenu( event, 'location__dropdown-menu--content-id', 'dropdown-menu__content' )"
+                             name="selection-location"
                              type="text"
                              placeholder="Выберите расположение">
                       <div class="dropdown-menu__wrapper">
@@ -427,6 +472,12 @@
       </div>
 
       </main>
+      <?php
+        echo '<pre>';
+        var_dump(  $_SESSION );
+        echo '</pre>';
+      ?>
+      
     </div>
   </div>
 
@@ -440,4 +491,6 @@
     <!--    Empty Aside-->
   </aside>
 </div>
+
+
 
