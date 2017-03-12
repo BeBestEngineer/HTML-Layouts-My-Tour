@@ -8,6 +8,10 @@
   );
 }
 
+.icons__svg {
+  fill: #000000;
+}
+
 .rating .icons__svg {
   &--color {
     fill: $color-6-layout;
