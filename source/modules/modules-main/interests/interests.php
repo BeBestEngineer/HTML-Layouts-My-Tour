@@ -229,7 +229,7 @@
                     <div class="flex__container  flex__direction--column  flex__item--custom-width-160-0">
                       <label class="form__label"  for="hotel-stars">Категория отелей от</label>
 <!--                      todo: синхронизироать id для input и label-->
-                      <input class="form__input  form__input--prices  dropdown-menu__button"
+                      <input class="form__input  form__input--hotels  dropdown-menu__button"
                              id="hotels__dropdown-menu--button"
                              onclick="openDropdownMenu( event, 'hotels__dropdown-menu--content-id', 'dropdown-menu__content' )"
                              type="text"
@@ -238,18 +238,28 @@
                         <div id="hotels__dropdown-menu--content-id" class="dropdown-menu__content  hotels__dropdown-menu--content">
 
                           <div class="rating  rating--5-stars">
+<!--                            JavaScript create stars-->
                             <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
                               <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
                             </svg>                            
                           </div>
 
                           <div class="rating  rating--4-stars">
+<!--                            JavaScript create stars-->
                             <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
                               <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
                             </svg>
                           </div>
 
                           <div class="rating  rating--3-stars">
+<!--                            JavaScript create stars-->
+                            <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
+                              <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
+                            </svg>
+                          </div>
+
+                          <div class="rating  rating--2-stars">
+<!--                            JavaScript create stars-->
                             <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
                               <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
                             </svg>
@@ -260,15 +270,135 @@
                     </div>
                     <div class="flex__container  flex__direction--column  flex__item--custom-width-185-0">
                       <label class="form__label"  for="hotel-rating">Рейтинг TopHotels</label>
-                      <input class="form__input"  type="text"  id="hotel-rating" placeholder="" value="не ниже 4.0">
+                      <input class="form__input  form__input--hotel-rating  dropdown-menu__button"
+                             id="hotel-rating__dropdown-menu--button"
+                             onclick="openDropdownMenu( event, 'hotel-rating__dropdown-menu--content-id', 'dropdown-menu__content' )"
+                             type="text"
+                             placeholder="Рейтинг отеля">
+                      <div class="dropdown-menu__wrapper">
+                        <div id="hotel-rating__dropdown-menu--content-id" class="dropdown-menu__content  hotel-rating__dropdown-menu--content">
+
+                          <ul class="hotels-rating-list  hotels-rating-5-list" id="hotels-rating-select__list-id">
+<!--                            JavaScript create list-->
+                            <li id="hotels-rating-select__item-id">
+                              <span class="hotels-rating-list__text">Не ниже</span>
+                              <svg class="allign-bottom  icons__svg  hotels-rating-list__icon" width="20" height="20" viewBox="0 0 24 24" >
+                                <path d="M21 22h-18v-4h18v4zm-2.266-12.906c-3.749 2.293-5.296-2.125-6.734-7.094-1.433 4.951-2.984 9.388-6.734 7.094-1.305-.798-5.266-4.094-5.266-4.094 1.796 3.797 2.75 6.292 3 11h18c.25-4.708 1.203-7.203 3-11 0 0-3.961 3.296-5.266 4.094z"/>
+                              </svg>
+                              <span id="hotels-rating-select__value-id" class="hotels-rating-list__value"></span>
+                            </li>
+                          </ul>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="flex__container  flex__direction--column  flex__item--custom-width-125-0">
                       <label class="form__label"  for="nutrition">Тип питания</label>
-                      <input class="form__input"  type="text"  id="nutrition" placeholder="Выберите питание">
+                      <input class="form__input  form__input--nutrition  dropdown-menu__button"
+                             id="nutrition__dropdown-menu--button"
+                             onclick="openDropdownMenu( event, 'nutrition__dropdown-menu--content-id', 'dropdown-menu__content' )"
+                             type="text"
+                             placeholder="Выберите питание">
+                      <div class="dropdown-menu__wrapper">
+                        <div id="nutrition__dropdown-menu--content-id" class="dropdown-menu__content  nutrition__dropdown-menu--content">
+
+                          <ul>
+                            <li>
+                              <label class="  ">
+                                <input class="nutrition__dropdown-menu-option" type="checkbox" name="nutrition-ro" >Room only
+                              </label>
+                            </li>
+                            <li>
+                              <label class="">
+                                <input class="nutrition__dropdown-menu-option" type="checkbox" name="nutrition-bb" >Bed & breakfast
+                              </label>
+                            </li>
+                            <li>
+                              <label class="">
+                                <input class="nutrition__dropdown-menu-option" type="checkbox" name="nutrition-hb" >Half board
+                              </label>
+                            </li>
+                            <li>
+                              <label class="">
+                                <input class="nutrition__dropdown-menu-option" type="checkbox" name="nutrition-fb" >Full board
+                              </label>
+                            </li>
+                            <li>
+                              <label class="">
+                                <input class="nutrition__dropdown-menu-option" type="checkbox" name="nutrition-ai" >All inclusive
+                              </label>
+                            </li>
+                          </ul>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="flex__container  flex__direction--column  flex__item--custom-width-225-0">
                       <label class="form__label"  for="location">Расположение</label>
-                      <input class="form__input"  type="text"  id="location" placeholder="Выберите расположение">
+                      <input class="form__input  form__input--location  dropdown-menu__button"
+                             id="location__dropdown-menu--button"
+                             onclick="openDropdownMenu( event, 'location__dropdown-menu--content-id', 'dropdown-menu__content' )"
+                             type="text"
+                             placeholder="Выберите расположение">
+                      <div class="dropdown-menu__wrapper">
+                        <div id="location__dropdown-menu--content-id" class="dropdown-menu__content  location__dropdown-menu--content">
+
+
+                          <div class="flex__container">
+                            <ul>
+                            <li>
+                              <label class="  ">
+                                <input class="location__dropdown-menu-option" type="checkbox" name="location-active" >Активный
+                              </label>
+                            </li>
+                            <li>
+                              <label class="">
+                                <input class="location__dropdown-menu-option" type="checkbox" name="nutrition-calm" >Спокойный
+                              </label>
+                            </li>
+                            <li>
+                              <label class="">
+                                <input class="location__dropdown-menu-option" type="checkbox" name="nutrition-family" >Семейный
+                              </label>
+                            </li>
+                            <li>
+                              <label class="">
+                                <input class="location__dropdown-menu-option" type="checkbox" name="nutrition-health" >Здоровье
+                              </label>
+                            </li>
+                            <li>
+                              <label class="">
+                                <input class="location__dropdown-menu-option" type="checkbox" name="nutrition-urban" >Городской
+                              </label>
+                            </li>
+                            <li>
+                              <label class="">
+                                <input class="location__dropdown-menu-option" type="checkbox" name="nutrition-beach" >Пляжный
+                              </label>
+                            </li>
+                          </ul>
+                            <ul>
+                              <li>
+                                <label class="  ">
+                                  <input class="location__dropdown-menu-option" type="checkbox" name="nutrition-line-1" >1-я линия
+                                </label>
+                              </li>
+                              <li>
+                                <label class="  ">
+                                  <input class="location__dropdown-menu-option" type="checkbox" name="nutrition-line-2" >2-я линия
+                                </label>
+                              </li>
+                              <li>
+                                <label class="  ">
+                                  <input class="location__dropdown-menu-option" type="checkbox" name="nutrition-line-3" >3-я линия
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+
+
+                        </div>
+                      </div>
                     </div>
                     <!--
                       todo: сделать input как в яндекс авиа
