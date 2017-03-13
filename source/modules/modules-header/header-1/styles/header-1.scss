@@ -8,11 +8,18 @@
   /*Position ( end )*/
   /*Fonts ( begin )*/
   .main-nav {
-    @include font( $size: 17px );
+
   }
 
   /*Fonts ( end )*/
   /*Colors ( begin )*/
+  @include  block__colors (
+            $textColor: $color-4-layout,
+            $linksColor: $color-4-layout
+  );
+
+  background: linear-gradient(to right,  rgba(0,139,212,1) 0%,rgba(0,107,197,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008bd4', endColorstr='#006bc5',GradientType=1 ); /* IE6-9 */
 
   /*Colors ( end )*/
 }
