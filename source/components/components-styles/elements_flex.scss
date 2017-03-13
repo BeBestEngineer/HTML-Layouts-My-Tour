@@ -99,8 +99,11 @@
 
 
 .flex__align-items--flex-start {
-align-items: flex-start;
+  align-items: flex-start;
 }
 .flex__align-items--flex-end {
   align-items: flex-end;
+}
+.flex__align-items--baseline {
+  align-items: baseline;
 }
