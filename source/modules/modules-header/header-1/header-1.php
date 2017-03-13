@@ -5,7 +5,7 @@
         <li class="main-nav__item">
           <a class="links  main-nav__link" href="#">Моя лента</a>
         </li>
-        <li class="main-nav__item">
+        <li class="main-nav__item  main-nav__item--active">
           <a class="links  main-nav__link" href="#">Интересы</a>
         </li>
         <li class="main-nav__item">
