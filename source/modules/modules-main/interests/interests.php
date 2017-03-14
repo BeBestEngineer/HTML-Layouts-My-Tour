@@ -144,12 +144,27 @@
 <!--                      todo: вместо flex__direction--column указать flex__direction т.е. без --column-->
 <!--                      960px / 170px = 5.647-->
                       <label class="form__label"  for="dates__dropdown-menu--button">На сколько</label>
-                      <input class="form__input  form__input--dates  dropdown-menu__button"  
+<!--                      <input class="form__input  form__input--dates  dropdown-menu__button"
                              id="dates__dropdown-menu--button"  
                              onclick="openDropdownMenu( event, 'dates__dropdown-menu--content-id', 'dropdown-menu__content' )"
                              name="selection-dates"
                              type="text"  
-                             placeholder="7-14 ночей">
+                             placeholder="7-14 ночей">-->
+                      <div class="flex__container">
+                        <input class="form__input  form__input--dates  form__input--1-2  dropdown-menu__button"
+                               id="dates-min__dropdown-menu--button"
+                               onclick="openDropdownMenu( event, 'dates__dropdown-menu--content-id', 'dropdown-menu__content' )"
+                               name="selection-dates-min"
+                               type="text"
+                               placeholder="7 ночей">
+                        <span>-</span>
+                        <input class="form__input  form__input--dates  form__input--1-2  dropdown-menu__button"
+                               id="dates-max__dropdown-menu--button"
+                               onclick="openDropdownMenu( event, 'dates__dropdown-menu--content-id', 'dropdown-menu__content' )"
+                               name="selection-dates-max"
+                               type="text"
+                               placeholder="14 ночей">
+                      </div>
                       <div class="dropdown-menu__wrapper">
                         <div id="dates__dropdown-menu--content-id" class="dropdown-menu__content  dates__dropdown-menu--content">
 
@@ -168,13 +183,21 @@
                         <label class="form__label" for="passengers">Количество пассажиров</label>
                         <label class="form__label  hide__label" for="passengers-childs">Количество пассажиров</label>
                       </div>
-                      <div class="">
+                      <div class="flex__container">
                         <input class="form__input  form__input--passengers  dropdown-menu__button"
-                               id="passengers__dropdown-menu--button"
+                               id="parents__dropdown-menu--button"
                                onclick="openDropdownMenu( event, 'passengers__dropdown-menu--content-id', 'dropdown-menu__content' )"
-                               name="selection-passengers"
+                               name="selection-passengers-parents"
                                type="text"
-                               placeholder=Пассажиры">
+                               placeholder="Пассажиры">
+                        <span class="flex__item--equal-width  form__text--passengers" id="parents__text"></span>
+                        <input class="form__input  form__input--passengers  dropdown-menu__button"
+                               id="childs__dropdown-menu--button"
+                               onclick="openDropdownMenu( event, 'passengers__dropdown-menu--content-id', 'dropdown-menu__content' )"
+                               name="selection-passengers-childs"
+                               type="text"
+                               placeholder="Пассажиры">
+                        <span class="flex__item--equal-width  form__text--passengers" id="childs__text"></span>
                       </div>
                       <div class="">
                         <div class="dropdown-menu__wrapper">
@@ -185,7 +208,7 @@
 
                               <button class="allign-middle  widget__passengers-range--button"
                                       id="widget__passengers-range--button-more"
-                                      onclick="ChangeInputValueMore( event, 'widget__passengers-range--input' )"
+                                      onclick="ChangeInputValueMore( event, 'widget__passengers-range-parents--input', 'parents__dropdown-menu--button', 'parents__text' )"
                                       type="button">
                                 <svg width="20" height="20" viewBox="0 0 1792 1792">
                                   <path class="icons__svg-color" d="M1395 1184q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"></path>
@@ -193,13 +216,14 @@
                               </button>
 
                               <input class="allign-middle  widget__passengers-range--input"
-                                     id="widget__passengers-range--input"
+                                     id="widget__passengers-range-parents--input"
+                                     name="selection-passengers-parents"
                                      value="1"
                                      type="text">
 
                               <button class="allign-middle  widget__passengers-range--button"
                                       id="widget__passengers-range--button-less"
-                                      onclick="ChangeInputValueLess( event, 'widget__passengers-range--input' )"
+                                      onclick="ChangeInputValueLess( event, 'widget__passengers-range-parents--input', 'parents__dropdown-menu--button', 'parents__text' )"
                                       type="button">
                                 <svg width="20" height="20" viewBox="0 0 1792 1792">
                                   <path class="icons__svg-color" d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"></path>
@@ -214,7 +238,7 @@
 
                               <button class="allign-middle  widget__passengers-range--button"
                                       id="widget__passengers-range--button-more"
-                                      onclick="ChangeInputValueMore( event, 'widget__passengers-range--input' )"
+                                      onclick="ChangeInputValueMore( event, 'widget__passengers-range-childs--input', 'childs__dropdown-menu--button', 'childs__text' )"
                                       type="button">
                                 <svg width="20" height="20" viewBox="0 0 1792 1792">
                                   <path class="icons__svg-color" d="M1395 1184q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"></path>
@@ -222,13 +246,14 @@
                               </button>
 
                               <input class="allign-middle  widget__passengers-range--input"
-                                     id="widget__passengers-range--input"
+                                     id="widget__passengers-range-childs--input"
+                                     name="selection-passengers-childs"
                                      value="1"
                                      type="text">
 
                               <button class="allign-middle  widget__passengers-range--button"
                                       id="widget__passengers-range--button-less"
-                                      onclick="ChangeInputValueLess( event, 'widget__passengers-range--input' )"
+                                      onclick="ChangeInputValueLess( event, 'widget__passengers-range-childs--input', 'childs__dropdown-menu--button', 'childs__text' )"
                                       type="button">
                                 <svg width="20" height="20" viewBox="0 0 1792 1792">
                                   <path class="icons__svg-color" d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"></path>
@@ -246,13 +271,22 @@
 
                     <div class="flex__container  flex__direction--column  flex__item--custom-width-265-0">
 <!--                      960px / 265px = 3.623-->
-                      <label class="form__label"  for="price">Стоимость тура</label>                      
-                      <input class="form__input  form__input--prices  dropdown-menu__button"
-                             id="prices__dropdown-menu--button"
-                             onclick="openDropdownMenu( event, 'prices__dropdown-menu--content-id', 'dropdown-menu__content' )"
-                             name="selection-prices"
-                             type="text"
-                             placeholder="Укажите стоимость тура">
+                      <label class="form__label"  for="price">Стоимость тура</label>
+                      <div class="flex__container">
+                        <input class="form__input  form__input--prices  form__input--1-2  dropdown-menu__button"
+                               id="prices-min__dropdown-menu--button"
+                               onclick="openDropdownMenu( event, 'prices__dropdown-menu--content-id', 'dropdown-menu__content' )"
+                               name="selection-prices-min"
+                               type="text"
+                               placeholder="7 ночей">
+                        <span>-</span>
+                        <input class="form__input  form__input--prices  form__input--1-2  dropdown-menu__button"
+                               id="prices-max__dropdown-menu--button"
+                               onclick="openDropdownMenu( event, 'prices__dropdown-menu--content-id', 'dropdown-menu__content' )"
+                               name="selection-prices-max"
+                               type="text"
+                               placeholder="14 ночей">
+                      </div>
                       <div class="dropdown-menu__wrapper">
                         <div id="prices__dropdown-menu--content-id" class="dropdown-menu__content  prices__dropdown-menu--content">
 
@@ -270,37 +304,54 @@
                     <div class="flex__container  flex__direction--column  flex__item--custom-width-160-0">
                       <label class="form__label"  for="hotel-stars">Категория отелей от</label>
 <!--                      todo: синхронизироать id для input и label-->
-                      <input class="form__input  form__input--hotels  dropdown-menu__button"
-                             id="hotels__dropdown-menu--button"
-                             onclick="openDropdownMenu( event, 'hotels__dropdown-menu--content-id', 'dropdown-menu__content' )"
-                             name="selection-hotels-stars"
-                             type="text"
-                             placeholder="Выберите уровень отеля">
+                      <input class="hide"  id="hotels__dropdown-menu--input"  name="selection-hotels-stars"  type="text">
+                      <div class="form__input  form__input--hotels  dropdown-menu__button"
+                           id="hotels__dropdown-menu--button"
+                           onclick="openDropdownMenu( event, 'hotels__dropdown-menu--content-id', 'dropdown-menu__content' )">
+                        <span>Выберите уровень отеля</span>
+                      </div>
                       <div class="dropdown-menu__wrapper">
                         <div id="hotels__dropdown-menu--content-id" class="dropdown-menu__content  hotels__dropdown-menu--content">
 
-                          <div class="rating  rating--5-stars">
+                          <div class="form__rating-hotels  flex__container  flex__justify-content--space-between">
+                          <div class="rating  rating--5-stars"
+                               id="rating--5-stars-id"
+                               onclick="addSelectElement( event, 'rating--5-stars-id', 'hotels__dropdown-menu--button' )">
 <!--                            JavaScript create stars-->
                             <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
                               <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
                             </svg>                            
                           </div>
+                          <a class="links  allign-middle  icons__wrapper" 
+                             href="#"
+                             onclick="removeSelectElement( event, 'hotels__dropdown-menu--content-id', 'dropdown-menu__content' )">
+                            <svg class="icons  icons__svg  icons__svg--rating-hotels" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
+                              <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
+                            </svg>
+                          </a>
+                          </div>
 
-                          <div class="rating  rating--4-stars">
+                          <div class="rating  rating--4-stars"
+                               id="rating--4-stars-id"
+                               onclick="addSelectElement( event, 'rating--4-stars-id', 'hotels__dropdown-menu--button' )">
 <!--                            JavaScript create stars-->
                             <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
                               <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
                             </svg>
                           </div>
 
-                          <div class="rating  rating--3-stars">
+                          <div class="rating  rating--3-stars"
+                               id="rating--3-stars-id"
+                               onclick="addSelectElement( event, 'rating--3-stars-id', 'hotels__dropdown-menu--button' )">
 <!--                            JavaScript create stars-->
                             <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
                               <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
                             </svg>
                           </div>
 
-                          <div class="rating  rating--2-stars">
+                          <div class="rating  rating--2-stars"
+                               id="rating--2-stars-id"
+                               onclick="addSelectElement( event, 'rating--2-stars-id', 'hotels__dropdown-menu--button' )">
 <!--                            JavaScript create stars-->
                             <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
                               <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
