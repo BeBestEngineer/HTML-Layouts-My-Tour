@@ -87,6 +87,18 @@
     @include font( $size: 15px);
   }
 
+
+
+
+  &__rating-hotels {
+    .icons__wrapper {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+
   /*Fonts ( end )*/
   /*Colors ( begin )*/
   &__button--submit {
@@ -106,6 +118,8 @@
   &__button--submit {
     border-radius: 4px;
   }
+
+
 
   /*Decorate ( end )*/
 
