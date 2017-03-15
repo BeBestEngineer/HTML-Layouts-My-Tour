@@ -90,11 +90,16 @@
 
 
 
-  &__rating-hotels {
+  &__rating-hotels-wrapper {
     .icons__wrapper {
       display: inline-block;
       width: 20px;
       height: 20px;
+    }
+
+    .hide {
+      display: none;
+      //todo: разобраться со стилями hide & show во всём документе
     }
   }
 
