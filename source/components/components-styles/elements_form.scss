@@ -104,6 +104,22 @@
   }
 
 
+  &__rating-hotels-number-wrapper {
+    //todo: сделать файл со стилями конкретных модулей - hotel-rating-stars, hotel-rating-number
+    .icons__wrapper {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+    }
+
+    .hide {
+      display: none;
+      //todo: разобраться со стилями hide & show во всём документе
+    }
+  }
+
+
+
   /*Fonts ( end )*/
   /*Colors ( begin )*/
   &__button--submit {
