@@ -1,17 +1,8 @@
 /*Set height for tabs-wrapper block*/
 (function () {
-	var i, tabcontent, tabcontentHeights = [], tabsWrapper;
 
+	recalculationTabHeight();
 
-	tabcontent  = document.getElementsByClassName("tabs__content");
-	tabsWrapper = document.getElementById("tabs-wrapper-id");
-
-
-	for (i = 0; i < tabcontent.length; i++) {
-		tabcontentHeights[i] = tabcontent[i].clientHeight;
-	}
-
-	tabsWrapper.style.height = getMaxOfArray(tabcontentHeights) + 'px';
 })();
 
 
