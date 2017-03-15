@@ -308,54 +308,94 @@
                       <div class="form__input  form__input--hotels  dropdown-menu__button"
                            id="hotels__dropdown-menu--button"
                            onclick="openDropdownMenu( event, 'hotels__dropdown-menu--content-id', 'dropdown-menu__content' )">
-                        <span>Выберите уровень отеля</span>
+                        <span id="hotels__dropdown-menu--placeholder-id">Выберите уровень отеля</span>
                       </div>
                       <div class="dropdown-menu__wrapper">
                         <div id="hotels__dropdown-menu--content-id" class="dropdown-menu__content  hotels__dropdown-menu--content">
 
-                          <div class="form__rating-hotels  flex__container  flex__justify-content--space-between">
-                          <div class="rating  rating--5-stars"
-                               id="rating--5-stars-id"
-                               onclick="addSelectElement( event, 'rating--5-stars-id', 'hotels__dropdown-menu--button' )">
-<!--                            JavaScript create stars-->
-                            <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
-                              <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
-                            </svg>                            
-                          </div>
-                          <a class="links  allign-middle  icons__wrapper" 
-                             href="#"
-                             onclick="removeSelectElement( event, 'hotels__dropdown-menu--content-id', 'dropdown-menu__content' )">
-                            <svg class="icons  icons__svg  icons__svg--rating-hotels" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
-                              <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
-                            </svg>
-                          </a>
-                          </div>
-
-                          <div class="rating  rating--4-stars"
-                               id="rating--4-stars-id"
-                               onclick="addSelectElement( event, 'rating--4-stars-id', 'hotels__dropdown-menu--button' )">
-<!--                            JavaScript create stars-->
-                            <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
-                              <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
-                            </svg>
+                          
+                          <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
+                               id="rating--5-wrapper-id"
+                               onclick="addSelectElement( event, 'rating--5-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--5-remove-button' )">
+                            <div class="rating  rating--5-stars"
+                                 id="rating--5-stars-id">
+  <!--                            JavaScript create stars-->
+                              <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
+                                <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
+                              </svg>
+                            </div>
+<!--                                    todo: разобраться с названиями классов и идентификаторов по БЭМ-->
+                            <button class="allign-middle  icons__wrapper  hide"
+                                    type="button"
+                                    id="rating--5-remove-button"
+                                    onclick="removeSelectElement( event, 'rating--5-wrapper-id', 'hotels__dropdown-menu--placeholder-id' )">
+                              <svg class="icons  icons__svg  icons__svg--rating-hotels" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
+                                <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
+                              </svg>
+                            </button>
                           </div>
 
-                          <div class="rating  rating--3-stars"
-                               id="rating--3-stars-id"
-                               onclick="addSelectElement( event, 'rating--3-stars-id', 'hotels__dropdown-menu--button' )">
-<!--                            JavaScript create stars-->
-                            <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
-                              <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
-                            </svg>
+
+                          <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
+                               id="rating--4-wrapper-id"
+                               onclick="addSelectElement( event, 'rating--4-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--4-remove-button' )">
+                            <div class="rating  rating--4-stars"
+                                 id="rating--4-stars-id">
+  <!--                            JavaScript create stars-->
+                              <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
+                                <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
+                              </svg>
+                            </div>
+                            <button class="allign-middle  icons__wrapper  hide"
+                                    type="button"
+                                    id="rating--4-remove-button"
+                                    onclick="removeSelectElement( event, 'rating--4-wrapper-id', 'hotels__dropdown-menu--placeholder-id' )">
+                              <svg class="icons  icons__svg  icons__svg--rating-hotels" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
+                                <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
+                              </svg>
+                            </button>
                           </div>
 
-                          <div class="rating  rating--2-stars"
-                               id="rating--2-stars-id"
-                               onclick="addSelectElement( event, 'rating--2-stars-id', 'hotels__dropdown-menu--button' )">
-<!--                            JavaScript create stars-->
-                            <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
-                              <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
-                            </svg>
+
+                          <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
+                               id="rating--3-wrapper-id"
+                               onclick="addSelectElement( event, 'rating--3-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--3-remove-button' )">
+                            <div class="rating  rating--3-stars"
+                                 id="rating--3-stars-id">
+  <!--                            JavaScript create stars-->
+                              <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
+                                <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
+                              </svg>
+                            </div>
+                            <button class="allign-middle  icons__wrapper  hide"
+                                    type="button"
+                                    id="rating--3-remove-button"
+                                    onclick="removeSelectElement( event, 'rating--3-wrapper-id', 'hotels__dropdown-menu--placeholder-id' )">
+                              <svg class="icons  icons__svg  icons__svg--rating-hotels" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
+                                <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
+                              </svg>
+                            </button>
+                          </div>
+
+
+                          <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
+                               id="rating--2-wrapper-id"
+                               onclick="addSelectElement( event, 'rating--2-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--2-remove-button' )">
+                            <div class="rating  rating--2-stars"
+                                 id="rating--2-stars-id">
+  <!--                            JavaScript create stars-->
+                              <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
+                                <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
+                              </svg>
+                            </div>
+                            <button class="allign-middle  icons__wrapper  hide"
+                                    type="button"
+                                    id="rating--2-remove-button"
+                                    onclick="removeSelectElement( event, 'rating--2-wrapper-id', 'hotels__dropdown-menu--placeholder-id' )">
+                              <svg class="icons  icons__svg  icons__svg--rating-hotels" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
+                                <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
+                              </svg>
+                            </button>
                           </div>
 
                         </div>
