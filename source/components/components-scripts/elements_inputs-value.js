@@ -8,7 +8,7 @@ function ChangeInputValueMore( e, inputId, outputId, textId ) {
     inputValue = inputValue*1 + 1;
     input.setAttribute( "value", inputValue );
 
-    setValuePassengers( input, inputValue, outputId, textId );
+    setValuePassengers( inputId, inputValue, outputId, textId );
   };
 };
 
@@ -29,7 +29,7 @@ function ChangeInputValueLess( e, inputId, outputId, textId ) {
     }
       inputValue = inputValue*1;
 
-    setValuePassengers( input, inputValue, outputId, textId );
+    setValuePassengers( inputId, inputValue, outputId, textId );
   };
 };
 
@@ -37,7 +37,7 @@ function ChangeInputValueLess( e, inputId, outputId, textId ) {
 
 
 
-function setValuePassengers( input, inputValue, outputId, textId ) {
+function setValuePassengers( inputId, inputValue, outputId, textId ) {
   //Поле в которое будет вставляться числовое значение
   var output = document.getElementById( outputId );
   //Поле в которое будет вставляться строка содержащая текст для родителей или детей
@@ -47,7 +47,7 @@ function setValuePassengers( input, inputValue, outputId, textId ) {
 
   text.innerHTML = '';
 
-  switch ( input.id ) {
+  switch ( inputId ) {
     case 'widget__passengers-range-parents--input':
       text.innerHTML = setTextPassengersParents( inputValue );
       break;
