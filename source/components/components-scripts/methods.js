@@ -12,21 +12,20 @@ function getMaxOfArray(arr) {
 
 function addSelectElement ( event, ratingWrapperId, placeholderId, ratingInputId, removeButtonId ) {
   var ratingWrapper              = document.getElementById( ratingWrapperId );
-  if ( document.getElementById( ratingWrapperId ) ) {
-    ratingWrapper.removeAttribute('id');
-    var ratingWrapperClone         = ratingWrapper.cloneNode( true );
-  }
-
+  var ratingWrapperClone         = ratingWrapper.cloneNode( true );
+  document.getElementById( removeButtonId ).removeAttribute('id');
   // Делаем копию рейтинга, при этом id тоже копируется и документ содержит уже два элемента с одним идентификатором для
   // обёртки и для кнопки
   // Пока элемент не вставлен на страницу то идентификатор по прежнему остаётся уникальным
 
-  var removeButton = document.getElementById( removeButtonId );
+
+
   // var removeButtonInWrapperClone = ratingWrapperClone.getElementById( removeButtonId );
 
+  ratingWrapperClone.removeAttribute('id');
 
   console.log( ratingWrapper );
-  console.log( removeButton );
+  console.log( ratingWrapperClone );
   // console.log( removeButtonInWrapperClone );
 
 
@@ -49,10 +48,12 @@ function addSelectElement ( event, ratingWrapperId, placeholderId, ratingInputId
    placeholder.classList.add('hide');
   }
 
+  ratingWrapper.removeAttribute('id');
 
-  removeButton.classList.remove('hide');
 
   ratingInput.appendChild( ratingWrapperClone );
+
+  document.getElementById( removeButtonId ).classList.remove('hide');
 }
 
 
