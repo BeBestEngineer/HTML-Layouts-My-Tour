@@ -206,6 +206,8 @@ html, body {
 
 
 .hide {
+  display: none;
+
   &__label {
     display: none;
   }
@@ -215,6 +217,15 @@ html, body {
 .show {
   display:block;
   opacity: 1;
+
+  &--block {
+    display:block;
+    opacity: 1;
+  }
+  &--inline-block {
+    display: inline-block;
+    opacity: 1;
+  }
 }
 //todo: сделать класс с opacity 0
 
