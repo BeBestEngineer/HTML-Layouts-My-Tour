@@ -60,7 +60,7 @@ function addSelectElement ( event, ratingWrapperId, placeholderId, ratingInputId
   document.getElementById( removeButtonId ).classList.remove('hide');
 
   //Пересчитываем высоту вкладки ( tab height )
-  recalculationTabHeight( ratingInput.offsetHeight );
+  recalculationTabHeight();
 }
 
 
@@ -80,6 +80,15 @@ function removeSelectElement( event, ratingWrapperId, placeholderId, ratingInput
 
 
 
-function recalculationTabHeight( inputHeight ) {
-  
+function recalculationTabHeight() {
+  var tabcontent  = document.getElementsByClassName("tabs__content");
+  var tabsWrapper = document.getElementById("tabs-wrapper-id");
+
+
+  var i, tabcontentHeights = [];
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontentHeights[i] = tabcontent[i].offsetHeight;
+  }
+
+  tabsWrapper.style.height = getMaxOfArray(tabcontentHeights) + 'px';
 }
