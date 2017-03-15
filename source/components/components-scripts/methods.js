@@ -11,7 +11,7 @@ function getMaxOfArray(arr) {
 
 
 function addSelectElement ( event, ratingWrapperId, placeholderId, ratingInputId, removeButtonId ) {
-  console.log( 'start addSelectElement' );
+  // console.log( 'start addSelectElement' );
   /*
    1. Пользвователь нажимает на выбранный рейтинг
    2. Скрипт проверяет виден ли placeholder, если виден то прячем - добавляем классс hide
@@ -47,16 +47,9 @@ function addSelectElement ( event, ratingWrapperId, placeholderId, ratingInputId
   var ratingWrapperIdInDropdown = ratingWrapperId + '-in-dropdown';
   ratingWrapper.setAttribute( 'id', ratingWrapperIdInDropdown );
 
-  //Запоминаем событие которое было установлено для item'a в dropdown и удаляем это событие из клона ( Часть 3/3 )
-  // var ratingWrapperIdEventInDropdown = ratingWrapper.getAttribute('onclick');
+  //Удаляем событие которое было установлено для item'a в dropdown из клона ( Часть 3/3 )
   ratingWrapperClone.removeAttribute('onclick');
-  // console.log( ratingWrapperIdEventInDropdown );
 
-
-  // addSelectElement.REMOVE_BUTTON_ID_IN_DROPDOWN        = removeButtonIdInDropdown;
-  // addSelectElement.RATING_WRAPPER_ID_IN_DROPDOWN       = ratingWrapperIdInDropdown;
-  // addSelectElement.RATING_WRAPPER_ID_EVENT_IN_DROPDOWN = ratingWrapperIdEventInDropdown;
-  
   
   //После удаления повторяющихся id вставляем клона
   ratingInput.appendChild( ratingWrapperClone );
@@ -76,31 +69,55 @@ function addSelectElement ( event, ratingWrapperId, placeholderId, ratingInputId
   recalculationTabHeight();
 }
 
-//ratingWrapperIdInDropdown, removeButtonIdInDropdown
 
-function removeSelectElement( event, ratingWrapperId, placeholderId, dropdownId ) {
-  var removeButton              = document.getElementById( event.target.id );
+
+
+
+function removeSelectElement( event, ratingWrapperId, placeholderId ) {
+  var removeButtonIdInDropdown  = event.target.id + '-in-dropdown';
   var ratingWrapperIdInDropdown = ratingWrapperId + '-in-dropdown';
+  var ratingWrapper             = document.getElementById( ratingWrapperId );
   var placeholder               = document.getElementById( placeholderId );
-  var dropdown                  = document.getElementById( dropdownId );
+  
 
 
-  console.log( ratingWrapperId );
+  var ratingWrapperInDropdown = document.getElementById( ratingWrapperIdInDropdown );
+  // console.log( ratingWrapperInDropdown );
+  ratingWrapperInDropdown.setAttribute('id', ratingWrapperId );
+  // console.log( ratingWrapperInDropdown );
 
-  var ratingWrapper
-
-  /*
-    1. Удаляем элемент из родителя
-    2. Заменяем id у обёртки и кнопки на оригинальные
-   */
-
-
-
+  var removeButtonInDropdown = document.getElementById( removeButtonIdInDropdown );
+  // console.log( removeButtonInDropdown );
+  removeButtonInDropdown.setAttribute('id', event.target.id );
+  // console.log( removeButtonInDropdown );
 
   ratingWrapper.parentNode.removeChild( ratingWrapper );
 
-  // recalculationTabHeight();
 
+
+
+  var placeholder = document.getElementById( placeholderId );
+  var ratingInput = document.getElementById( placeholder.parentNode.id );
+
+  //устанавливаем высоту для input, когда в нём есть рейтинг
+  ratingInput.style.minHeight = '';
+  ratingInput.style.height = '';
+
+  removeSelectElement.RATING_INPUT_ORIGINAL_HEIGHT = parseInt( getComputedStyle( ratingInput ).height, 10);
+
+  ratingInput.style.height = 'auto';
+
+  if ( ratingInput.offsetHeight < removeSelectElement.RATING_INPUT_ORIGINAL_HEIGHT ) {
+    ratingInput.style.height = removeSelectElement.RATING_INPUT_ORIGINAL_HEIGHT + 'px';
+  }
+
+
+  //показываем placeholder
+  if ( ratingInput.getElementsByClassName('form__rating-hotels-wrapper').length == 0 ) {
+    placeholder.classList.remove('hide');
+  }
+
+  recalculationTabHeight();
 }
 
 
