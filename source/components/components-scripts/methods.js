@@ -10,14 +10,14 @@ function getMaxOfArray(arr) {
 })();
 
 
-function addSelectElement ( event, ratingWrapperId, placeholderId, ratingInputId, removeButtonId ) {
+function addSelectElement ( event, ratingWrapperId, placeholderId, ratingInputId, removeButtonId, ratingContainerId ) {
   // console.log( 'start addSelectElement' );
   /*
    1. Пользвователь нажимает на выбранный рейтинг
    2. Скрипт проверяет виден ли placeholder, если виден то прячем - добавляем классс hide
    */
   var ratingInput                = document.getElementById( ratingInputId );
-
+  var ratingContainer            = document.getElementById( ratingContainerId );
 
   var placeholder                = document.getElementById( placeholderId );
   if ( !placeholder.classList.contains('hide') ) {
@@ -57,9 +57,10 @@ function addSelectElement ( event, ratingWrapperId, placeholderId, ratingInputId
 
   //снимаем фиксированную высоту с контейнеру куда вставился клон и устанавливаем минимальную выслоту
   //todo: т.к. используем flex то можно задавать высоту только  родителю для input, но тогда будут увеличиваться по высоте все input в родителе у которого меняется высота
-  var ratingInputBeforeAddtem = ratingInput.offsetHeight;
-  ratingInput.style.height = 'auto';
-  ratingInput.style.minHeight = ratingInputBeforeAddtem + 'px';
+  //т.к. элементы из dropdown могут вставляться в любой контейнер, т.е. такой контейнер нужно дополнительно объявить и определить.
+  var ratingInputBeforeAddtem = ratingContainer.offsetHeight;
+  ratingContainer.style.height = 'auto';
+  ratingContainer.style.minHeight = ratingInputBeforeAddtem + 'px';
 
 
   //показываем кнопку удаления
@@ -73,7 +74,7 @@ function addSelectElement ( event, ratingWrapperId, placeholderId, ratingInputId
 
 
 
-function removeSelectElement( event, ratingWrapperId, placeholderId ) {
+function removeSelectElement( event, ratingWrapperId, placeholderId, ratingWrapperClass ) {
   var removeButtonIdInDropdown  = event.target.id + '-in-dropdown';
   var ratingWrapperIdInDropdown = ratingWrapperId + '-in-dropdown';
   var ratingWrapper             = document.getElementById( ratingWrapperId );
@@ -94,8 +95,6 @@ function removeSelectElement( event, ratingWrapperId, placeholderId ) {
   ratingWrapper.parentNode.removeChild( ratingWrapper );
 
 
-
-
   var placeholder = document.getElementById( placeholderId );
   var ratingInput = document.getElementById( placeholder.parentNode.id );
 
@@ -113,7 +112,7 @@ function removeSelectElement( event, ratingWrapperId, placeholderId ) {
 
 
   //показываем placeholder
-  if ( ratingInput.getElementsByClassName('form__rating-hotels-wrapper').length == 0 ) {
+  if ( ratingInput.getElementsByClassName( ratingWrapperClass ).length == 0 ) {
     placeholder.classList.remove('hide');
   }
 
