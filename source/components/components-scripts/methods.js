@@ -10,38 +10,54 @@ function getMaxOfArray(arr) {
 })();
 
 
-function addSelectElement ( event, ratingWrapperId, placeholderId, ratingInputId ) {
+function addSelectElement ( event, ratingWrapperId, placeholderId, ratingInputId, removeButtonId ) {
+  var ratingWrapper              = document.getElementById( ratingWrapperId );
+
+  var ratingWrapperClone         = ratingWrapper.cloneNode( true );
+
+
+  var removeButton = document.getElementById( removeButtonId );
+
+  var placeholder                = document.getElementById( placeholderId );
+  var ratingInput                = document.getElementById( ratingInputId );
+
+
   /*
+  1. Пользвователь нажимает на выбранный рейтинг
+  2. Скрипт проверяет содержит ли контейнер выбранный рейтинг, если содержит, то выходим из функции
+                                                               если не содержит прячем placeholder
+   */
 
+  // console.log( ratingInput ); 
 
-
-  var rating      = document.getElementById( ratingId );
-  var ratingClone = rating.cloneNode( true );
-  var ratingInput = document.getElementById( ratingInputId );
-  var ratingInputText = ratingInput.getElementsByTagName( 'span' );
-
-
-  if ( ratingInput.contains( rating ) ) {
+  if ( ratingInput.contains( ratingWrapper ) ) {
+    //Чтобы не вставлялись копии уже вставленных ratingWrapper'ов
     return false;
   }
 
-  if ( ratingInputText ) {
-    //Если поле содержит плейсхолдер удаляем его - лучше скрыть через display:none
-    for ( i = 0; i < ratingInputText.length; i++ ) {
-      var ratingInputTextItem = ratingInputText[i];
-      //не надо искать по коллекции,  устаyjdb id для palceholder и обращайся к нему
-      ratingInput.removeChild( ratingInputTextItem );
-    }
+
+  if ( !placeholder.classList.contains('hide') ) {
+    //Если placeholderId виден
+   placeholder.classList.add('hide');
   }
 
-  ratingInput.appendChild( ratingClone );
-  */
+  ratingWrapper.removeAttribute('id');
+  removeButton.classList.remove('hide');
 
+  ratingInput.appendChild( ratingWrapperClone );
 }
 
 
 
-function removeSelectElement() {
-  
+function removeSelectElement( event, ratingWrapperId, placeholderId, ratingInputId ) {
+  var ratingWrapper      = document.getElementById( ratingWrapperId );
+  var placeholder        = document.getElementById( placeholderId );
+  var ratingInput        = document.getElementById( ratingInputId );
+
+
+  ratingWrapper.parentNode.removeChild( ratingWrapper );
+
+
+
 }
 
