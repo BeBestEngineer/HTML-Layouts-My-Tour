@@ -101,11 +101,22 @@ function removeCheckedElement( event, placeholderId, pillWrapperClass ) {
 
   //Получаем коллекцию после удаления пилюли в которой также находиться оригинальная скрытая пилюля
   var pillWrappersCollection = dropDownButton.getElementsByClassName( pillWrapperClass );
-  console.log( pillWrappersCollection );
 
+  var i;
+  var pillWrappersItemVisible = 0;
+  for ( i = 0; i < pillWrappersCollection.length; i++ ) {
+    //Получаем элемент коллекции
+    var pillWrappersItem = pillWrappersCollection[i];
 
+    //Считаем видимые элементы
+    if ( getComputedStyle( pillWrappersItem ).display !== 'none' ) {
+      pillWrappersItemVisible +=1;
+    }
+  }
 
+  if ( pillWrappersItemVisible === 0 ) {
+    placeholder.classList.remove('hide');
+  }
 
   recalculationTabHeight();
-
 }
