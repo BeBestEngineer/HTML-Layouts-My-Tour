@@ -6,7 +6,9 @@ function addCheckedElement( event, labelTextId, pillWrapperId, pillTextId, pillB
   // console.log( checkbox );
 
   if ( checkbox.checked ) {
-    //Запоинаем текст
+    //todo: Добавить проверку на существующие в контейнере пилюли
+
+    //Запоминаем текст
     var labelText = document.getElementById( labelTextId );
     //Ищем пилюлю
     var pillWrapper 					   = document.getElementById( pillWrapperId );
