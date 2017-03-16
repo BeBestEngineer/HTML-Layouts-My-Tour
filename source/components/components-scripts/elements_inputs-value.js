@@ -22,7 +22,7 @@ function ChangeInputValueLess( e, inputId, outputId, textId ) {
   if ( input && buttonLess ) {
     var inputValue = input.getAttribute("value");
 
-    if ( inputValue > 1 ) {
+    if ( inputValue > 0 ) {
       // console.log( inputValue );
       inputValue = inputValue*1 - 1;
       input.setAttribute( "value", inputValue );
