@@ -316,7 +316,7 @@
                           
                           <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
                                id="rating--5-wrapper-id"
-                               onclick="addSelectElement( event, 'rating--5-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--5-remove-button' )">
+                               onclick="addSelectElement( event, 'rating--5-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--5-remove-button', 'hotels__dropdown-menu--button' )">
                             <div class="rating  rating--5-stars"
                                  id="rating--5-stars-id">
   <!--                            JavaScript create stars-->
@@ -338,7 +338,7 @@
 
                           <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
                                id="rating--4-wrapper-id"
-                               onclick="addSelectElement( event, 'rating--4-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--4-remove-button' )">
+                               onclick="addSelectElement( event, 'rating--4-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--4-remove-button', 'hotels__dropdown-menu--button' )">
                             <div class="rating  rating--4-stars"
                                  id="rating--4-stars-id">
   <!--                            JavaScript create stars-->
@@ -359,7 +359,7 @@
 
                           <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
                                id="rating--3-wrapper-id"
-                               onclick="addSelectElement( event, 'rating--3-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--3-remove-button' )">
+                               onclick="addSelectElement( event, 'rating--3-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--3-remove-button', 'hotels__dropdown-menu--button' )">
                             <div class="rating  rating--3-stars"
                                  id="rating--3-stars-id">
   <!--                            JavaScript create stars-->
@@ -380,7 +380,7 @@
 
                           <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
                                id="rating--2-wrapper-id"
-                               onclick="addSelectElement( event, 'rating--2-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--2-remove-button' )">
+                               onclick="addSelectElement( event, 'rating--2-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--2-remove-button', 'hotels__dropdown-menu--button' )">
                             <div class="rating  rating--2-stars"
                                  id="rating--2-stars-id">
   <!--                            JavaScript create stars-->
@@ -428,7 +428,7 @@
 
                             <li class="flex__container  flex__justify-content--space-between  hotels-rating-list__item  form__rating-hotels-number-wrapper"
                                 id="hotel-rating--1.0-wrapper-id"
-                                onclick="addSelectElement( event, 'hotel-rating--1.0-wrapper-id' ,'hotels-rating__dropdown-menu--placeholder-id', 'hotels-rating-list', 'hotels-rating--1.0-remove-button' )">
+                                onclick="addSelectElement( event, 'hotel-rating--1.0-wrapper-id' ,'hotels-rating__dropdown-menu--placeholder-id', 'hotels-rating-list', 'hotels-rating--1.0-remove-button', 'hotels-rating__dropdown-menu--button' )">
                                 <div class="">
                                   <span class="hotels-rating-list__text">Не ниже</span>
                                   <svg class="allign-bottom  icons__svg  hotels-rating-list__icon" width="20" height="20" viewBox="0 0 24 24" >
@@ -451,7 +451,7 @@
 
                             <li class="flex__container  flex__justify-content--space-between  hotels-rating-list__item  form__rating-hotels-number-wrapper"
                                      id="hotel-rating--2.0-wrapper-id"
-                                     onclick="addSelectElement( event, 'hotel-rating--2.0-wrapper-id' ,'hotels-rating__dropdown-menu--placeholder-id', 'hotels-rating-list', 'hotels-rating--2.0-remove-button' )">
+                                     onclick="addSelectElement( event, 'hotel-rating--2.0-wrapper-id' ,'hotels-rating__dropdown-menu--placeholder-id', 'hotels-rating-list', 'hotels-rating--2.0-remove-button', 'hotels-rating__dropdown-menu--button' )">
                               <div class="">
                                 <span class="hotels-rating-list__text">Не ниже</span>
                                 <svg class="allign-bottom  icons__svg  hotels-rating-list__icon" width="20" height="20" viewBox="0 0 24 24" >
@@ -474,7 +474,7 @@
 
                             <li class="flex__container  flex__justify-content--space-between  hotels-rating-list__item  form__rating-hotels-number-wrapper"
                                 id="hotel-rating--3.0-wrapper-id"
-                                onclick="addSelectElement( event, 'hotel-rating--3.0-wrapper-id' ,'hotels-rating__dropdown-menu--placeholder-id', 'hotels-rating-list', 'hotels-rating--3.0-remove-button' )">
+                                onclick="addSelectElement( event, 'hotel-rating--3.0-wrapper-id' ,'hotels-rating__dropdown-menu--placeholder-id', 'hotels-rating-list', 'hotels-rating--3.0-remove-button', 'hotels-rating__dropdown-menu--button' )">
                               <div class="">
                                 <span class="hotels-rating-list__text">Не ниже</span>
                                 <svg class="allign-bottom  icons__svg  hotels-rating-list__icon" width="20" height="20" viewBox="0 0 24 24" >
@@ -497,7 +497,7 @@
 
                             <li class="flex__container  flex__justify-content--space-between  hotels-rating-list__item  form__rating-hotels-number-wrapper"
                                 id="hotel-rating--4.0-wrapper-id"
-                                onclick="addSelectElement( event, 'hotel-rating--4.0-wrapper-id' ,'hotels-rating__dropdown-menu--placeholder-id', 'hotels-rating-list', 'hotels-rating--4.0-remove-button' )">
+                                onclick="addSelectElement( event, 'hotel-rating--4.0-wrapper-id' ,'hotels-rating__dropdown-menu--placeholder-id', 'hotels-rating-list', 'hotels-rating--4.0-remove-button', 'hotels-rating__dropdown-menu--button' )">
                               <div class="">
                                 <span class="hotels-rating-list__text">Не ниже</span>
                                 <svg class="allign-bottom  icons__svg  hotels-rating-list__icon" width="20" height="20" viewBox="0 0 24 24" >
@@ -537,28 +537,48 @@
 
                           <ul>
                             <li>
-                              <label class="  ">
-                                <input class="nutrition__dropdown-menu-option" type="checkbox" name="nutrition-ro" >Room only
+                              <label class="custom-checkbox__label">
+                                <input class="nutrition__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="nutrition-room-only" >
+                                <span class="cr">
+                                  <i class="cr-icon custom-checkbox__icon"></i>
+                                </span>
+                                Room only
                               </label>
                             </li>
                             <li>
-                              <label class="">
-                                <input class="nutrition__dropdown-menu-option" type="checkbox" name="nutrition-bb" >Bed & breakfast
+                              <label class="custom-checkbox__label">
+                                <input class="nutrition__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="nutrition-bed-and-breakfast" >
+                                <span class="cr">
+                                  <i class="cr-icon custom-checkbox__icon"></i>
+                                </span>
+                                Bed & breakfast
                               </label>
                             </li>
                             <li>
-                              <label class="">
-                                <input class="nutrition__dropdown-menu-option" type="checkbox" name="nutrition-hb" >Half board
+                              <label class="custom-checkbox__label">
+                                <input class="nutrition__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="nutrition-half-board" >
+                                <span class="cr">
+                                  <i class="cr-icon custom-checkbox__icon"></i>
+                                </span>
+                                Half board
                               </label>
                             </li>
                             <li>
-                              <label class="">
-                                <input class="nutrition__dropdown-menu-option" type="checkbox" name="nutrition-fb" >Full board
+                              <label class="custom-checkbox__label">
+                                <input class="nutrition__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="nutrition-full-board" >
+                                <span class="cr">
+                                  <i class="cr-icon custom-checkbox__icon"></i>
+                                </span>
+                                Full board
                               </label>
                             </li>
                             <li>
-                              <label class="">
-                                <input class="nutrition__dropdown-menu-option" type="checkbox" name="nutrition-ai" >All inclusive
+                              <label class="custom-checkbox__label">
+                                <input class="nutrition__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="nutrition-all-inclusive" >
+                                <span class="cr">
+                                  <i class="cr-icon custom-checkbox__icon"></i>
+                                </span>
+                                All inclusive
                               </label>
                             </li>
                           </ul>
@@ -581,50 +601,86 @@
                           <div class="flex__container">
                             <ul>
                             <li>
-                              <label class="  ">
-                                <input class="location__dropdown-menu-option" type="checkbox" name="location-active" >Активный
+                              <label class="custom-checkbox__label  ">
+                                <input class="location__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="location-active" >
+                                <span class="cr">
+                                  <i class="cr-icon custom-checkbox__icon"></i>
+                                </span>
+                                Активный
                               </label>
                             </li>
                             <li>
-                              <label class="">
-                                <input class="location__dropdown-menu-option" type="checkbox" name="nutrition-calm" >Спокойный
+                              <label class="custom-checkbox__label">
+                                <input class="location__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="location-calm" >
+                                <span class="cr">
+                                  <i class="cr-icon custom-checkbox__icon"></i>
+                                </span>
+                                Спокойный
                               </label>
                             </li>
                             <li>
-                              <label class="">
-                                <input class="location__dropdown-menu-option" type="checkbox" name="nutrition-family" >Семейный
+                              <label class="custom-checkbox__label">
+                                <input class="location__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="location-family" >
+                                <span class="cr">
+                                  <i class="cr-icon custom-checkbox__icon"></i>
+                                </span>
+                                Семейный
                               </label>
                             </li>
                             <li>
-                              <label class="">
-                                <input class="location__dropdown-menu-option" type="checkbox" name="nutrition-health" >Здоровье
+                              <label class="custom-checkbox__label">
+                                <input class="location__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="location-health" >
+                                <span class="cr">
+                                  <i class="cr-icon custom-checkbox__icon"></i>
+                                </span>
+                                Здоровье
                               </label>
                             </li>
                             <li>
-                              <label class="">
-                                <input class="location__dropdown-menu-option" type="checkbox" name="nutrition-urban" >Городской
+                              <label class="custom-checkbox__label">
+                                <input class="location__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="location-urban" >
+                                <span class="cr">
+                                  <i class="cr-icon custom-checkbox__icon"></i>
+                                </span>
+                                Городской
                               </label>
                             </li>
                             <li>
-                              <label class="">
-                                <input class="location__dropdown-menu-option" type="checkbox" name="nutrition-beach" >Пляжный
+                              <label class="custom-checkbox__label">
+                                <input class="location__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="location-beach" >
+                                <span class="cr">
+                                  <i class="cr-icon custom-checkbox__icon"></i>
+                                </span>
+                                Пляжный
                               </label>
                             </li>
                           </ul>
                             <ul>
                               <li>
-                                <label class="  ">
-                                  <input class="location__dropdown-menu-option" type="checkbox" name="nutrition-line-1" >1-я линия
+                                <label class="custom-checkbox__label  ">
+                                  <input class="location__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="location-line-1" >
+                                  <span class="cr">
+                                  <i class="cr-icon custom-checkbox__icon"></i>
+                                </span>
+                                  1-я линия
                                 </label>
                               </li>
                               <li>
-                                <label class="  ">
-                                  <input class="location__dropdown-menu-option" type="checkbox" name="nutrition-line-2" >2-я линия
+                                <label class="custom-checkbox__label  ">
+                                  <input class="location__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="location-line-2" >
+                                  <span class="cr">
+                                  <i class="cr-icon custom-checkbox__icon"></i>
+                                </span>
+                                  2-я линия
                                 </label>
                               </li>
                               <li>
-                                <label class="  ">
-                                  <input class="location__dropdown-menu-option" type="checkbox" name="nutrition-line-3" >3-я линия
+                                <label class="custom-checkbox__label  ">
+                                  <input class="location__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="location-line-3" >
+                                  <span class="cr">
+                                  <i class="cr-icon custom-checkbox__icon"></i>
+                                </span>
+                                  3-я линия
                                 </label>
                               </li>
                             </ul>
