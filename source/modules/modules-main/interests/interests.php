@@ -401,7 +401,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="flex__container  flex__direction--column  flex__item--custom-width-185-0">
+                    <div class="flex__container  flex__direction--column  flex__item--custom-width-125-0">
                       <label class="form__label"  for="hotel-rating">Рейтинг TopHotels</label>
                       <!--
                       <input class="form__input  form__input--hotel-rating  dropdown-menu__button"
@@ -411,7 +411,7 @@
                              type="text"
                              placeholder="Рейтинг отеля">
                       -->
-                      <input class="hide"  id="hotel-rating__dropdown-menu--button"  name="selection-hotels-rating"  type="text">
+                      <input class="hide"  id="hotel-rating__dropdown-menu--input-button"  name="selection-hotels-rating"  type="text">
                       <div class="form__input  form__input--hotels-rating  dropdown-menu__button"
                            id="hotels-rating__dropdown-menu--button"
                            onclick="openDropdownMenu( event, 'hotel-rating__dropdown-menu--content-id', 'dropdown-menu__content' )">
@@ -524,61 +524,107 @@
                         </div>
                       </div>
                     </div>
-                    <div class="flex__container  flex__direction--column  flex__item--custom-width-125-0">
+
+
+                    <div class="flex__container  flex__direction--column  flex__item--custom-width-185-0">
                       <label class="form__label"  for="nutrition">Тип питания</label>
-                      <input class="form__input  form__input--nutrition  dropdown-menu__button"
-                             id="nutrition__dropdown-menu--button"
-                             onclick="openDropdownMenu( event, 'nutrition__dropdown-menu--content-id', 'dropdown-menu__content' )"
+                      <input class="hide"
+                             id=""
                              name="selection-nutrition"
                              type="text"
                              placeholder="Выберите питание">
+                      <div class="form__input  form__input--nutrition  dropdown-menu__button"
+                           id="nutrition__dropdown-menu--button"
+                           onclick="openDropdownMenu( event, 'nutrition__dropdown-menu--content-id', 'dropdown-menu__content' )">
+                        <span id="nutrition__dropdown-menu--placeholder-id">Выберите тип питания</span>
+                        <div id="nutrition-pills-container">
+
+
+<!--                          pills ( begin )-->
+                          <div class="pills__interests-form--nutrition  someClass  hide"
+                               id="pills__wrapper--nutrition-id">
+                            <span class="allign-middle" id="pills__text--nutrition-id">Nuttrition type</span>
+                            <button class="allign-middle  icons__wrapper"
+                                    type="button"
+                                    id="pills__button--nutrition-id"
+                                    onclick="removeCheckedElement( event, 'nutrition__dropdown-menu--placeholder-id', 'pills__interests-form--nutrition' )">
+                              <svg class="icons  icons__svg" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
+                                <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
+                              </svg>
+                            </button>
+                          </div>
+<!--                          pills ( end )-->
+
+                        </div>
+                      </div>
+
                       <div class="dropdown-menu__wrapper">
                         <div id="nutrition__dropdown-menu--content-id" class="dropdown-menu__content  nutrition__dropdown-menu--content">
 
                           <ul>
                             <li>
                               <label class="custom-checkbox__label">
-                                <input class="nutrition__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="nutrition-room-only" >
+                                <input class="nutrition__dropdown-menu-option  custom-checkbox__input"
+                                       id="nutrition-room-only--input-id"
+                                       onclick="addCheckedElement( event, 'nutrition-room-only--label-text-id', 'pills__wrapper--nutrition-id', 'pills__text--nutrition-id', 'pills__button--nutrition-id', 'nutrition__dropdown-menu--button', 'nutrition__dropdown-menu--placeholder-id' )"
+                                       type="checkbox"
+                                       name="nutrition-room-only" >
                                 <span class="cr">
                                   <i class="cr-icon custom-checkbox__icon"></i>
                                 </span>
-                                Room only
+                                <span id="nutrition-room-only--label-text-id">Room only</span>
                               </label>
                             </li>
                             <li>
                               <label class="custom-checkbox__label">
-                                <input class="nutrition__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="nutrition-bed-and-breakfast" >
+                                <input class="nutrition__dropdown-menu-option  custom-checkbox__input"
+                                       id="nutrition-bed-and-breakfast--input-id"
+                                       onclick="addCheckedElement( event, 'nutrition-bed-and-breakfast--label-text-id', 'pills__wrapper--nutrition-id', 'pills__text--nutrition-id', 'pills__button--nutrition-id', 'nutrition__dropdown-menu--button', 'nutrition__dropdown-menu--placeholder-id' )"
+                                       type="checkbox"
+                                       name="nutrition-bed-and-breakfast" >
                                 <span class="cr">
                                   <i class="cr-icon custom-checkbox__icon"></i>
                                 </span>
-                                Bed & breakfast
+                                <span id="nutrition-bed-and-breakfast--label-text-id">Bed &amp; breakfast</span>
                               </label>
                             </li>
                             <li>
                               <label class="custom-checkbox__label">
-                                <input class="nutrition__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="nutrition-half-board" >
+                                <input class="nutrition__dropdown-menu-option  custom-checkbox__input"
+                                       id="nutrition-half-board--input-id"
+                                       onclick="addCheckedElement( event, 'nutrition-half-board--label-text-id', 'pills__wrapper--nutrition-id', 'pills__text--nutrition-id', 'pills__button--nutrition-id', 'nutrition__dropdown-menu--button', 'nutrition__dropdown-menu--placeholder-id' )"
+                                       type="checkbox"
+                                       name="nutrition-half-board" >
                                 <span class="cr">
                                   <i class="cr-icon custom-checkbox__icon"></i>
                                 </span>
-                                Half board
+                                <span id="nutrition-half-board--label-text-id">Half board</span>
                               </label>
                             </li>
                             <li>
                               <label class="custom-checkbox__label">
-                                <input class="nutrition__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="nutrition-full-board" >
+                                <input class="nutrition__dropdown-menu-option  custom-checkbox__input"
+                                       id="nutrition-full-board--input-id"
+                                       onclick="addCheckedElement( event, 'nutrition-full-board--label-text-id', 'pills__wrapper--nutrition-id', 'pills__text--nutrition-id', 'pills__button--nutrition-id', 'nutrition__dropdown-menu--button', 'nutrition__dropdown-menu--placeholder-id' )"
+                                       type="checkbox"
+                                       name="nutrition-full-board" >
                                 <span class="cr">
                                   <i class="cr-icon custom-checkbox__icon"></i>
                                 </span>
-                                Full board
+                                <span id="nutrition-full-board--label-text-id">Full board</span>
                               </label>
                             </li>
                             <li>
                               <label class="custom-checkbox__label">
-                                <input class="nutrition__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="nutrition-all-inclusive" >
+                                <input class="nutrition__dropdown-menu-option  custom-checkbox__input"
+                                       id="nutrition-all-inclusive--input-id"
+                                       onclick="addCheckedElement( event, 'nutrition-all-inclusive--label-text-id', 'pills__wrapper--nutrition-id', 'pills__text--nutrition-id', 'pills__button--nutrition-id', 'nutrition__dropdown-menu--button', 'nutrition__dropdown-menu--placeholder-id' )"
+                                       type="checkbox"
+                                       name="nutrition-all-inclusive" >
                                 <span class="cr">
                                   <i class="cr-icon custom-checkbox__icon"></i>
                                 </span>
-                                All inclusive
+                                <span id="nutrition-all-inclusive--label-text-id">All inclusive</span>
                               </label>
                             </li>
                           </ul>
