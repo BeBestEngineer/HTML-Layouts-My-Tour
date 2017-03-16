@@ -57,7 +57,7 @@ function addCheckedElement( event, labelTextId, pillWrapperId, pillTextId, pillB
 
 
 
-function removeCheckedElement( event, placeholderId ) {
+function removeCheckedElement( event, placeholderId, pillWrapperClass ) {
 //todo: исправить названия js файлов по БЭМ
   /*
   При нажатии на кнопку удаления:
@@ -95,38 +95,15 @@ function removeCheckedElement( event, placeholderId ) {
 
 
   //показываем placeholder
-  var pillWrapperClass = pillWrapper.classList[0];
+  //Берём коллексию с элементами содержащими нужный класс
+  //В этой коллекции находим видимые элементы с нужным классом,
+  //если количество таких элементов равно 0 то показываем placeholder
+
+  //Получаем коллекцию после удаления пилюли в которой также находиться оригинальная скрытая пилюля
   var pillWrappersCollection = dropDownButton.getElementsByClassName( pillWrapperClass );
-
-  var i;
-  for ( i = 0; i < pillWrappersCollection.length; i++ ) {
-    var pillWrappersCollectionItem = pillWrappersCollection[i];
-    var visibleElementsCounter = 0;
-
-    console.log( getComputedStyle( pillWrapperCollectionItem ).display );
+  console.log( pillWrappersCollection );
 
 
-  }
-
-
-
-  function makeCounter() {
-    var currentCount = 0;
-
-    return function() {
-      return currentCount++;
-    };
-  }
-
-  var counter = makeCounter();
-
-
-  
-  // console.log( visibleElementsCounter );
-
-  if ( visibleElementsCounter === 0 ) {
-    placeholder.classList.remove('hide');
-  }
 
 
   recalculationTabHeight();
