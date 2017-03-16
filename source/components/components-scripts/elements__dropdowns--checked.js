@@ -17,11 +17,7 @@ function addCheckedElement( event, labelTextId, pillWrapperId, pillTextId, pillB
     // ratingWrapper.parentNode.removeChild( ratingWrapper );
     //Обрабатываем клона
     //Меняем id оболочки
-    // console.log( pillWrapperClone.id );
-    // console.log( event.target.id );
     pillWrapperClone.id = pillWrapperClone.id.slice( 0, 16 ) + event.target.id.slice( 0, -10 ) + event.target.id.slice( -3 );
-    // console.log( pillWrapperClone.id );
-    // console.log( '----------------------------------------------------' );
 
     var i;
     for (i = 0; i < pillWrapperClone.children.length; i++) {
@@ -29,21 +25,13 @@ function addCheckedElement( event, labelTextId, pillWrapperId, pillTextId, pillB
 
       if ( pillWrapperCloneChildren.id === pillTextId ) {
         //Меняем id текста
-        // console.log( pillWrapperCloneChildren.id );
-        // console.log( event.target.id );
         pillWrapperCloneChildren.id = pillWrapperCloneChildren.id.slice( 0, 13 ) + event.target.id.slice( 0, -10 ) + event.target.id.slice( -3 );
-        // console.log( pillWrapperCloneChildren.id );
-        // console.log( '----------------------------------------------------' );
         //Вставляем клону текст
         pillWrapperCloneChildren.innerHTML = labelText.innerHTML;
       }
       if ( pillWrapperCloneChildren.id === pillButtonId ) {
         //Меняем id кнопки
-        // console.log( pillWrapperCloneChildren.id );
-        // console.log( event.target.id );
         pillWrapperCloneChildren.id = pillWrapperCloneChildren.id.slice( 0, 15 ) + event.target.id.slice( 0, -10 ) + event.target.id.slice( -3 );
-        // console.log( pillWrapperCloneChildren.id );
-        // console.log( '----------------------------------------------------' );
       }
     }
 
@@ -85,9 +73,7 @@ function removeCheckedElement( event, placeholderId, pillWrapperClass ) {
 
 
   //Ищем checkbox
-  console.log( event.target.id );
   var checkBoxId = event.target.id.slice( 15, -3 ) + '--input-id';
-  console.log( checkBoxId );
   var checkBox = document.getElementById( checkBoxId );
   checkBox.checked = false;
 
