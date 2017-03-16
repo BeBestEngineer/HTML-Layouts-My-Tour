@@ -1,4 +1,4 @@
-function addSelectElement ( event, ratingWrapperId, placeholderId, ratingInputId, removeButtonId, ratingContainerId, checkboxClass ) {
+function addSelectElement ( event, ratingWrapperId, placeholderId, ratingInputId, removeButtonId, ratingContainerId, checkboxIdPattern ) {
 	//todo: исправить названия функций на addSelectedElement
 	// console.log( 'start addSelectElement' );
 	/*
@@ -59,33 +59,20 @@ function addSelectElement ( event, ratingWrapperId, placeholderId, ratingInputId
 	recalculationTabHeight();
 
 
-
 	//Активируем нужный checkbox
-	var ratingValue = ratingWrapperClone.id.slice( 8, -11 );
-	var ratingCheckboxCollection = document.getElementsByClassName( checkboxClass )
-	// console.log( ratingCheckboxCollection );
-
-	var i;
-	for ( i = 0; i < ratingCheckboxCollection.length; i++ ) {
-		var ratingCheckboxId = ratingCheckboxCollection[i].id;
-		console.log( ratingCheckboxId );
-
-		var j;
-		for ( j = 0; j < ratingCheckboxId.length; j++ ) {
-			var symbol = ratingCheckboxId[j];
-
-			if ( !isNaN( symbol ) && symbol*1 === ratingValue*1 ) {
-
-			}
-		}
-	}
+	//Узнаём количество звёзд
+	var ratingValue = ratingWrapperClone.id.slice( 8, -11 )*1;
+	var checkboxIdPart1= checkboxIdPattern.slice( 0, 13 );
+	var checkboxIdPart2= checkboxIdPattern.slice( -6 );
+	var checkbox = document.getElementById( checkboxIdPart1 + ratingValue + checkboxIdPart2 );
+	checkbox.checked = true;
 }
 
 
 
 
 
-function removeSelectElement( event, ratingWrapperId, placeholderId, ratingWrapperClass ) {
+function removeSelectElement( event, ratingWrapperId, placeholderId, ratingWrapperClass, checkboxIdPattern ) {
 	//todo: исправить названия функций на removeSelectedElement
 	var removeButtonIdInDropdown  = event.target.id + '-in-dropdown';
 	var ratingWrapperIdInDropdown = ratingWrapperId + '-in-dropdown';
@@ -128,5 +115,15 @@ function removeSelectElement( event, ratingWrapperId, placeholderId, ratingWrapp
 		placeholder.classList.remove('hide');
 	}
 
+	//Пересчитываем высоту вкладки ( tab height )
 	recalculationTabHeight();
+
+
+	//Деактивируем нужный checkbox
+	//Узнаём количество звёзд
+	var ratingValue = ratingWrapper.id.slice( 8, -11 )*1;
+	var checkboxIdPart1= checkboxIdPattern.slice( 0, 13 );
+	var checkboxIdPart2= checkboxIdPattern.slice( -6 );
+	var checkbox = document.getElementById( checkboxIdPart1 + ratingValue + checkboxIdPart2 );
+	checkbox.checked = false;
 }
