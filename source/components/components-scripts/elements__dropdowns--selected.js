@@ -1,4 +1,4 @@
-function addSelectElement ( event, ratingWrapperId, placeholderId, ratingInputId, removeButtonId, ratingContainerId ) {
+function addSelectElement ( event, ratingWrapperId, placeholderId, ratingInputId, removeButtonId, ratingContainerId, checkboxClass ) {
 	//todo: исправить названия функций на addSelectedElement
 	// console.log( 'start addSelectElement' );
 	/*
@@ -57,6 +57,28 @@ function addSelectElement ( event, ratingWrapperId, placeholderId, ratingInputId
 
 	//Пересчитываем высоту вкладки ( tab height )
 	recalculationTabHeight();
+
+
+
+	//Активируем нужный checkbox
+	var ratingValue = ratingWrapperClone.id.slice( 8, -11 );
+	var ratingCheckboxCollection = document.getElementsByClassName( checkboxClass )
+	// console.log( ratingCheckboxCollection );
+
+	var i;
+	for ( i = 0; i < ratingCheckboxCollection.length; i++ ) {
+		var ratingCheckboxId = ratingCheckboxCollection[i].id;
+		console.log( ratingCheckboxId );
+
+		var j;
+		for ( j = 0; j < ratingCheckboxId.length; j++ ) {
+			var symbol = ratingCheckboxId[j];
+
+			if ( !isNaN( symbol ) && symbol*1 === ratingValue*1 ) {
+
+			}
+		}
+	}
 }
 
 
