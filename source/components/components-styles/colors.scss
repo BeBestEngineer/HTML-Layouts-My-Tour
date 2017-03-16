@@ -20,3 +20,12 @@
     fill: $color-15-layout;
   }
 }
+
+
+/*Custom checkbox styles ( begin ) */
+.custom-checkbox {
+  &__label .cr {
+    border: 1px solid #a9a9a9;
+  }
+}
+/*Custom checkbox styles ( end ) */

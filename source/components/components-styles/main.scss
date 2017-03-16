@@ -3,6 +3,48 @@ html, body {
 }
 
 
+
+
+/*Custom checkbox styles ( begin ) */
+.custom-checkbox {
+  &__input {
+    display: none;
+  }
+  &__label {
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  &__label .cr {
+    position: relative;
+    display: inline-block;
+    //border-radius: .25em;
+    width: 1.0em;
+    height: 1.0em;
+    float: left;
+    margin-right: .5em;
+    top: 0.3em;
+  }
+  &__label .cr .cr-icon {
+    position: absolute;
+    top: 35%;
+    left: 10%;
+  }
+  &__icon::before {
+    content: " ";
+    position: relative;
+    bottom: 7px;
+    right: 1px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url("#{$icons-path}/check.svg") no-repeat;
+  }
+}
+/*Custom checkbox styles ( end ) */
+
+
+
+
 .icons {
   @include absolute_alignment;
   display: block;
@@ -234,3 +276,6 @@ html, body {
 .rating {
   cursor: pointer;
 }
+
+
+
