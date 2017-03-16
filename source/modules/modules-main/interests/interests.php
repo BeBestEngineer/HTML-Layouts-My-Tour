@@ -43,8 +43,6 @@
 
 
             <form action="" class="interests__form" method="post">
-
-
               <div class="form__container">
                 <div class="flex__container">
 
@@ -73,6 +71,8 @@
 
                 </div>
               </div>
+
+
 
 
               <div class="form__container">
@@ -118,6 +118,7 @@
                 </div>
               </div>
               
+
 
 
               <div class="form__container">
@@ -300,6 +301,8 @@
                   </div>
 
 
+
+
                   <div class="flex__container">
                     <div class="flex__container  flex__direction--column  flex__item--custom-width-160-0">
                       <label class="form__label"  for="hotel-stars">Категория отелей от</label>
@@ -401,6 +404,10 @@
                         </div>
                       </div>
                     </div>
+
+
+
+
                     <div class="flex__container  flex__direction--column  flex__item--custom-width-125-0">
                       <label class="form__label"  for="hotel-rating">Рейтинг TopHotels</label>
                       <!--
@@ -526,6 +533,8 @@
                     </div>
 
 
+
+
                     <div class="flex__container  flex__direction--column  flex__item--custom-width-185-0">
                       <label class="form__label"  for="nutrition">Тип питания</label>
                       <input class="hide"
@@ -632,14 +641,43 @@
                         </div>
                       </div>
                     </div>
+
+
+
+
                     <div class="flex__container  flex__direction--column  flex__item--custom-width-225-0">
                       <label class="form__label"  for="location">Расположение</label>
-                      <input class="form__input  form__input--location  dropdown-menu__button"
-                             id="location__dropdown-menu--button"
-                             onclick="openDropdownMenu( event, 'location__dropdown-menu--content-id', 'dropdown-menu__content' )"
+                      <input class="hide"
+                             id=""
                              name="selection-location"
                              type="text"
                              placeholder="Выберите расположение">
+                      <div class="form__input  form__input--location  dropdown-menu__button"
+                           id="location__dropdown-menu--button"
+                           onclick="openDropdownMenu( event, 'location__dropdown-menu--content-id', 'dropdown-menu__content' )">
+                        <span id="location__dropdown-menu--placeholder-id">Выберите расположение</span>
+                        <div id="location-pills-container">
+
+
+                          <!--                          pills ( begin )-->
+                          <div class="pills__interests-form--location  someClass  hide"
+                               id="pills__wrapper--location-id">
+                            <span class="allign-middle" id="pills__text--location-id">Location place</span>
+                            <button class="allign-middle  icons__wrapper"
+                                    type="button"
+                                    id="pills__button--location-id"
+                                    onclick="removeCheckedElement( event, 'location__dropdown-menu--placeholder-id', 'pills__interests-form--location' )">
+                              <svg class="icons  icons__svg" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
+                                <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
+                              </svg>
+                            </button>
+                          </div>
+                          <!--                          pills ( end )-->
+
+                        </div>
+                      </div>
+
+
                       <div class="dropdown-menu__wrapper">
                         <div id="location__dropdown-menu--content-id" class="dropdown-menu__content  location__dropdown-menu--content">
 
@@ -647,86 +685,122 @@
                           <div class="flex__container">
                             <ul>
                             <li>
-                              <label class="custom-checkbox__label  ">
-                                <input class="location__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="location-active" >
+                              <label class="custom-checkbox__label">
+                                <input class="location__dropdown-menu-option  custom-checkbox__input"
+                                       id="location-active--input-id"
+                                       onclick="addCheckedElement( event, 'location-active--label-text-id', 'pills__wrapper--location-id', 'pills__text--location-id', 'pills__button--location-id', 'location__dropdown-menu--button', 'location__dropdown-menu--placeholder-id' )"
+                                       type="checkbox"
+                                       name="location-active" >
                                 <span class="cr">
                                   <i class="cr-icon custom-checkbox__icon"></i>
                                 </span>
-                                Активный
+                                <span id="location-active--label-text-id">Активный</span>
                               </label>
                             </li>
                             <li>
                               <label class="custom-checkbox__label">
-                                <input class="location__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="location-calm" >
+                                <input class="location__dropdown-menu-option  custom-checkbox__input"
+                                       id="location-calm--input-id"
+                                       onclick="addCheckedElement( event, 'location-calm--label-text-id', 'pills__wrapper--location-id', 'pills__text--location-id', 'pills__button--location-id', 'location__dropdown-menu--button', 'location__dropdown-menu--placeholder-id' )"
+                                       type="checkbox"
+                                       name="location-calm" >
                                 <span class="cr">
                                   <i class="cr-icon custom-checkbox__icon"></i>
                                 </span>
-                                Спокойный
+                                <span id="location-calm--label-text-id">Спокойный</span>
                               </label>
                             </li>
                             <li>
                               <label class="custom-checkbox__label">
-                                <input class="location__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="location-family" >
+                                <input class="location__dropdown-menu-option  custom-checkbox__input"
+                                       id="location-family--input-id"
+                                       onclick="addCheckedElement( event, 'location-family--label-text-id', 'pills__wrapper--location-id', 'pills__text--location-id', 'pills__button--location-id', 'location__dropdown-menu--button', 'location__dropdown-menu--placeholder-id' )"
+                                       type="checkbox"
+                                       name="location-family" >
                                 <span class="cr">
                                   <i class="cr-icon custom-checkbox__icon"></i>
                                 </span>
-                                Семейный
+                                <span id="location-family--label-text-id">Семейный</span>
                               </label>
                             </li>
                             <li>
                               <label class="custom-checkbox__label">
-                                <input class="location__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="location-health" >
+                                <input class="location__dropdown-menu-option  custom-checkbox__input"
+                                       id="location-health--input-id"
+                                       onclick="addCheckedElement( event, 'location-health--label-text-id', 'pills__wrapper--location-id', 'pills__text--location-id', 'pills__button--location-id', 'location__dropdown-menu--button', 'location__dropdown-menu--placeholder-id' )"
+                                       type="checkbox"
+                                       name="location-health" >
                                 <span class="cr">
                                   <i class="cr-icon custom-checkbox__icon"></i>
                                 </span>
-                                Здоровье
+                                <span id="location-health--label-text-id">Здоровье</span>
                               </label>
                             </li>
                             <li>
                               <label class="custom-checkbox__label">
-                                <input class="location__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="location-urban" >
+                                <input class="location__dropdown-menu-option  custom-checkbox__input"
+                                       id="location-city--input-id"
+                                       onclick="addCheckedElement( event, 'location-city--label-text-id', 'pills__wrapper--location-id', 'pills__text--location-id', 'pills__button--location-id', 'location__dropdown-menu--button', 'location__dropdown-menu--placeholder-id' )"
+                                       type="checkbox"
+                                       name="location-city" >
                                 <span class="cr">
                                   <i class="cr-icon custom-checkbox__icon"></i>
                                 </span>
-                                Городской
+                                <span id="location-city--label-text-id">Городской</span>
                               </label>
                             </li>
                             <li>
                               <label class="custom-checkbox__label">
-                                <input class="location__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="location-beach" >
+                                <input class="location__dropdown-menu-option  custom-checkbox__input"
+                                       id="location-beachfront--input-id"
+                                       onclick="addCheckedElement( event, 'location-beachfront--label-text-id', 'pills__wrapper--location-id', 'pills__text--location-id', 'pills__button--location-id', 'location__dropdown-menu--button', 'location__dropdown-menu--placeholder-id' )"
+                                       type="checkbox"
+                                       name="location-beachfront" >
                                 <span class="cr">
                                   <i class="cr-icon custom-checkbox__icon"></i>
                                 </span>
-                                Пляжный
+                                <span id="location-beachfront--label-text-id">Пляжный</span>
                               </label>
                             </li>
                           </ul>
                             <ul>
                               <li>
-                                <label class="custom-checkbox__label  ">
-                                  <input class="location__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="location-line-1" >
-                                  <span class="cr">
+                                <label class="custom-checkbox__label">
+                                  <input class="location__dropdown-menu-option  custom-checkbox__input"
+                                         id="location-first-line--input-id"
+                                         onclick="addCheckedElement( event, 'location-first-line--label-text-id', 'pills__wrapper--location-id', 'pills__text--location-id', 'pills__button--location-id', 'location__dropdown-menu--button', 'location__dropdown-menu--placeholder-id' )"
+                                         type="checkbox"
+                                         name="location-first-line" >
+                                <span class="cr">
                                   <i class="cr-icon custom-checkbox__icon"></i>
                                 </span>
-                                  1-я линия
+                                  <span id="location-first-line--label-text-id">1-я линия</span>
                                 </label>
                               </li>
                               <li>
-                                <label class="custom-checkbox__label  ">
-                                  <input class="location__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="location-line-2" >
-                                  <span class="cr">
+                                <label class="custom-checkbox__label">
+                                  <input class="location__dropdown-menu-option  custom-checkbox__input"
+                                         id="location-second-line--input-id"
+                                         onclick="addCheckedElement( event, 'location-second-line--label-text-id', 'pills__wrapper--location-id', 'pills__text--location-id', 'pills__button--location-id', 'location__dropdown-menu--button', 'location__dropdown-menu--placeholder-id' )"
+                                         type="checkbox"
+                                         name="location-second-line" >
+                                <span class="cr">
                                   <i class="cr-icon custom-checkbox__icon"></i>
                                 </span>
-                                  2-я линия
+                                  <span id="location-second-line--label-text-id">2-я линия</span>
                                 </label>
                               </li>
                               <li>
-                                <label class="custom-checkbox__label  ">
-                                  <input class="location__dropdown-menu-option  custom-checkbox__input" type="checkbox" name="location-line-3" >
-                                  <span class="cr">
+                                <label class="custom-checkbox__label">
+                                  <input class="location__dropdown-menu-option  custom-checkbox__input"
+                                         id="location-third-line--input-id"
+                                         onclick="addCheckedElement( event, 'location-third-line--label-text-id', 'pills__wrapper--location-id', 'pills__text--location-id', 'pills__button--location-id', 'location__dropdown-menu--button', 'location__dropdown-menu--placeholder-id' )"
+                                         type="checkbox"
+                                         name="location-third-line" >
+                                <span class="cr">
                                   <i class="cr-icon custom-checkbox__icon"></i>
                                 </span>
-                                  3-я линия
+                                  <span id="location-third-line--label-text-id">3-я линия</span>
                                 </label>
                               </li>
                             </ul>
@@ -752,9 +826,13 @@
                       </button>
                     </div>
                   </div>
+
+
                 </div>
               </div>
             </form>
+
+
           </div>
         </div>
         <div class="tabs__content"                      id="selection-2">
