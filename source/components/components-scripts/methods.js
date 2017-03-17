@@ -27,3 +27,12 @@ function recalculationTabHeight() {
 
   tabsWrapper.style.height = getMaxOfArray(tabcontentHeights) + 'px';
 }
+
+
+
+
+
+function checkboxManager() {
+  
+  
+}
