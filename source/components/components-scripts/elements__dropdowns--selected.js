@@ -61,10 +61,14 @@ function addSelectElement ( event, ratingWrapperId, placeholderId, ratingInputId
 
 	//Активируем нужный checkbox
 	//Узнаём количество звёзд
-	var ratingValue = ratingWrapperClone.id.slice( 8, -11 )*1;
-	var checkboxIdPart1= checkboxIdPattern.slice( 0, 13 );
-	var checkboxIdPart2= checkboxIdPattern.slice( -6 );
-	var checkbox = document.getElementById( checkboxIdPart1 + ratingValue + checkboxIdPart2 );
+	var ratingValue = ratingWrapperClone.id.replace(/\D+/g,"");
+	console.log( ratingWrapperClone.id );
+	console.log( ratingValue );
+
+	var checkboxIdPart1= checkboxIdPattern.slice( 0, -1 );
+	console.log( checkboxIdPart1 );
+	
+	var checkbox = document.getElementById( checkboxIdPart1 + ratingValue );
 	checkbox.checked = true;
 }
 
@@ -121,7 +125,7 @@ function removeSelectElement( event, ratingWrapperId, placeholderId, ratingWrapp
 
 	//Деактивируем нужный checkbox
 	//Узнаём количество звёзд
-	var ratingValue = ratingWrapper.id.slice( 8, -11 )*1;
+	var ratingValue = parseInt( ratingWrapperClone.id.replace(/\D+/g,"") );
 	var checkboxIdPart1= checkboxIdPattern.slice( 0, 13 );
 	var checkboxIdPart2= checkboxIdPattern.slice( -6 );
 	var checkbox = document.getElementById( checkboxIdPart1 + ratingValue + checkboxIdPart2 );
