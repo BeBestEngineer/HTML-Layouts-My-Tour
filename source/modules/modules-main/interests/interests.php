@@ -79,6 +79,8 @@
 
                       </div>
                     </div>
+
+                    <?php require_once 'modules/modules-widgets/cities-modal-window/cities-modal-window.php'; ?>
                   </div>
 
 
@@ -103,9 +105,23 @@
                   <label class="form__label">Вы можете задать несколько стран или регионов для подборки</label>
                   <input class="form__input  form__input--regions" type="text" name="selection-regions" placeholder="Выберите регион мира и страну для добавления к подборке" value="Франция Германия">
 
-                <div class="flex__container  flex__direction--column  form__area">
-                  <span class="form__region-name">Европа</span>
-                  <div class="flex__container">
+                <div class="flex__container  flex__direction--column  form__area"
+                     id="regions-pills-container"><!--      область для placeholder и групп Регион-Страны              -->
+                  <div class="flex__container  flex__direction--column  form__area-group">
+                    <span class="form__region-name">Region name</span>
+                    <div class="flex__container">
+
+                      <div class="pill"></div>
+                      <div class="pill"></div>
+
+                    </div>
+                  </div>
+
+
+                  <div class="flex__container  flex__direction--column  form__area-group">
+  <span class="form__region-name">Европа</span>
+  <div class="flex__container">
+
                     <div    class="pills__interests-form--country">
                       <div class="image-wrapper  pills__image-wrapper  allign-middle">
                         <img class="image" src="/myTour.loc/source/images/flags/flag-france.png" alt="flag-france" >
@@ -130,15 +146,62 @@
                       </a>
                     </div>
 <!--                    -->
+  </div>
+</div>
+
+
+                  <div class="flex__container  flex__direction--column  form__area-group">
+                    <span class="form__region-name">Европа</span>
+                    <div class="flex__container">
+
+                      <div    class="pills__interests-form--country">
+                        <div class="image-wrapper  pills__image-wrapper  allign-middle">
+                          <img class="image" src="/myTour.loc/source/images/flags/flag-france.png" alt="flag-france" >
+                        </div>
+                        <span  class="allign-middle">Франция</span>
+                        <a class="links  allign-middle  icons__wrapper" href="#">
+                          <svg class="icons  icons__svg" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
+                            <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "/>
+                          </svg>
+                        </a>
+                      </div>
+                      <!--                    -->
+                      <div    class="pills__interests-form--country">
+                        <div class="image-wrapper  pills__image-wrapper  allign-middle">
+                          <img class="image" src="/myTour.loc/source/images/flags/flag-germany.png" alt="flag-germany" >
+                        </div>
+                        <span  class="allign-middle">Германия</span>
+                        <a class="links  allign-middle  icons__wrapper" href="#">
+                          <svg class="icons  icons__svg" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
+                            <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "/>
+                          </svg>
+                        </a>
+                      </div>
+                      <!--                    -->
+                    </div>
                   </div>
                 </div>
                 <div class="flex__container">                  
-                  <button class="buttons  buttons__interests-form--add" type="button">
+                  <button class="buttons  buttons__interests-form--add"
+                          id="regions__modal-window--button"                          
+                          type="button">
                     <span class="allign-middle">Добавить регион</span>
                   </button>
-                  <button class="buttons  buttons__interests-form--add" type="button">
+                  
+                  <?php require_once 'modules/modules-widgets/regions-modal-window/regions-modal-window.php'; ?>
+                  
+                  
+                  
+                  
+                  <button class="buttons  buttons__interests-form--add"
+                          id="form__add-country-button-id"
+                          onclick="addCountry( event )"
+                          type="button">
                     <span class="allign-middle">Добавить страну</span>
                   </button>
+                  
+                  <?php require_once 'modules/modules-widgets/countries-modal-window/countries-modal-windows.php'; ?>                  
+                  
                 </div>
               </div>
               
@@ -889,163 +952,6 @@
 
                 </div>
               </div>
-
-
-              <!-- The Modal -->
-              <div id="modal-windows__city-list" class="modal">
-
-                <!-- Modal content -->
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <span class="close">&times;</span>
-                  </div>
-                  <div class="">
-                    <ul>
-                      <li>
-                        <label class="custom-checkbox__label">
-                          <span id="cities-moscow--label-text-id">Москва</span>
-
-                          <input class="custom-checkbox__input"
-                                 id="cities-moscow--input-id"
-                                 onclick="addCheckedElement( event, 'cities-moscow--label-text-id', 'pills__wrapper--cities-id', 'pills__text--cities-id', 'pills__button--cities-id', 'cities__modal-window--button', 'cities__modal-window--placeholder-id' )"
-                                 type="checkbox"
-                                 name="cities-moscow" >
-                    <span class="cr">
-                      <i class="cr-icon custom-checkbox__icon"></i>
-                    </span>
-                        </label>
-                      </li>
-                      <li>
-                        <label class="custom-checkbox__label">
-                          <span id="cities-spb--label-text-id">Санкт-Петербург</span>
-
-                          <input class="custom-checkbox__input"
-                                 id="cities-spb--input-id"
-                                 onclick="addCheckedElement( event, 'cities-spb--label-text-id', 'pills__wrapper--cities-id', 'pills__text--cities-id', 'pills__button--cities-id', 'cities__modal-window--button', 'cities__modal-window--placeholder-id' )"
-                                 type="checkbox"
-                                 name="cities-spb" >
-                    <span class="cr">
-                      <i class="cr-icon custom-checkbox__icon"></i>
-                    </span>
-                        </label>
-                      </li>
-                      <li>
-                        <label class="custom-checkbox__label">
-                          <span id="cities-ekaterinburg--label-text-id">Екатеринбург</span>
-
-                          <input class="custom-checkbox__input"
-                                 id="cities-ekaterinburg--input-id"
-                                 onclick="addCheckedElement( event, 'cities-ekaterinburg--label-text-id', 'pills__wrapper--cities-id', 'pills__text--cities-id', 'pills__button--cities-id', 'cities__modal-window--button', 'cities__modal-window--placeholder-id' )"
-                                 type="checkbox"
-                                 name="cities-ekaterinburg" >
-                    <span class="cr">
-                      <i class="cr-icon custom-checkbox__icon"></i>
-                    </span>
-                        </label>
-                      </li>
-                      <li>
-                        <label class="custom-checkbox__label">
-                          <span id="cities-n-novgorod--label-text-id">Нижний Новгород</span>
-
-                          <input class="custom-checkbox__input"
-                                 id="cities-n-novgorod--input-id"
-                                 onclick="addCheckedElement( event, 'cities-n-novgorod--label-text-id', 'pills__wrapper--cities-id', 'pills__text--cities-id', 'pills__button--cities-id', 'cities__modal-window--button', 'cities__modal-window--placeholder-id' )"
-                                 type="checkbox"
-                                 name="cities-n-novgorod" >
-                    <span class="cr">
-                      <i class="cr-icon custom-checkbox__icon"></i>
-                    </span>
-                        </label>
-                      </li>
-                      <li>
-                        <label class="custom-checkbox__label">
-                          <span id="cities-krasnodar--label-text-id">Краснодар</span>
-
-                          <input class="custom-checkbox__input"
-                                 id="cities-krasnodar--input-id"
-                                 onclick="addCheckedElement( event, 'cities-krasnodar--label-text-id', 'pills__wrapper--cities-id', 'pills__text--cities-id', 'pills__button--cities-id', 'cities__modal-window--button', 'cities__modal-window--placeholder-id' )"
-                                 type="checkbox"
-                                 name="cities-krasnodar" >
-                    <span class="cr">
-                      <i class="cr-icon custom-checkbox__icon"></i>
-                    </span>
-                        </label>
-                      </li>
-                      <li>
-                        <label class="custom-checkbox__label">
-                          <span id="cities-tumen--label-text-id">Тюмень</span>
-
-                          <input class="custom-checkbox__input"
-                                 id="cities-tumen--input-id"
-                                 onclick="addCheckedElement( event, 'cities-tumen--label-text-id', 'pills__wrapper--cities-id', 'pills__text--cities-id', 'pills__button--cities-id', 'cities__modal-window--button', 'cities__modal-window--placeholder-id' )"
-                                 type="checkbox"
-                                 name="cities-tumen" >
-                    <span class="cr">
-                      <i class="cr-icon custom-checkbox__icon"></i>
-                    </span>
-                        </label>
-                      </li>
-                      <li>
-                        <label class="custom-checkbox__label">
-                          <span id="cities-omsk--label-text-id">Омск</span>
-
-                          <input class="custom-checkbox__input"
-                                 id="cities-omsk--input-id"
-                                 onclick="addCheckedElement( event, 'cities-omsk--label-text-id', 'pills__wrapper--cities-id', 'pills__text--cities-id', 'pills__button--cities-id', 'cities__modal-window--button', 'cities__modal-window--placeholder-id' )"
-                                 type="checkbox"
-                                 name="cities-omsk" >
-                    <span class="cr">
-                      <i class="cr-icon custom-checkbox__icon"></i>
-                    </span>
-                        </label>
-                      </li>
-                      <li>
-                        <label class="custom-checkbox__label">
-                          <span id="cities-nsk--label-text-id">Новосибирск</span>
-
-                          <input class="custom-checkbox__input"
-                                 id="cities-nsk--input-id"
-                                 onclick="addCheckedElement( event, 'cities-nsk--label-text-id', 'pills__wrapper--cities-id', 'pills__text--cities-id', 'pills__button--cities-id', 'cities__modal-window--button', 'cities__modal-window--placeholder-id' )"
-                                 type="checkbox"
-                                 name="cities-nsk" >
-                    <span class="cr">
-                      <i class="cr-icon custom-checkbox__icon"></i>
-                    </span>
-                        </label>
-                      </li>
-                      <li>
-                        <label class="custom-checkbox__label">
-                          <span id="cities-krasnoyarsk--label-text-id">Красноярск</span>
-
-                          <input class="custom-checkbox__input"
-                                 id="cities-krasnoyarsk--input-id"
-                                 onclick="addCheckedElement( event, 'cities-krasnoyarsk--label-text-id', 'pills__wrapper--cities-id', 'pills__text--cities-id', 'pills__button--cities-id', 'cities__modal-window--button', 'cities__modal-window--placeholder-id' )"
-                                 type="checkbox"
-                                 name="cities-krasnoyarsk" >
-                    <span class="cr">
-                      <i class="cr-icon custom-checkbox__icon"></i>
-                    </span>
-                        </label>
-                      </li>
-                      <li>
-                        <label class="custom-checkbox__label">
-                          <span id="cities-vladivostok--label-text-id">Владивосток</span>
-
-                          <input class="custom-checkbox__input"
-                                 id="cities-vladivostok--input-id"
-                                 onclick="addCheckedElement( event, 'cities-vladivostok--label-text-id', 'pills__wrapper--cities-id', 'pills__text--cities-id', 'pills__button--cities-id', 'cities__modal-window--button', 'cities__modal-window--placeholder-id' )"
-                                 type="checkbox"
-                                 name="cities-vladivostok" >
-                    <span class="cr">
-                      <i class="cr-icon custom-checkbox__icon"></i>
-                    </span>
-                        </label>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-              </div>
             </form>
 
 
@@ -1079,4 +985,3 @@
 
 
 
-javascript:void(0)
