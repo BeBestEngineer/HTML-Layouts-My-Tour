@@ -84,6 +84,7 @@
                   </div>
 
 
+                  <!--Submit button ( begin )-->
                   <div class="flex__container  flex__direction--row-reverse  flex__align-items--flex-end  flex__item--custom-width-2-0">
                     <button class="buttons  buttons__interests-form--submit" type="submit" name="Button_pressed">
                       <span class="allign-middle">Смотреть результаты</span>
@@ -94,6 +95,7 @@
                       </span>
                     </button>
                   </div>
+                  <!--Submit button ( end )-->
 
                 </div>
               </div>
@@ -103,88 +105,104 @@
 
               <div class="form__container">
                   <label class="form__label">Вы можете задать несколько стран или регионов для подборки</label>
-                  <input class="form__input  form__input--regions" type="text" name="selection-regions" placeholder="Выберите регион мира и страну для добавления к подборке" value="Франция Германия">
+<!--                  <input class="form__input  form__input--regions" type="text" name="selection-regions" placeholder="Выберите регион мира и страну для добавления к подборке" value="">-->
+                      <!--todo: заменить на группу input, наверное динамически надо генерировать-->
 
                 <div class="flex__container  flex__direction--column  form__area"
                      id="regions-pills-container"><!--      область для placeholder и групп Регион-Страны              -->
-                  <div class="flex__container  flex__direction--column  form__area-group">
-                    <span class="form__region-name">Region name</span>
-                    <div class="flex__container">
+                  <span id="regions__modal-window--placeholder-id">Нажмите кнопку "Добавить регион"</span>
 
-                      <div class="pill"></div>
-                      <div class="pill"></div>
+                  <!--                          pills ( begin )-->
+                  <!--todo: обернуть в рамку или выделить фоном-->
+                  <div class="pills__interests-form--regions  hide"
+                       id="pills__wrapper--regions-id">
+<!--
+                       При создании нужно менять id с учётом региона, чтобы id не дублировались
+                       Исходный id:                 pills__wrapper-regions-id
+                       id для конкретного региона:  pills__wrapper-regions--australia-and-oceania-id
+-->
+                    <span class="allign-middle" id="pills__text--regions-id">Region name</span>
+<!--
+                                                    При создании нужно менять id для текста с учётом региона, чтобы id не дублировались
+                                                    Исходный id:                 pills__text-regions-id
+                                                    id для конкретного региона:  pills__text-regions--australia-and-oceania-id
+-->
+                    <button class="allign-middle  icons__wrapper"
+                            type="button"
+                            id="pills__button--regions-id"
+                            onclick="removeCheckedElement( event, 'regions__modal-window--placeholder-id', 'pills__interests-form--regions' )">
+<!--                        меняем id-->
+                      <svg class="icons  icons__svg" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
+                        <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
+                      </svg>
+                    </button>
+
+
+                    <div id="regions__countries-container">
+
+                      <div class="pills__interests-form--country  hide"
+                           id="pills__wrapper--country-id">
+                        <div class="image-wrapper  pills__image-wrapper  allign-middle">
+                          <img class="image" src="/path to flag of country/" alt="flag-country-name" >
+                        </div>
+
+                        <span class="allign-middle" id="pills__text--regions-id">Country name</span>
+
+                        <button class="allign-middle  icons__wrapper"
+                                type="button"
+                                id="pills__button--regions-id"
+                                onclick="removeCheckedElement( event, 'regions__modal-window--placeholder-id', 'pills__interests-form--regions' )">
+                          <svg class="icons  icons__svg" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
+                            <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
+                          </svg>
+                        </button>
+                      </div>
 
                     </div>
                   </div>
+                  <!--                          pills ( end )-->
 
-
-                  <div class="flex__container  flex__direction--column  form__area-group">
-  <span class="form__region-name">Европа</span>
-  <div class="flex__container">
-
-                    <div    class="pills__interests-form--country">
-                      <div class="image-wrapper  pills__image-wrapper  allign-middle">
-                        <img class="image" src="/myTour.loc/source/images/flags/flag-france.png" alt="flag-france" >
-                      </div>
-                      <span  class="allign-middle">Франция</span>
-                      <a class="links  allign-middle  icons__wrapper" href="#">
-                        <svg class="icons  icons__svg" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
-                          <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "/>
-                        </svg>
-                      </a>
-                    </div>
-<!--                    -->
-                    <div    class="pills__interests-form--country">
-                      <div class="image-wrapper  pills__image-wrapper  allign-middle">
-                        <img class="image" src="/myTour.loc/source/images/flags/flag-germany.png" alt="flag-germany" >
-                      </div>
-                      <span  class="allign-middle">Германия</span>
-                      <a class="links  allign-middle  icons__wrapper" href="#">
-                        <svg class="icons  icons__svg" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
-                          <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "/>
-                        </svg>
-                      </a>
-                    </div>
-<!--                    -->
-  </div>
-</div>
-
-
-                  <div class="flex__container  flex__direction--column  form__area-group">
-                    <span class="form__region-name">Европа</span>
-                    <div class="flex__container">
-
-                      <div    class="pills__interests-form--country">
-                        <div class="image-wrapper  pills__image-wrapper  allign-middle">
-                          <img class="image" src="/myTour.loc/source/images/flags/flag-france.png" alt="flag-france" >
-                        </div>
-                        <span  class="allign-middle">Франция</span>
-                        <a class="links  allign-middle  icons__wrapper" href="#">
-                          <svg class="icons  icons__svg" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
-                            <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "/>
-                          </svg>
-                        </a>
-                      </div>
-                      <!--                    -->
-                      <div    class="pills__interests-form--country">
-                        <div class="image-wrapper  pills__image-wrapper  allign-middle">
-                          <img class="image" src="/myTour.loc/source/images/flags/flag-germany.png" alt="flag-germany" >
-                        </div>
-                        <span  class="allign-middle">Германия</span>
-                        <a class="links  allign-middle  icons__wrapper" href="#">
-                          <svg class="icons  icons__svg" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
-                            <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "/>
-                          </svg>
-                        </a>
-                      </div>
-                      <!--                    -->
-                    </div>
-                  </div>
                 </div>
+
+<!--                Buttons for add regions and countries-->
                 <div class="flex__container">                  
                   <button class="buttons  buttons__interests-form--add"
-                          id="regions__modal-window--button"                          
+                          id="regions__modal-window--button"
+                          onclick="addRegion( event )"
                           type="button">
+                    <!--
+                    Алгоритм добавления регионов и стран:
+                      Раздел 1. Когда нажимаем на "Добавить регион"
+                        1. Открывается модальное окно
+                        2. Выбираем нужный регион или несколько регионов
+                        3. Закрываем модальное окно ( нажимаем на "ок" или "крестик" в верхнем правом углу )
+                        4. Скрипт добавляет блоки-региона( пока пилюли ) в #regions-pills-container и устанавливает радиокнопку на первый регион ( делает первый регион активным )
+                           Пользователь может самостоятельно перемещать радиокнопку на нужный регион
+                           Радиокнопка как стандартный HTML элемент будет скрыта, но активный регион должен отличаться от неактивного ( background-color )
+                           /*Может лучше перенести кнопку добавить страну в блоки-региона( пока пилюли )???*/
+
+                          4.1. Добавление блоков региона
+                            4.1.1. Скрипт находит шаблон блока
+                            4.1.2. Клонирует блок
+                            4.1.3. меняет id для: блока-региона, названия региона( находится в span ), кнопки удаления региона
+
+                        5. Скрипт меняет id для кнопки "Добавить страну":
+                           Исходный id:                                               countries--country-name__modal-window-button
+                           id который устанавливает скрипт в зависимости от региона:  countries--australia-and-oceania__modal-window-button
+                                                                                      countries--asia__modal-window-button
+                                                                                      countries--america__modal-window-button
+                                                                                      countries--africa__modal-window-button
+                                                                                      countries--europe__modal-window-button
+                                                                                      countries--euroasia__modal-window-button
+                      Раздел 2. Когда нажимаем на "Добавить страну"
+                        1. Открывается модальное окно в зависимости  от установленного на кнопку id ( Раздел 1, пункт 5. )
+                        2. Выбираем нужные страны
+                        3. Закрываем модальное окно ( нажимаем на "ок" или "крестик" в верхнем правом углу )
+                        4. Скрипт добавляет пилюли для выбранных стран в #regions__countries-container
+
+                      Раздел 3. Когда переключаемся между блоками-регионов( пока пилюлями )
+                        1. Скрипт меняет id кнопки ( Раздел 1, пункт 5. )
+                    -->
                     <span class="allign-middle">Добавить регион</span>
                   </button>
                   
@@ -192,9 +210,9 @@
                   
                   
                   
-                  
+<!--                  После выбора региона поменять id кнопки для страны-->
                   <button class="buttons  buttons__interests-form--add"
-                          id="form__add-country-button-id"
+                          id="countries--country-name__modal-window-button"
                           onclick="addCountry( event )"
                           type="button">
                     <span class="allign-middle">Добавить страну</span>
