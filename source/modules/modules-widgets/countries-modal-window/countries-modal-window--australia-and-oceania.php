@@ -1,10 +1,10 @@
 <!-- The Modal -->
-<div id="modal-windows__regions-list--australia-and-oceania" class="modal">
+<div id="modal-windows__regions--australia-and-oceania-list" class="modal">
 
   <!-- Modal content -->
   <div class="modal-content">
     <div class="modal-header">
-      <span class="close">&times;</span>
+      <span class="close"  id="countries--australia-and-oceania__modal-window-close-button">&times;</span>
     </div>
     <div class="">
       <ul>
