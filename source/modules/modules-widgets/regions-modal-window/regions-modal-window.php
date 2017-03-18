@@ -4,7 +4,7 @@
   <!-- Modal content -->
   <div class="modal-content">
     <div class="modal-header">
-      <span class="close">&times;</span>
+      <span class="close" id="regions__modal-window--close-button">&times;</span>
     </div>
     <div class="">
       <ul>
