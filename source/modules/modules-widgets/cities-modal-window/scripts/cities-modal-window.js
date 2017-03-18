@@ -5,7 +5,7 @@
 	var btn = document.getElementById("cities__modal-window--button");
 
 // Get the <span> element that closes the modal
-	var span = document.getElementsByClassName("close")[0];
+	var span = document.getElementById("cities__modal-window--close-button");
 
 // When the user clicks the button, open the modal
 	btn.onclick = function() {
@@ -18,11 +18,16 @@
 	}
 
 // When the user clicks anywhere outside of the modal, close it
+	/*
 	window.onclick = function(event) {
+		console.log( event.target );
+		console.log( modal );
+
 		if (event.target == modal) {
 			modal.style.display = "none";
 		}
-	}
+	};
+	 */
 
 	//todo: добавить дерево городов
 	var cities = {

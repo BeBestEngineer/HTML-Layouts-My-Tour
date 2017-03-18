@@ -1,3 +1,4 @@
+
 (function () {
 	var modal = document.getElementById('modal-windows__regions-list');
 
@@ -5,7 +6,7 @@
 	var btn = document.getElementById("regions__modal-window--button");
 
 // Get the <span> element that closes the modal
-	var span = document.getElementsByClassName("close")[0];
+	var span = document.getElementById("regions__modal-window--close-button");
 
 // When the user clicks the button, open the modal
 	btn.onclick = function() {
@@ -18,11 +19,17 @@
 	}
 
 // When the user clicks anywhere outside of the modal, close it
+	/*
 	window.onclick = function(event) {
+		// console.log( 'Regions - ' + event.target );
+		// console.log( 'Regions - ' + modal );
+//todo: onclick для cities перезаписывается???
+
 		if (event.target == modal) {
 			modal.style.display = "none";
 		}
-	}
+	};
+	*/
 })();
 
 
