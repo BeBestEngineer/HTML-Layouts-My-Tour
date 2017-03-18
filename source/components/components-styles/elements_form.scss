@@ -47,6 +47,13 @@
     padding: 15px;
     border-radius: 2px;
   }
+  &__area-group {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
   &__button--submit {
     height: 50px;
     padding: 0 15px;
