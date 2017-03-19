@@ -38,7 +38,8 @@ function addRegion( event, labelTextId, pillWrapperId, pillTextId, pillButtonId,
 
 		// Если не существует кнопка с исходным id, то
 		// перезаписываем id добавленного региона на id региона который добавляем
-		document.querySelector( '[data-first-level-dependent-button-id]' ).id = FirstLevelDependentButtonNewId;
+
+		document.querySelector( '[data-first-level-dependent-button-id=' + FirstLevelDependentButtonId + ']' ).id = FirstLevelDependentButtonNewId;
 
 
 	addCheckedElement( event, labelTextId, pillWrapperId, pillTextId, pillButtonId, dropdownButtonId, placeholderId );
