@@ -28,21 +28,17 @@
 function addRegion( event, labelTextId, pillWrapperId, pillTextId, pillButtonId, dropdownButtonId, placeholderId, FirstLevelDependentButtonId ) {
 
 	var FirstLevelDependentButtonNewId = FirstLevelDependentButtonId.slice(0, 11) + labelTextId.slice(8, -15) + FirstLevelDependentButtonId.slice(-21);
-	// console.log( FirstLevelDependentButtonNewId );
+	console.log( FirstLevelDependentButtonId );
+	console.log( FirstLevelDependentButtonNewId );
 
 	if ( document.getElementById( FirstLevelDependentButtonId ) ) {
 		//Если существует кнопка с исходным id, то меняем на id соответствующего региона
 		document.getElementById(FirstLevelDependentButtonId).id = FirstLevelDependentButtonNewId;
-
-		// и записываем id установленного региона в свойство функции, чтобы при добавлении нового региона можно было найти кнопку для добавления стран и перезаписать ей id
-		addRegion.FIRST_LEVEL_DEPENDENT_BUTTON_NEW_ID = FirstLevelDependentButtonNewId;
 	}
 
-	// if ( !document.getElementById( FirstLevelDependentButtonId ) ) {
-		//Если не существует кнопка с исходным id, то
-		//Перезаписываем id добавленного региона на id региона который добавляем
-		document.getElementById( addRegion.FIRST_LEVEL_DEPENDENT_BUTTON_NEW_ID ).id = FirstLevelDependentButtonNewId;
-	// }
+		// Если не существует кнопка с исходным id, то
+		// перезаписываем id добавленного региона на id региона который добавляем
+		document.querySelector( '[data-first-level-dependent-button-id]' ).id = FirstLevelDependentButtonNewId;
 
 
 	addCheckedElement( event, labelTextId, pillWrapperId, pillTextId, pillButtonId, dropdownButtonId, placeholderId );
@@ -59,6 +55,7 @@ function removeRegion ( event, placeholderId, pillWrapperClass ) {
 
 
 
-function addCountry() {
-	console.log('addCountry log');
+function addCountry( event ) {
+
+	openModal( event );
 }
