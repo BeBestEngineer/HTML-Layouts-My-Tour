@@ -1,36 +1,103 @@
-
+//australia-and-oceania
 (function () {
-	var modalWindowId, buttonForOpenWindowId, buttonForCloseWindowId;
-	
-	var modal = document.getElementById( modalWindowId );
+	var modal = document.getElementById( 'modal-windows__regions--australia-and-oceania-list' );
 
 // Get the button that opens the modal
-	var btn = document.getElementById( buttonForOpenWindowId );
+	var btn = document.getElementById( 'countries--australia-and-oceania__modal-window-button' );
 
 // Get the <span> element that closes the modal
-	var span = document.getElementById( buttonForCloseWindowId );
+	var span = document.getElementById( 'countries--australia-and-oceania__modal-window-close-button' );
 
-	if ( btn && span ) {
-	// When the user clicks the button, open the modal
+	if ( btn && modal && span ) {
+		// When the user clicks the button, open the modal
 		btn.onclick = function() {
 			modal.style.display = "block";
 		}
 
-	// When the user clicks on <span> (x), close the modal
+		// When the user clicks on <span> (x), close the modal
 		span.onclick = function() {
 			modal.style.display = "none";
 		}
 	}
-// When the user clicks anywhere outside of the modal, close it
-	/*
-	window.onclick = function(event) {
-		// console.log( 'countries - ' + event.target );
-		// console.log( 'countries - ' + modal );
-//todo: onclick для cities перезаписывается, поэтому не закрываются dropdowsn
+})();
 
-		if (event.target == modal) {
+
+
+
+//asia
+(function () {
+	var modal = document.getElementById( 'modal-windows__regions--asia-list' );
+
+// Get the button that opens the modal
+	var btn = document.getElementById( 'countries--asia__modal-window-button' );
+
+// Get the <span> element that closes the modal
+	var span = document.getElementById( 'countries--asia__modal-window-close-button' );
+
+	if ( btn && modal && span ) {
+		// When the user clicks the button, open the modal
+		btn.onclick = function() {
+			modal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
 			modal.style.display = "none";
 		}
-	};
-	*/
+	}
+})();
+
+
+
+
+//america
+(function () {
+	var modal = document.getElementById( 'modal-windows__regions--america-list' );
+
+// Get the button that opens the modal
+	var btn = document.getElementById( 'countries--america__modal-window-button' );
+
+// Get the <span> element that closes the modal
+	var span = document.getElementById( 'countries--america__modal-window-close-button' );
+
+
+
+	if ( btn && modal && span ) {
+		// When the user clicks the button, open the modal
+		btn.onclick = function() {
+			modal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+			modal.style.display = "none";
+		}
+	}
+})();
+
+
+
+
+
+//africa
+(function () {
+	var modal = document.getElementById( 'modal-windows__regions--africa-list' );
+
+// Get the button that opens the modal
+	var btn = document.getElementById( 'countries--africa__modal-window-button' );
+
+// Get the <span> element that closes the modal
+	var span = document.getElementById( 'countries--africa__modal-window-close-button' );
+
+	if ( btn && modal && span ) {
+		// When the user clicks the button, open the modal
+		btn.onclick = function() {
+			modal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+			modal.style.display = "none";
+		}
+	}
 })();
