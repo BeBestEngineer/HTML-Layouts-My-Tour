@@ -1,5 +1,5 @@
 <!-- The Modal -->
-<div id="modal-windows__countries--africa-list" class="modal">
+<div id="modal-windows__regions--africa-list" class="modal">
 
   <!-- Modal content -->
   <div class="modal-content">
