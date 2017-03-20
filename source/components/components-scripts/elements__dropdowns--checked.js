@@ -4,7 +4,6 @@ function addCheckedElement( event, labelTextId, pillWrapperId, pillTextId, pillB
   var placeholder = document.getElementById( placeholderId );
 
   var checkbox = document.getElementById( event.target.id );
-  // console.log( checkbox );
 
   if ( checkbox.checked ) {
     //todo: Добавить проверку на существующие в контейнере пилюли
@@ -16,8 +15,6 @@ function addCheckedElement( event, labelTextId, pillWrapperId, pillTextId, pillB
     var pillWrapper 					   = document.getElementById( pillWrapperId );
     //Делаем клона
     var pillWrapperClone         = pillWrapper.cloneNode( true );
-    console.log( countriesPillsContainerId );
-    console.log( pillWrapperClone );
 
     //Обрабатываем клона
     //Меняем id оболочки
@@ -39,10 +36,6 @@ function addCheckedElement( event, labelTextId, pillWrapperId, pillTextId, pillB
       }
       if ( pillWrapperCloneChildren.id === countriesPillsContainerId ) {
         //Меняем id контейнера для внутренних пилюль, если такой есть
-        // console.log( countriesPillsContainerId.slice( 0, 11 ) );
-        // console.log( labelTextId.slice( 8, -15 ) );
-        // console.log( countriesPillsContainerId.slice( -16 ) );
-
         pillWrapperCloneChildren.id = countriesPillsContainerId.slice( 0, 11 ) + labelTextId.slice( -15 ) + countriesPillsContainerId.slice( -16 );
         console.log( pillWrapperCloneChildren.id );
       }
@@ -57,8 +50,7 @@ function addCheckedElement( event, labelTextId, pillWrapperId, pillTextId, pillB
     //Показываем клона
     pillWrapperClone.classList.remove('hide');
     //Вставляем клона
-    console.log( pillWrapper );
-    pillWrapper.parentNode.appendChild( pillWrapperClone );
+    dropdownButton.appendChild( pillWrapperClone );
 
     //снимаем фиксированную высоту с контейнера
     var containerHeightBeforeAddItem = dropdownButton.offsetHeight;
