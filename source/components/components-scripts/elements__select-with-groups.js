@@ -25,25 +25,19 @@
 
 
 
-function addRegion( event, labelTextId, pillWrapperId, pillTextId, pillButtonId, dropdownButtonId, placeholderId, FirstLevelDependentButtonId ) {
+function addRegion( event, labelTextId, pillWrapperId, pillTextId, pillButtonId, dropdownButtonId, placeholderId, FirstLevelDependentButtonId, countriesPillsContainerId ) {
 
+	addCheckedElement( event, labelTextId, pillWrapperId, pillTextId, pillButtonId, dropdownButtonId, placeholderId, countriesPillsContainerId );
+
+	//Создаём новый id для кнопки "Добавления страны" для соответствующего региона
 	var FirstLevelDependentButtonNewId = FirstLevelDependentButtonId.slice(0, 11) + labelTextId.slice(8, -15) + FirstLevelDependentButtonId.slice(-21);
-	console.log( FirstLevelDependentButtonId );
-	console.log( FirstLevelDependentButtonNewId );
 
-	if ( document.getElementById( FirstLevelDependentButtonId ) ) {
-		//Если существует кнопка с исходным id, то меняем на id соответствующего региона
-		document.getElementById(FirstLevelDependentButtonId).id = FirstLevelDependentButtonNewId;
-	}
+	// перезаписываем id добавленного региона на id региона который добавляем
+	document.querySelector( '[data-first-level-dependent-button-id=' + FirstLevelDependentButtonId + ']' ).id = FirstLevelDependentButtonNewId;
 
-		// Если не существует кнопка с исходным id, то
-		// перезаписываем id добавленного региона на id региона который добавляем
-
-		document.querySelector( '[data-first-level-dependent-button-id=' + FirstLevelDependentButtonId + ']' ).id = FirstLevelDependentButtonNewId;
-
-
-	addCheckedElement( event, labelTextId, pillWrapperId, pillTextId, pillButtonId, dropdownButtonId, placeholderId );
 }
+
+
 
 
 function removeRegion ( event, placeholderId, pillWrapperClass ) {
