@@ -1,7 +1,7 @@
 function openModal( event ) {
 	console.log( event.target.id );
 
-	var modal = document.getElementById( 'modal-windows__regions--' + event.target.id.slice( 11, -21 ) + '-list' );
+	var modal = document.getElementById( 'modal-windows__countries--' + event.target.id.slice( 11, -21 ) + '-list' );
 
 	var span = document.getElementById( 'countries--' + event.target.id.slice( 11, -21 ) + '__modal-window-close-button' );
 
