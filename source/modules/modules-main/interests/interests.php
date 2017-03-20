@@ -11,6 +11,7 @@
           <div class="flex__container  flex__item--custom-width-1-0  tabs__titles-wrapper">
             <a class="links  tabs__title  active"  href="javascript:void(0)"  onclick="openTab(event, 'selection-1')">
               Подборка
+<!--              Хранить состояния вкладок после отправки форм можно в local storage-->
               <span class="tabs__title-marker--bottom"></span>
             </a>
             <a class="links  tabs__title"          href="javascript:void(0)"  onclick="openTab(event, 'selection-2')">
@@ -114,6 +115,7 @@
 
                   <!--                          pills ( begin )-->
                   <!--todo: обернуть в рамку или выделить фоном-->
+                  <!--скрытая пилюля региона для клонирования-->
                   <div class="pills__interests-form--regions  hide"
                        id="pills__wrapper--regions-id">
 <!--
@@ -130,27 +132,33 @@
                     <button class="allign-middle  icons__wrapper"
                             type="button"
                             id="pills__button--regions-id"
-                            onclick="removeCheckedElement( event, 'regions__modal-window--placeholder-id', 'pills__interests-form--regions' )">
+                            onclick="removeRegion( event, 'regions__modal-window--placeholder-id', 'pills__interests-form--regions' )">
 <!--                        меняем id-->
                       <svg class="icons  icons__svg" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
                         <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
                       </svg>
                     </button>
 
-
-                    <div id="regions__countries-container">
-
+                    <!--контейнер для пилюль стран-->
+                    <div id="countries--pills-container">
+<!--
+                         при добавлении региона поменять id с учётом региона:  countries--australia-and-oceania-pills-container
+-->
+                      <!--скрытая пилюля страны для клонирования-->
                       <div class="pills__interests-form--country  hide"
-                           id="pills__wrapper--country-id">
+                           id="pills__wrapper--countries-id">
+<!--                       при добавлении региона нужно менять id  pills__wrapper--countries-africa-id-->
                         <div class="image-wrapper  pills__image-wrapper  allign-middle">
-                          <img class="image" src="/path to flag of country/" alt="flag-country-name" >
+                          <img class="image" src="icons/flags/" alt="flag-country-name" >
                         </div>
 
-                        <span class="allign-middle" id="pills__text--regions-id">Country name</span>
+<!--                                                при добавлении региона нужно менять id  pills__text--countries-africa-id-->
+                        <span class="allign-middle" id="pills__text--countries-id">Country name</span>
 
+<!--                            при добавлении региона нужно менять id  pills__button--countries-africa-id-->
                         <button class="allign-middle  icons__wrapper"
                                 type="button"
-                                id="pills__button--regions-id"
+                                id="pills__button--countries-id"
                                 onclick="removeCheckedElement( event, 'regions__modal-window--placeholder-id', 'pills__interests-form--regions' )">
                           <svg class="icons  icons__svg" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
                             <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
@@ -168,7 +176,7 @@
                 <div class="flex__container">                  
                   <button class="buttons  buttons__interests-form--add"
                           id="regions__modal-window--button"
-                          onclick="addRegion( event )"
+                          
                           type="button">
                     <!--
                     Алгоритм добавления регионов и стран:
@@ -211,8 +219,10 @@
                   
                   
 <!--                  После выбора региона поменять id кнопки для страны-->
+<!--                  onclick="addCountry( event )"-->
                   <button class="buttons  buttons__interests-form--add"
-                          id="countries--country-name__modal-window-button"
+                          id=  "countries--country-name__modal-window-button"
+                          data-first-level-dependent-button-id="countries--country-name__modal-window-button"
                           onclick="addCountry( event )"
                           type="button">
                     <span class="allign-middle">Добавить страну</span>
