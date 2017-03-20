@@ -1,5 +1,5 @@
 <!-- The Modal -->
-<div id="modal-windows__regions--asia-list" class="modal">
+<div id="modal-windows__countries--asia-list" class="modal">
 
   <!-- Modal content -->
   <div class="modal-content">
@@ -15,7 +15,7 @@
 
             <input class="custom-checkbox__input"
                    id="regions-izrail--input-id"
-                   onclick="addCheckedElement( event, 'regions-izrail--label-text-id', 'pills__wrapper--regions-id', 'pills__text--regions-id', 'pills__button--regions-id', 'regions__modal-window--button', 'regions__modal-window--placeholder-id' )"
+                   onclick="addCheckedElement( event, 'regions-izrail--label-text-id', 'pills__wrapper--countries-id', 'pills__text--regions-id', 'pills__button--regions-id', 'regions__modal-window--button', 'regions__modal-window--placeholder-id' )"
                    type="checkbox"
                    name="regions-izrail" >
                     <span class="cr">
@@ -29,7 +29,7 @@
 
             <input class="custom-checkbox__input"
                    id="regions-oae--input-id"
-                   onclick="addCheckedElement( event, 'regions-oae--label-text-id', 'pills__wrapper--regions-id', 'pills__text--regions-id', 'pills__button--regions-id', 'regions__modal-window--button', 'regions__modal-window--placeholder-id' )"
+                   onclick="addCheckedElement( event, 'regions-oae--label-text-id', 'pills__wrapper--countries-id', 'pills__text--regions-id', 'pills__button--regions-id', 'regions__modal-window--button', 'regions__modal-window--placeholder-id' )"
                    type="checkbox"
                    name="regions-oae" >
                     <span class="cr">
@@ -43,7 +43,7 @@
 
             <input class="custom-checkbox__input"
                    id="regions-s-aravia--input-id"
-                   onclick="addCheckedElement( event, 'regions-s-aravia--label-text-id', 'pills__wrapper--regions-id', 'pills__text--regions-id', 'pills__button--regions-id', 'regions__modal-window--button', 'regions__modal-window--placeholder-id' )"
+                   onclick="addCheckedElement( event, 'regions-s-aravia--label-text-id', 'pills__wrapper--countries-id', 'pills__text--regions-id', 'pills__button--regions-id', 'regions__modal-window--button', 'regions__modal-window--placeholder-id' )"
                    type="checkbox"
                    name="regions-s-aravia" >
                     <span class="cr">
@@ -57,7 +57,7 @@
 
             <input class="custom-checkbox__input"
                    id="regions-turkey--input-id"
-                   onclick="addCheckedElement( event, 'regions-turkey--label-text-id', 'pills__wrapper--regions-id', 'pills__text--regions-id', 'pills__button--regions-id', 'regions__modal-window--button', 'regions__modal-window--placeholder-id' )"
+                   onclick="addCheckedElement( event, 'regions-turkey--label-text-id', 'pills__wrapper--countries-id', 'pills__text--regions-id', 'pills__button--regions-id', 'regions__modal-window--button', 'regions__modal-window--placeholder-id' )"
                    type="checkbox"
                    name="regions-turkey" >
                     <span class="cr">

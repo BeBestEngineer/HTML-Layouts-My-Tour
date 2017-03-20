@@ -1,5 +1,5 @@
 <!-- The Modal -->
-<div id="modal-windows__regions--australia-and-oceania-list" class="modal">
+<div id="modal-windows__countries--australia-and-oceania-list" class="modal">
 
   <!-- Modal content -->
   <div class="modal-content">
@@ -15,7 +15,7 @@
 
             <input class="custom-checkbox__input"
                    id="regions-australia--input-id"
-                   onclick="addCheckedElement( event, 'regions-australia--label-text-id', 'pills__wrapper--regions-id', 'pills__text--regions-id', 'pills__button--regions-id', 'regions__modal-window--button', 'regions__modal-window--placeholder-id' )"
+                   onclick="addCheckedElement( event, 'regions-australia--label-text-id', 'pills__wrapper--countries-id', 'pills__text--countries-id', 'pills__button--countries-id', 'countries--australia-and-oceania-pills-container', 'regions__modal-window--placeholder-id' )"
                    type="checkbox"
                    name="regions-australia" >
                     <span class="cr">
@@ -29,7 +29,7 @@
 
             <input class="custom-checkbox__input"
                    id="regions-fiji--input-id"
-                   onclick="addCheckedElement( event, 'regions-fiji--label-text-id', 'pills__wrapper--regions-id', 'pills__text--regions-id', 'pills__button--regions-id', 'regions__modal-window--button', 'regions__modal-window--placeholder-id' )"
+                   onclick="addCheckedElement( event, 'regions-fiji--label-text-id', 'pills__wrapper--countries-id', 'pills__text--regions-id', 'pills__button--regions-id', 'countries--australia-and-oceania-pills-container', 'regions__modal-window--placeholder-id' )"
                    type="checkbox"
                    name="regions-fiji" >
                     <span class="cr">
@@ -43,7 +43,7 @@
 
             <input class="custom-checkbox__input"
                    id="regions-hawaii--input-id"
-                   onclick="addCheckedElement( event, 'regions-hawaii--label-text-id', 'pills__wrapper--regions-id', 'pills__text--regions-id', 'pills__button--regions-id', 'regions__modal-window--button', 'regions__modal-window--placeholder-id' )"
+                   onclick="addCheckedElement( event, 'regions-hawaii--label-text-id', 'pills__wrapper--countries-id', 'pills__text--regions-id', 'pills__button--regions-id', 'countries--australia-and-oceania-pills-container', 'regions__modal-window--placeholder-id' )"
                    type="checkbox"
                    name="regions-hawaii" >
                     <span class="cr">
@@ -57,7 +57,7 @@
 
             <input class="custom-checkbox__input"
                    id="regions-ausnew-zealandtralia--input-id"
-                   onclick="addCheckedElement( event, 'regions-new-zealand--label-text-id', 'pills__wrapper--regions-id', 'pills__text--regions-id', 'pills__button--regions-id', 'regions__modal-window--button', 'regions__modal-window--placeholder-id' )"
+                   onclick="addCheckedElement( event, 'regions-new-zealand--label-text-id', 'pills__wrapper--countries-id', 'pills__text--regions-id', 'pills__button--regions-id', 'countries--australia-and-oceania-pills-container', 'regions__modal-window--placeholder-id' )"
                    type="checkbox"
                    name="regions-new-zealand" >
                     <span class="cr">
