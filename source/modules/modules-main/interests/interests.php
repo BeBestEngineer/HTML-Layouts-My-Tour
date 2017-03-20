@@ -113,27 +113,17 @@
                      id="regions-pills-container"><!--      область для placeholder и групп Регион-Страны              -->
                   <span id="regions__modal-window--placeholder-id">Нажмите кнопку "Добавить регион"</span>
 
-                  <!--                          pills ( begin )-->
                   <!--todo: обернуть в рамку или выделить фоном-->
-                  <!--скрытая пилюля региона для клонирования-->
+                  <!--скрытая пилюля региона для клонирования ( начало )-->
                   <div class="pills__interests-form--regions  hide"
                        id="pills__wrapper--regions-id">
-<!--
-                       При создании нужно менять id с учётом региона, чтобы id не дублировались
-                       Исходный id:                 pills__wrapper-regions-id
-                       id для конкретного региона:  pills__wrapper-regions--australia-and-oceania-id
--->
+
                     <span class="allign-middle" id="pills__text--regions-id">Region name</span>
-<!--
-                                                    При создании нужно менять id для текста с учётом региона, чтобы id не дублировались
-                                                    Исходный id:                 pills__text-regions-id
-                                                    id для конкретного региона:  pills__text-regions--australia-and-oceania-id
--->
+
                     <button class="allign-middle  icons__wrapper"
                             type="button"
                             id="pills__button--regions-id"
                             onclick="removeRegion( event, 'regions__modal-window--placeholder-id', 'pills__interests-form--regions' )">
-<!--                        меняем id-->
                       <svg class="icons  icons__svg" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
                         <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
                       </svg>
@@ -141,21 +131,16 @@
 
                     <!--контейнер для пилюль стран-->
                     <div id="countries--pills-container">
-<!--
-                         при добавлении региона поменять id с учётом региона:  countries--australia-and-oceania-pills-container
--->
+
                       <!--скрытая пилюля страны для клонирования-->
                       <div class="pills__interests-form--country  hide"
                            id="pills__wrapper--countries-id">
-<!--                       при добавлении региона нужно менять id  pills__wrapper--countries-africa-id-->
                         <div class="image-wrapper  pills__image-wrapper  allign-middle">
                           <img class="image" src="icons/flags/" alt="flag-country-name" >
                         </div>
 
-<!--                                                при добавлении региона нужно менять id  pills__text--countries-africa-id-->
                         <span class="allign-middle" id="pills__text--countries-id">Country name</span>
 
-<!--                            при добавлении региона нужно менять id  pills__button--countries-africa-id-->
                         <button class="allign-middle  icons__wrapper"
                                 type="button"
                                 id="pills__button--countries-id"
@@ -168,7 +153,8 @@
 
                     </div>
                   </div>
-                  <!--                          pills ( end )-->
+                  <!--скрытая пилюля региона для клонирования ( окончание )-->
+
 
                 </div>
 
