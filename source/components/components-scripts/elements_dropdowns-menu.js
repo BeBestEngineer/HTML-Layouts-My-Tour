@@ -17,7 +17,7 @@ function openDropdownMenu( event, menuId, menuClass ) {
 
 
 // Close the dropdown if the user clicks outside of it
-
+/*
 window.onclick = function( event ) {
 	if ( !openDropdownMenu.EVENT && !openDropdownMenu.MENU_ID && event.target.type !== 'submit' ) {
 		return false;
@@ -28,8 +28,8 @@ window.onclick = function( event ) {
     closeDropdownMenu();
 
   }
-}
-
+};
+*/
 
 
 function closeDropdownMenu () {
