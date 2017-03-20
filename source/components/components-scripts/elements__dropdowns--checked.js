@@ -1,5 +1,6 @@
-function addCheckedElement( event, labelTextId, pillWrapperId, pillTextId, pillButtonId, dropdownButtonId, placeholderId ) {
-	var dropdownButton = document.getElementById( dropdownButtonId );
+function addCheckedElement( event, labelTextId, pillWrapperId, pillTextId, pillButtonId, dropdownButtonId, placeholderId, countriesPillsContainerId ) {
+	//контейнер, куда вставляются пилюли
+  var dropdownButton = document.getElementById( dropdownButtonId );
   var placeholder = document.getElementById( placeholderId );
 
   var checkbox = document.getElementById( event.target.id );
@@ -11,10 +12,13 @@ function addCheckedElement( event, labelTextId, pillWrapperId, pillTextId, pillB
     //Запоминаем текст
     var labelText = document.getElementById( labelTextId );
     //Ищем пилюлю
+    //Когда создаётся несколько регионов то в каждом из них находятся скрытые контейнеры для стран, т.е. создаётся несколько контейнеров с id="pills__wrapper--countries-id"
     var pillWrapper 					   = document.getElementById( pillWrapperId );
     //Делаем клона
     var pillWrapperClone         = pillWrapper.cloneNode( true );
-    // ratingWrapper.parentNode.removeChild( ratingWrapper );
+    console.log( countriesPillsContainerId );
+    console.log( pillWrapperClone );
+
     //Обрабатываем клона
     //Меняем id оболочки
     pillWrapperClone.id = pillWrapperClone.id.slice( 0, 16 ) + event.target.id.slice( 0, -10 ) + event.target.id.slice( -3 );
@@ -33,7 +37,19 @@ function addCheckedElement( event, labelTextId, pillWrapperId, pillTextId, pillB
         //Меняем id кнопки
         pillWrapperCloneChildren.id = pillWrapperCloneChildren.id.slice( 0, 15 ) + event.target.id.slice( 0, -10 ) + event.target.id.slice( -3 );
       }
+      if ( pillWrapperCloneChildren.id === countriesPillsContainerId ) {
+        //Меняем id контейнера для внутренних пилюль, если такой есть
+        // console.log( countriesPillsContainerId.slice( 0, 11 ) );
+        // console.log( labelTextId.slice( 8, -15 ) );
+        // console.log( countriesPillsContainerId.slice( -16 ) );
+
+        pillWrapperCloneChildren.id = countriesPillsContainerId.slice( 0, 11 ) + labelTextId.slice( -15 ) + countriesPillsContainerId.slice( -16 );
+        console.log( pillWrapperCloneChildren.id );
+      }
     }
+
+
+
 
     //Убираем placeholder
     placeholder.classList.add('hide');
@@ -41,6 +57,7 @@ function addCheckedElement( event, labelTextId, pillWrapperId, pillTextId, pillB
     //Показываем клона
     pillWrapperClone.classList.remove('hide');
     //Вставляем клона
+    console.log( pillWrapper );
     pillWrapper.parentNode.appendChild( pillWrapperClone );
 
     //снимаем фиксированную высоту с контейнера
