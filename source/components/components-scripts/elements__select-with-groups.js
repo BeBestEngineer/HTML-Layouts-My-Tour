@@ -25,16 +25,15 @@
 
 
 
-function addRegion( event, labelTextId, pillWrapperId, pillTextId, pillButtonId, dropdownButtonId, placeholderId, FirstLevelDependentButtonId, countriesPillsContainerId ) {
+function addRegion( event, labelTextId, pillWrapperId, pillTextId, pillButtonId, dropdownButtonId, placeholderId, FirstLevelDependentButtonId, FirstLevelDependentPlaceholderId, countriesPillsContainerId ) {
+	
 
-	addCheckedElement( event, labelTextId, pillWrapperId, pillTextId, pillButtonId, dropdownButtonId, placeholderId, countriesPillsContainerId );
+	addCheckedElement( event, labelTextId, pillWrapperId, pillTextId, pillButtonId, dropdownButtonId, placeholderId, FirstLevelDependentPlaceholderId, countriesPillsContainerId );
 
 	//Создаём новый id для кнопки "Добавления страны" для соответствующего региона
 	var FirstLevelDependentButtonNewId = FirstLevelDependentButtonId.slice(0, 11) + labelTextId.slice(8, -15) + FirstLevelDependentButtonId.slice(-21);
-
 	// перезаписываем id добавленного региона на id региона который добавляем
 	document.querySelector( '[data-first-level-dependent-button-id=' + FirstLevelDependentButtonId + ']' ).id = FirstLevelDependentButtonNewId;
-
 }
 
 
@@ -43,7 +42,6 @@ function addRegion( event, labelTextId, pillWrapperId, pillTextId, pillButtonId,
 function removeRegion ( event, placeholderId, pillWrapperClass ) {
 
 	removeCheckedElement( event, placeholderId, pillWrapperClass );
-
 
 }
 
