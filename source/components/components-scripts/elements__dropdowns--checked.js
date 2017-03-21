@@ -1,7 +1,17 @@
-function addCheckedElement( event, labelTextId, pillWrapperId, pillTextId, pillButtonId, dropdownButtonId, placeholderId, countriesPillsContainerId ) {
+function addCheckedElement( event, 
+                            labelTextId, 
+                            pillWrapperId, 
+                            pillTextId, 
+                            pillButtonId, 
+                            dropdownButtonId, 
+                            placeholderId, 
+                            FirstLevelDependentPlaceholderId, 
+                            countriesPillsContainerId,
+                            regionPlaceholderId
+                          ) {
 	//контейнер, куда вставляются пилюли
   var dropdownButton = document.getElementById( dropdownButtonId );
-  var placeholder = document.getElementById( placeholderId );
+
 
   var checkbox = document.getElementById( event.target.id );
 
@@ -36,15 +46,28 @@ function addCheckedElement( event, labelTextId, pillWrapperId, pillTextId, pillB
       }
       if ( pillWrapperCloneChildren.id === countriesPillsContainerId ) {
         //Меняем id контейнера для внутренних пилюль, если такой есть
-        pillWrapperCloneChildren.id = countriesPillsContainerId.slice( 0, 11 ) + labelTextId.slice( -15 ) + countriesPillsContainerId.slice( -16 );
-        console.log( pillWrapperCloneChildren.id );
+        pillWrapperCloneChildren.id = countriesPillsContainerId.slice( 0, 11 ) + labelTextId.slice( 8, -15 ) + countriesPillsContainerId.slice( -16 );
       }
     }
 
+    if ( FirstLevelDependentPlaceholderId ) {
+      //Меняем placeholder для контейнера стран
+      var FirstLevelDependentPlaceholderNewId = FirstLevelDependentPlaceholderId.slice( 0, -2 ) + '-' + labelTextId.slice( 8, -15 ) + FirstLevelDependentPlaceholderId.slice( -3 );
+      pillWrapperClone.querySelector( '#' + FirstLevelDependentPlaceholderId ).id = FirstLevelDependentPlaceholderNewId;
 
+      //меняем атрибут data-first-level-dependent-countries-placeholder-id
+      pillWrapperClone.querySelector( '#' + FirstLevelDependentPlaceholderNewId ).setAttribute( 'data-first-level-dependent-countries-placeholder-id', FirstLevelDependentPlaceholderNewId );
+      // console.log( pillWrapperClone.querySelector( '#' + FirstLevelDependentPlaceholderNewId ) );
+    }
+
+    if ( regionPlaceholderId ) {
+      //Меняем аттрибут data-region-placeholder-id
+      pillWrapperClone.querySelector( '[data-region-placeholder-id]' ).setAttribute( 'data-region-placeholder-id', regionPlaceholderId );
+    }
 
 
     //Убираем placeholder
+    var placeholder = document.getElementById( placeholderId );
     placeholder.classList.add('hide');
 
     //Показываем клона
@@ -88,8 +111,10 @@ function removeCheckedElement( event, placeholderId, pillWrapperClass ) {
 
 
   //Пересчитываем высоту
-  var placeholder = document.getElementById( placeholderId );
+  var placeholder = document.getElementById( event.target.attributes['data-region-placeholder-id'].value );
   var dropDownButton = document.getElementById( placeholder.parentNode.id );
+  // console.log( placeholder );
+
   //устанавливаем высоту для dropDownButton
   dropDownButton.style.minHeight = '';
   dropDownButton.style.height = '';
