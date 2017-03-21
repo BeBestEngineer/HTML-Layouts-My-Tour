@@ -12,10 +12,10 @@
 
 <!--               onclick="addCheckedElement(
                                                 event,
-                                                'countries-aljir--label-text-id',         - id текста который вставляется в пилюлю
-                                                'pills__wrapper--countries-id',    - id пилюли контейнера для вставки стран
-                                                'pills__text--countries-id',                -
-                                                'pills__button--countries-id',              -
+                                                'countries-aljir--label-text-id',           - id текста который вставляется в пилюлю страны
+                                                'pills__wrapper--countries-id',             - id оболочки пилюли страны
+                                                'pills__text--countries-id',                - id текста который заменяется на текст в countries-aljir--label-text-id
+                                                'pills__button--countries-id',              - id кнопки для удаления пилюли
                                                 'countries__modal-window--button',          -
                                                 'countries__modal-window--placeholder-id'   -
                                               )"
@@ -29,11 +29,14 @@
                    onclick="addCheckedElement(
                                                 event,
                                                 'countries-aljir--label-text-id',
-                                                'pills__wrapper--countries-africa-id',
+                                                'pills__wrapper--countries-id',
                                                 'pills__text--countries-id',
                                                 'pills__button--countries-id',
-                                                'countries__modal-window--button',
-                                                'countries__modal-window--placeholder-id'
+                                                'countries--africa-pills-container',
+                                                'placeholder__countries--africa-id',
+                                                '',
+                                                '',
+                                                'placeholder__countries--africa-id'
                                               )"
                    type="checkbox"
                    name="regions-aljir" >
