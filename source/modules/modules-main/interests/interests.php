@@ -110,53 +110,64 @@
                       <!--todo: заменить на группу input, наверное динамически надо генерировать-->
 
                 <div class="flex__container  flex__direction--column  form__area"
-                     id="regions-pills-container"><!--      область для placeholder и групп Регион-Страны              -->
+                     id="regions--pills-container"><!--      область для placeholder и групп Регион-Страны              -->
                   <span id="regions__modal-window--placeholder-id">Нажмите кнопку "Добавить регион"</span>
+                  <!-- сюда вставляетмя пилюля для регионов -->
+                </div>
 
-                  <!--todo: обернуть в рамку или выделить фоном-->
-                  <!--скрытая пилюля региона для клонирования ( начало )-->
-                  <div class="pills__interests-form--regions  hide"
-                       id="pills__wrapper--regions-id">
 
-                    <span class="allign-middle" id="pills__text--regions-id">Region name</span>
 
+
+                <!--todo: обернуть в рамку или выделить фоном-->
+                <!--скрытая пилюля региона для клонирования ( начало )-->
+                <div class="pills__interests-form--regions  hide"
+                     id="pills__wrapper--regions-id">
+
+                  <span class="allign-middle" id="pills__text--regions-id">Region name</span>
+
+                  <button class="allign-middle  icons__wrapper"
+                          type="button"
+                          id="pills__button--regions-id"
+                          onclick="removeRegion( event, 'regions__modal-window--placeholder-id', 'pills__interests-form--regions' )">
+                    <svg class="icons  icons__svg" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
+                      <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
+                    </svg>
+                  </button>
+                  <div id="countries--pills-container">
+                    <span id="placeholder__countries-id"
+                          data-first-level-dependent-countries-placeholder-id="placeholder__countries-id">
+                      Нажмите в этом месте чтобы выбрать регион, а затем кнопку "Добавить страну"
+                    </span>
+                    <!-- сюда вставляетмя пилюля для стран -->
+                  </div>
+                </div>
+                <!--скрытая пилюля региона для клонирования ( окончание )-->
+
+                <!--скрытая пилюля стран для клонирования ( начало )-->
+                  <div class="pills__interests-form--country  hide"
+                       id="pills__wrapper--countries-id">
+<!--                    заменяется на pills__wrapper--countries--america-id-->
+                    <div class="image-wrapper  pills__image-wrapper  allign-middle">
+                      <img class="image" src="icons/flags/" alt="flag-country-name" >
+                    </div>
+
+                    <span class="allign-middle" id="pills__text--countries-id">Country name</span>
+<!--                                            заменяется на pills__text--countries-america-id-->
                     <button class="allign-middle  icons__wrapper"
                             type="button"
-                            id="pills__button--regions-id"
-                            onclick="removeRegion( event, 'regions__modal-window--placeholder-id', 'pills__interests-form--regions' )">
+                            id="pills__button--countries-id"
+                            data-region-placeholder-id="region-placeholder-id"
+                            onclick="removeCheckedElement( event, 'placeholder__countries-id', 'pills__interests-form--country' )">
+<!--                        заменяется на pills__button--countries-america-id-->
                       <svg class="icons  icons__svg" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
                         <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
                       </svg>
                     </button>
-
-                    <!--контейнер для пилюль стран-->
-                    <div id="countries--pills-container">
-
-                      <!--скрытая пилюля страны для клонирования-->
-                      <div class="pills__interests-form--country  hide"
-                           id="pills__wrapper--countries-id">
-                        <div class="image-wrapper  pills__image-wrapper  allign-middle">
-                          <img class="image" src="icons/flags/" alt="flag-country-name" >
-                        </div>
-
-                        <span class="allign-middle" id="pills__text--countries-id">Country name</span>
-
-                        <button class="allign-middle  icons__wrapper"
-                                type="button"
-                                id="pills__button--countries-id"
-                                onclick="removeCheckedElement( event, 'regions__modal-window--placeholder-id', 'pills__interests-form--regions' )">
-                          <svg class="icons  icons__svg" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
-                            <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
-                          </svg>
-                        </button>
-                      </div>
-
-                    </div>
                   </div>
-                  <!--скрытая пилюля региона для клонирования ( окончание )-->
+                <!--скрытая пилюля стран для клонирования ( окончание )-->
 
 
-                </div>
+
 
 <!--                Buttons for add regions and countries-->
                 <div class="flex__container">                  
