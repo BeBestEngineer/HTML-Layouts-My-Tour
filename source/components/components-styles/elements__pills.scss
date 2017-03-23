@@ -2,6 +2,7 @@
 .pills {
   &__interests-form {
     &--country {
+      display: inline-block;
       @include  font( $size: 15px );
       @include  pills__image-and-icon (
               $border: '1px solid #{$color-tr-layout}',
