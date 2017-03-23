@@ -842,7 +842,7 @@
 
 @media only screen and (min-width: 768px) {
   .container {
-    width: 320px; }
+    width: 740px; }
   .col-sm {
     box-sizing: border-box;
     -webkit-box-flex: 0;
@@ -1582,7 +1582,7 @@
 
 @media only screen and (min-width: 992px) {
   .container {
-    width: 769px; }
+    width: 960px; }
   .col-md {
     box-sizing: border-box;
     -webkit-box-flex: 0;
@@ -2322,7 +2322,7 @@
 
 @media only screen and (min-width: 1200px) {
   .container {
-    width: 993px; }
+    width: 1160px; }
   .col-lg {
     box-sizing: border-box;
     -webkit-box-flex: 0;
