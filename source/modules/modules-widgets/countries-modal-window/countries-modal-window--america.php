@@ -11,13 +11,24 @@
         <!--        todo: распарсить через дерево-->
         <li>
           <label class="custom-checkbox__label">
-            <span id="regions-amerika--label-text-id">Америка</span>
+            <span id="countries-amerika--label-text-id">Америка</span>
 
             <input class="custom-checkbox__input"
-                   id="regions-amerika--input-id"
-                   onclick="addCheckedElement( event, 'regions-amerika--label-text-id', 'pills__wrapper--countries-id', 'pills__text--regions-id', 'pills__button--regions-id', 'regions__modal-window--button', 'regions__modal-window--placeholder-id' )"
+                   id="countries-amerika--input-id"
+                   onclick="addCheckedElement(
+                                                event,
+                                                'countries-amerika--label-text-id',
+                                                'pills__wrapper--countries-id',
+                                                'pills__text--countries-id',
+                                                'pills__button--countries-id',
+                                                'countries--america-pills-container',
+                                                'placeholder__countries--america-id',
+                                                '',
+                                                '',
+                                                'placeholder__countries--america-id'
+                                              )"
                    type="checkbox"
-                   name="regions-amerika" >
+                   name="country-amerika" >
                     <span class="cr">
                       <i class="cr-icon custom-checkbox__icon"></i>
                     </span>
@@ -25,13 +36,24 @@
         </li>
         <li>
           <label class="custom-checkbox__label">
-            <span id="regions-dominic-republic--label-text-id">Доминиканская Республика</span>
+            <span id="countries-dominic-republic--label-text-id">Доминиканская Республика</span>
 
             <input class="custom-checkbox__input"
-                   id="regions-dominic-republic--input-id"
-                   onclick="addCheckedElement( event, 'regions-dominic-republic--label-text-id', 'pills__wrapper--countries-id', 'pills__text--regions-id', 'pills__button--regions-id', 'regions__modal-window--button', 'regions__modal-window--placeholder-id' )"
+                   id="countries-dominic-republic--input-id"
+                   onclick="addCheckedElement(
+                                                event,
+                                                'countries-dominic-republic--label-text-id',
+                                                'pills__wrapper--countries-id',
+                                                'pills__text--countries-id',
+                                                'pills__button--countries-id',
+                                                'countries--america-pills-container',
+                                                'placeholder__countries--america-id',
+                                                '',
+                                                '',
+                                                'placeholder__countries--america-id'
+                                              )"
                    type="checkbox"
-                   name="regions-dominic-republic" >
+                   name="country-dominic-republic" >
                     <span class="cr">
                       <i class="cr-icon custom-checkbox__icon"></i>
                     </span>
@@ -39,13 +61,24 @@
         </li>
         <li>
           <label class="custom-checkbox__label">
-            <span id="regions-canada--label-text-id">Канада</span>
+            <span id="countries-canada--label-text-id">Канада</span>
 
             <input class="custom-checkbox__input"
-                   id="regions-canada--input-id"
-                   onclick="addCheckedElement( event, 'regions-canada--label-text-id', 'pills__wrapper--countries-id', 'pills__text--regions-id', 'pills__button--regions-id', 'regions__modal-window--button', 'regions__modal-window--placeholder-id' )"
+                   id="countries-canada--input-id"
+                   onclick="addCheckedElement(
+                                                event,
+                                                'countries-canada--label-text-id',
+                                                'pills__wrapper--countries-id',
+                                                'pills__text--countries-id',
+                                                'pills__button--countries-id',
+                                                'countries--america-pills-container',
+                                                'placeholder__countries--america-id',
+                                                '',
+                                                '',
+                                                'placeholder__countries--america-id'
+                                              )"
                    type="checkbox"
-                   name="regions-canada" >
+                   name="country-canada" >
                     <span class="cr">
                       <i class="cr-icon custom-checkbox__icon"></i>
                     </span>
@@ -53,13 +86,24 @@
         </li>
         <li>
           <label class="custom-checkbox__label">
-            <span id="regions-cuba--label-text-id">Куба</span>
+            <span id="countries-cuba--label-text-id">Куба</span>
 
             <input class="custom-checkbox__input"
-                   id="regions-cuba--input-id"
-                   onclick="addCheckedElement( event, 'regions-cuba--label-text-id', 'pills__wrapper--countries-id', 'pills__text--regions-id', 'pills__button--regions-id', 'regions__modal-window--button', 'regions__modal-window--placeholder-id' )"
+                   id="countries-cuba--input-id"
+                   onclick="addCheckedElement(
+                                                event,
+                                                'countries-cuba--label-text-id',
+                                                'pills__wrapper--countries-id',
+                                                'pills__text--countries-id',
+                                                'pills__button--countries-id',
+                                                'countries--america-pills-container',
+                                                'placeholder__countries--america-id',
+                                                '',
+                                                '',
+                                                'placeholder__countries--america-id'
+                                              )"
                    type="checkbox"
-                   name="regions-cuba" >
+                   name="country-cuba" >
                     <span class="cr">
                       <i class="cr-icon custom-checkbox__icon"></i>
                     </span>

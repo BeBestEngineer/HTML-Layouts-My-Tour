@@ -39,7 +39,7 @@
                                                 'placeholder__countries--africa-id'
                                               )"
                    type="checkbox"
-                   name="regions-aljir" >
+                   name="country-aljir" >
                     <span class="cr">
                       <i class="cr-icon custom-checkbox__icon"></i>
                     </span>
@@ -47,13 +47,24 @@
         </li>
         <li>
           <label class="custom-checkbox__label">
-            <span id="regions-egipet--label-text-id">Еги́пет</span>
+            <span id="countries-egipet--label-text-id">Еги́пет</span>
 
             <input class="custom-checkbox__input"
-                   id="regions-egipet--input-id"
-                   onclick="addCheckedElement( event, 'regions-egipet--label-text-id', 'pills__wrapper--countries-africa-id', 'pills__text--regions-id', 'pills__button--regions-id', 'regions__modal-window--button', 'regions__modal-window--placeholder-id' )"
+                   id="countries-egipet--input-id"
+                   onclick="addCheckedElement(
+                                                event,
+                                                'countries-egipet--label-text-id',
+                                                'pills__wrapper--countries-id',
+                                                'pills__text--countries-id',
+                                                'pills__button--countries-id',
+                                                'countries--africa-pills-container',
+                                                'placeholder__countries--africa-id',
+                                                '',
+                                                '',
+                                                'placeholder__countries--africa-id'
+                                              )"
                    type="checkbox"
-                   name="regions-egipet" >
+                   name="country-egipet" >
                     <span class="cr">
                       <i class="cr-icon custom-checkbox__icon"></i>
                     </span>
@@ -61,13 +72,24 @@
         </li>
         <li>
           <label class="custom-checkbox__label">
-            <span id="regions-madagaskar--label-text-id">Мадагаскар</span>
+            <span id="countries-madagaskar--label-text-id">Мадагаскар</span>
 
             <input class="custom-checkbox__input"
-                   id="regions-madagaskar--input-id"
-                   onclick="addCheckedElement( event, 'regions-madagaskar--label-text-id', 'pills__wrapper--countries-africa-id', 'pills__text--regions-id', 'pills__button--regions-id', 'regions__modal-window--button', 'regions__modal-window--placeholder-id' )"
+                   id="countries-madagaskar--input-id"
+                   onclick="addCheckedElement(
+                                                event,
+                                                'countries-madagaskar--label-text-id',
+                                                'pills__wrapper--countries-id',
+                                                'pills__text--countries-id',
+                                                'pills__button--countries-id',
+                                                'countries--africa-pills-container',
+                                                'placeholder__countries--africa-id',
+                                                '',
+                                                '',
+                                                'placeholder__countries--africa-id'
+                                              )"
                    type="checkbox"
-                   name="regions-madagaskar" >
+                   name="country-madagaskar" >
                     <span class="cr">
                       <i class="cr-icon custom-checkbox__icon"></i>
                     </span>
