@@ -42,8 +42,9 @@ onclick="addRegion(
                                         'regions--pills-container',
                                         'regions__modal-window--placeholder-id',
                                         'countries--country-name__modal-window-button',
-                                        'countries--pills-container' 
-                                     )"
+                                        'placeholder__countries-id',
+                                        'countries--pills-container'
+                                      )"
                    type="checkbox"
                    name="regions-australia-and-oceania" >
                     <span class="cr">
@@ -57,7 +58,18 @@ onclick="addRegion(
 
             <input class="custom-checkbox__input"
                    id="regions-asia--input-id"
-                   onclick="addRegion( event, 'regions-asia--label-text-id', 'pills__wrapper--regions-id', 'pills__text--regions-id', 'pills__button--regions-id', 'regions--pills-container', 'regions__modal-window--placeholder-id', 'countries--country-name__modal-window-button', 'countries--pills-container' )"
+                   onclick="addRegion(
+                                        event,
+                                        'regions-asia--label-text-id',
+                                        'pills__wrapper--regions-id',
+                                        'pills__text--regions-id',
+                                        'pills__button--regions-id',
+                                        'regions--pills-container',
+                                        'regions__modal-window--placeholder-id',
+                                        'countries--country-name__modal-window-button',
+                                        'placeholder__countries-id',
+                                        'countries--pills-container'
+                                      )"
                    type="checkbox"
                    name="regions-asia" >
                     <span class="cr">
@@ -71,7 +83,18 @@ onclick="addRegion(
 
             <input class="custom-checkbox__input"
                    id="regions-america--input-id"
-                   onclick="addRegion( event, 'regions-america--label-text-id', 'pills__wrapper--regions-id', 'pills__text--regions-id', 'pills__button--regions-id', 'regions--pills-container', 'regions__modal-window--placeholder-id', 'countries--country-name__modal-window-button', 'countries--pills-container' )"
+                   onclick="addRegion(
+                                        event,
+                                        'regions-america--label-text-id',
+                                        'pills__wrapper--regions-id',
+                                        'pills__text--regions-id',
+                                        'pills__button--regions-id',
+                                        'regions--pills-container',
+                                        'regions__modal-window--placeholder-id',
+                                        'countries--country-name__modal-window-button',
+                                        'placeholder__countries-id',
+                                        'countries--pills-container'
+                                      )"
                    type="checkbox"
                    name="regions-america" >
                     <span class="cr">
@@ -110,7 +133,18 @@ onclick="addRegion(
 
             <input class="custom-checkbox__input"
                    id="regions-europe--input-id"
-                   onclick="addRegion( event, 'regions-europe--label-text-id', 'pills__wrapper--regions-id', 'pills__text--regions-id', 'pills__button--regions-id', 'regions--pills-container', 'regions__modal-window--placeholder-id', 'countries--country-name__modal-window-button', 'countries--pills-container' )"
+                   onclick="addRegion(
+                                        event,
+                                        'regions-europe--label-text-id',
+                                        'pills__wrapper--regions-id',
+                                        'pills__text--regions-id',
+                                        'pills__button--regions-id',
+                                        'regions--pills-container',
+                                        'regions__modal-window--placeholder-id',
+                                        'countries--country-name__modal-window-button',
+                                        'placeholder__countries-id',
+                                        'countries--pills-container'
+                                      )"
                    type="checkbox"
                    name="regions-europe" >
                     <span class="cr">
@@ -124,7 +158,18 @@ onclick="addRegion(
 
             <input class="custom-checkbox__input"
                    id="regions-euroasia--input-id"
-                   onclick="addRegion( event, 'regions-euroasia--label-text-id', 'pills__wrapper--regions-id', 'pills__text--regions-id', 'pills__button--regions-id', 'regions--pills-container', 'regions__modal-window--placeholder-id', 'countries--country-name__modal-window-button', 'countries--pills-container' )"
+                   onclick="addRegion(
+                                        event,
+                                        'regions-euroasia--label-text-id',
+                                        'pills__wrapper--regions-id',
+                                        'pills__text--regions-id',
+                                        'pills__button--regions-id',
+                                        'regions--pills-container',
+                                        'regions__modal-window--placeholder-id',
+                                        'countries--country-name__modal-window-button',
+                                        'placeholder__countries-id',
+                                        'countries--pills-container'
+                                      )"
                    type="checkbox"
                    name="regions-euroasia" >
                     <span class="cr">
