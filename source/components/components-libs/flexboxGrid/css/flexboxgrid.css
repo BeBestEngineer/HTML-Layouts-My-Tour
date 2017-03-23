@@ -840,9 +840,9 @@
 .last-xs {
   order: 1; }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 768px) {
   .container {
-    width: 46rem; }
+    width: 320px; }
   .col-sm {
     box-sizing: border-box;
     -webkit-box-flex: 0;
@@ -1580,9 +1580,9 @@
   .last-sm {
     order: 1; } }
 
-@media only screen and (min-width: 62em) {
+@media only screen and (min-width: 992px) {
   .container {
-    width: 61rem; }
+    width: 769px; }
   .col-md {
     box-sizing: border-box;
     -webkit-box-flex: 0;
@@ -2320,9 +2320,9 @@
   .last-md {
     order: 1; } }
 
-@media only screen and (min-width: 75em) {
+@media only screen and (min-width: 1200px) {
   .container {
-    width: 71rem; }
+    width: 993px; }
   .col-lg {
     box-sizing: border-box;
     -webkit-box-flex: 0;

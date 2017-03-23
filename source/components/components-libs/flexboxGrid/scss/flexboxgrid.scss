@@ -13,11 +13,13 @@ $outer-margin: 0px !default;
 // Create or remove breakpoints for your project
 // Syntax:
 // name SIZErem,
-$breakpoints:
-  sm 48em 46rem,
-  md 62em 61rem,
-  lg 75em 71rem !default;
-$flexboxgrid-max-width: 1200px !default;
+$breakpoints:                               
+                                            //  col-xs-20       
+  sm 768px 320px,                           //  col-sm-15       
+  md 992px 769px,                           //  col-md-10       
+  lg 1200px 993px !default;                 //  col-lg-5        
+
+$flexboxgrid-max-width: 1200px !default;    
 
 //
 // -- Stop editing -- //
