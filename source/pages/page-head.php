@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="components/components-libs/normalize-css-5.0.0/normalize-5.0.0.css">
     <link rel="stylesheet" href="components/components-libs/pikaday/pikaday.css">
     <link rel="stylesheet" href="components/components-libs/noUIslider/nouislider.css">
+    <link rel="stylesheet" href="components/components-libs/flexboxGrid/css/flexboxgrid.css">
     <!--layout's styles-->
     <link rel="stylesheet" href="components/components-styles/collected-styles/css/layout.css">
   </head>
