@@ -88,3 +88,11 @@
   border: 1px solid $color-13-layout;
   /*Decorate ( end )*/
 }
+
+
+.main-wrapper {
+  .col {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
