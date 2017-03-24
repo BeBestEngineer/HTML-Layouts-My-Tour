@@ -2,12 +2,13 @@
   /*Position ( begin )*/
   &__label {
     display: block;
+    padding-left: 10px;
     margin-bottom: 10px;
   }
   &__input {
     display: block;
     width: 100%;
-    height: 50px;
+    height: 48px;
     padding: 0;
     padding-left: 5px;
     padding-right: 5px;
@@ -15,15 +16,39 @@
     border: 1px solid $color-tr-layout;
     border-radius: 0px;
   }
+  &__input--prices {
+    width: auto;
+    min-width: 50px;
+    max-width: 49%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  &__input--dates {
+    width: auto;
+    min-width: 10px;
+    max-width: 49%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  &__input--passengers {
+    width: auto;
+    min-width: 10px;
+    max-width: 49%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
   &__text--passengers {
     border: 1px solid $color-tr-layout;
     border-radius: 2px;
+  }
+  &__text--passengers-parents {
+    margin-right: 5px;
   }
   &__input--1-2 {
     width: 49%;
   }
   &__input--passengers {
-    width: 30px;
+    //width: 30px;
   }
   &__input--passengers-parents {
     width: 50%;
@@ -100,7 +125,8 @@
   &__label {
     @include font( $size: 12px);
   }
-  &__input {
+  &__input-text {
+    //form__input-text
     @include font( $size: 15px);
   }
   &__region-name {
@@ -169,11 +195,85 @@
 
 //todo: Разбить стили для всех ворм и для контектной формы
 .form--clients-interests {
-  &__input-wrapper:nth-child(1) .form__dropdown-menu-button {
-    border-radius: 20px;
-  }
-  &__input-wrapper:nth-child(4) .form__dropdown-menu-button {
-    border-radius: 20px;
+  &__fields-row {
+    position: relative;
+    left: 1px;
+    top: 1px;
   }
 
+
+  &__input-wrapper--row-2 {
+    margin-left: -1px;
+    margin-top: -1px;
+  }
+  &__input-wrapper--row-2:nth-child(1) .form__dropdown-menu-button {
+    border-top-left-radius:    $border-radius-fields;
+    border-bottom-left-radius: $border-radius-fields;
+  }
+  &__input-wrapper--row-2:nth-child(4) .form__dropdown-menu-button {
+    border-top-right-radius:    $border-radius-fields;
+    border-bottom-right-radius: $border-radius-fields;
+  }
+
+
+  &__input-wrapper--row-3 {
+    margin-left: -1px;
+    margin-top: -1px;
+  }
+  &__input-wrapper--row-3:nth-child(1) .form__dropdown-menu-button {
+    border-top-left-radius:    $border-radius-fields;
+    border-bottom-left-radius: $border-radius-fields;
+  }
+  &__input-wrapper--row-3:nth-child(4) .form__dropdown-menu-button {
+    border-top-right-radius:    $border-radius-fields;
+    border-bottom-right-radius: $border-radius-fields;
+  }
+}
+
+@media ( max-width: 1199px ) {
+  .form--clients-interests {
+    &__input-wrapper--row-2:nth-child(1) .form__dropdown-menu-button {
+      border-top-left-radius:    $border-radius-fields;
+      border-bottom-left-radius: $border-radius-fields;
+    }
+    &__input-wrapper--row-2:nth-child(2) .form__dropdown-menu-button {
+      border-top-right-radius:    $border-radius-fields;
+      border-bottom-right-radius: $border-radius-fields;
+    }
+    &__input-wrapper--row-2:nth-child(3) .form__dropdown-menu-button {
+      border-top-left-radius:    $border-radius-fields;
+      border-bottom-left-radius: $border-radius-fields;
+    }
+    &__input-wrapper--row-2:nth-child(4) .form__dropdown-menu-button {
+      border-top-right-radius:    $border-radius-fields;
+      border-bottom-right-radius: $border-radius-fields;
+    }
+    
+
+    &__input-wrapper--row-3:nth-child(3) .form__dropdown-menu-button {
+      border-top-right-radius:    $border-radius-fields;
+      border-bottom-right-radius: $border-radius-fields;
+    }
+    &__input-wrapper--row-3:nth-child(4) .form__dropdown-menu-button {
+      border-radius: $border-radius-fields;
+    }
+  }
+}
+
+@media ( max-width: 991px ) {
+  .form--clients-interests {
+    &__input-wrapper--row-2 .form__dropdown-menu-button {
+      border-radius: $border-radius-fields;
+    }
+
+    &__input-wrapper--row-3 .form__dropdown-menu-button {
+      border-radius: $border-radius-fields;
+    }
+  }
+}
+
+@media ( max-width: 767px ) {
+  .form--clients-interests {
+
+  }
 }
