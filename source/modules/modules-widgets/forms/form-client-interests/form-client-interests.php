@@ -151,39 +151,40 @@
 
         <div class="row  form--clients-interests__fields-row  form__container  "><!--... строка-->
 
-          <div class="col  col-lg-5  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper">
+          <div class="col  col-lg-6  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper--row-2">
             <div class="flex__container">
               <!--                        todo: добавить плавное появление для datepicker-->
               <label class="form__label"  for="departure-date">Даты вылета</label>
               <label class="form__label  form__label--hide"  for="arrival-date">Дата прилёта</label>
             </div>
 
-            <div class="flex__container  form__dropdown-menu-button">
+            <div class="flex__container  form__dropdown-menu-button  form__input-text">
               <input class="form__input  form__input--departure-date"  id="departure-date"   name="selection-departure-date"  type="text"  placeholder="дата вылета">
               <input class="form__input  form__input--arrival-date"  id="arrival-date"   name="selection-arrival-date"  type="text"  placeholder="дата прилёта">
             </div>
           </div>
 
 
-          <div class="col  col-lg-5  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper">
+          <div class="col  col-lg-4  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper--row-2">
             <!--                      todo: вместо flex__direction--column указать flex__direction т.е. без --column-->
             <label class="form__label"  for="dates__dropdown-menu--button">На сколько</label>
 
-            <div class="flex__container    form__dropdown-menu-button">
-              <input class="form__input  form__input--dates  dropdown-menu__button"
-                     id="dates-min__dropdown-menu--button"
-                     onclick="openDropdownMenu( event, 'dates__dropdown-menu--content-id', 'dropdown-menu__content' )"
-                     name="selection-dates-min"
-                     type="text"
-                     placeholder="7 ночей">
+<!--todo: сделать input для #dates-min__dropdown-menu--button и #dates-max__dropdown-menu--button-->
+            <div class="flex__container    form__dropdown-menu-button  form__input-text"
+                 onclick="openDropdownMenu( event, 'dates__dropdown-menu--content-id', 'dropdown-menu__content' )">
+
+              <span id="dates-min__dropdown-menu--button"
+                    class="flex__container  flex__direction--column  flex__justify-content--center  form__input--dates  dropdown-menu__button">
+              </span>
+
               <span class="flex__container  flex__direction--column  flex__justify-content--center">-</span>
-              <input class="form__input  form__input--dates  dropdown-menu__button"
-                     id="dates-max__dropdown-menu--button"
-                     onclick="openDropdownMenu( event, 'dates__dropdown-menu--content-id', 'dropdown-menu__content' )"
-                     name="selection-dates-max"
-                     type="text"
-                     placeholder="14 ночей">
+
+              <span id="dates-max__dropdown-menu--button"
+                    class="flex__container  flex__direction--column  flex__justify-content--center  form__input--dates  dropdown-menu__button">
+              </span>
+
               <span class="flex__container  flex__direction--column  flex__justify-content--center">ночей</span>
+
             </div>
             <div class="dropdown-menu__wrapper">
               <div id="dates__dropdown-menu--content-id" class="dropdown-menu__content  dates__dropdown-menu--content">
@@ -197,29 +198,27 @@
           </div>
 
 
-          <div class="col  col-lg-5  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper">
+          <div class="col  col-lg-5  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper--row-2">
             <div class="flex__container  ">
               <label class="form__label  "                  for="passengers">Количество пассажиров</label>
               <label class="form__label  form__label--hide" for="passengers-childs">Количество пассажиров</label>
             </div>
-            <div class="flex__container  form__dropdown-menu-button">
-              <input class="form__input  form__input--passengers  dropdown-menu__button"
-                     id="parents__dropdown-menu--button"
-                     onclick="openDropdownMenu( event, 'passengers__dropdown-menu--content-id', 'dropdown-menu__content' )"
-                     name="selection-passengers-parents"
-                     value="1"
-                     type="text"
-                     placeholder="Пассажиры">
-              <span class="flex__container  flex__align-items--center  form__text--passengers" id="parents__text">взрослый</span>
+            <div class="flex__container  form__dropdown-menu-button  form__input-text"
+                 onclick="openDropdownMenu( event, 'passengers__dropdown-menu--content-id', 'dropdown-menu__content' )">
+
+              <span id="parents__dropdown-menu--button"
+                    class="flex__container  flex__direction--column  flex__justify-content--center  form__input--passengers  dropdown-menu__button">1
+              </span>
+
+              <span class="flex__container  flex__direction--column  flex__justify-content--center" id="parents__text">взрослый</span>
               <span class="flex__container  flex__direction--column  flex__justify-content--center  form__text--passengers-parents">,</span>
-              <input class="form__input  form__input--passengers  dropdown-menu__button"
-                     id="childs__dropdown-menu--button"
-                     onclick="openDropdownMenu( event, 'passengers__dropdown-menu--content-id', 'dropdown-menu__content' )"
-                     name="selection-passengers-childs"
-                     value="0"
-                     type="text"
-                     placeholder="Пассажиры">
-              <span class="flex__container  flex__align-items--center  form__text--passengers" id="childs__text">детей</span>
+
+              <span id="childs__dropdown-menu--button"
+                    class="flex__container  flex__direction--column  flex__justify-content--center  form__input--passengers  dropdown-menu__button">0
+              </span>
+
+              <span class="flex__container  flex__direction--column  flex__justify-content--center" id="childs__text">детей</span>
+
             </div>
             <div class="">
               <div class="dropdown-menu__wrapper">
@@ -291,39 +290,21 @@
           </div>
 
 
-          <div class="col  col-lg-5  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--column    form--clients-interests__input-wrapper">
+          <div class="col  col-lg-5  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper--row-2">
             <label class="form__label"  for="price">Стоимость тура</label>
-            <div class="flex__container  form__dropdown-menu-button">
-<!--
-              <input class="form__input  form__input--prices  dropdown-menu__button"
-                     id="prices-min__dropdown-menu--button"
-                     onclick="openDropdownMenu( event, 'prices__dropdown-menu--content-id', 'dropdown-menu__content' )"
-                     name="selection-prices-min"
-                     type="text"
-                     placeholder="7 ночей">
--->
-<!---->
+            <div class="flex__container  form__dropdown-menu-button  form__input-text"
+                 onclick="openDropdownMenu( event, 'prices__dropdown-menu--content-id', 'dropdown-menu__content' )">
+
               <span id="prices-min__dropdown-menu--button"
-                    onclick="openDropdownMenu( event, 'prices__dropdown-menu--content-id', 'dropdown-menu__content' )"
-                    class="flex__container  flex__direction--column  flex__justify-content--center  form__input  form__input--prices  dropdown-menu__button">
+                    class="flex__container  flex__direction--column  flex__justify-content--center  form__input--prices  dropdown-menu__button">
               </span>
-<!---->
+              
               <span class="flex__container  flex__direction--column  flex__justify-content--center">-</span>
 
-<!---->
               <span id="prices-max__dropdown-menu--button"
-                    onclick="openDropdownMenu( event, 'prices__dropdown-menu--content-id', 'dropdown-menu__content' )"
-                    class="flex__container  flex__direction--column  flex__justify-content--center  form__input  form__input--prices  dropdown-menu__button">
+                    class="flex__container  flex__direction--column  flex__justify-content--center  form__input--prices  dropdown-menu__button">
               </span>
-<!--->
-<!--
-              <input class="form__input  form__input--prices  dropdown-menu__button"
-                     id="prices-max__dropdown-menu--button"
-                     onclick="openDropdownMenu( event, 'prices__dropdown-menu--content-id', 'dropdown-menu__content' )"
-                     name="selection-prices-max"
-                     type="text"
-                     placeholder="14 ночей">
--->
+
             </div>
             <div class="dropdown-menu__wrapper">
               <div id="prices__dropdown-menu--content-id" class="dropdown-menu__content  prices__dropdown-menu--content">
@@ -340,7 +321,7 @@
 
         <div class="row  form--clients-interests__fields-row"><!--последняя строка-->
 
-          <div class="col  col-lg-3  col-md-5  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper">
+          <div class="col  col-lg-3  col-md-5  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper--row-3">
             <label class="form__label"  for="hotel-stars">Категория отелей от</label>
             <!--todo: синхронизироать id для input и label-->
             <input class="form__checkbox--hotel-stars  hide"  id="hotel-stars--5"  name="selection__hotel-5-stars"  type="checkbox">
@@ -446,7 +427,7 @@
           </div>
 
 
-          <div class="col  col-lg-4  col-md-5  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper">
+          <div class="col  col-lg-4  col-md-5  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper--row-3">
             <label class="form__label"  for="hotel-rating">Рейтинг TopHotels</label>
             <input class="form__checkbox--hotel-rating  hide"  id="hotel-rating--50"  name="selection__hotel-rating-5-0"  type="checkbox">
             <input class="form__checkbox--hotel-rating  hide"  id="hotel-rating--40"  name="selection__hotel-rating-4-0"  type="checkbox">
@@ -590,7 +571,7 @@
           </div>
 
 
-          <div class="col  col-lg-3  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper">
+          <div class="col  col-lg-3  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper--row-3">
             <label class="form__label"  for="nutrition">Тип питания</label>
             <input class="hide"
                    id=""
@@ -697,7 +678,7 @@
           </div>
 
 
-          <div class="col  col-lg-5  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper">
+          <div class="col  col-lg-5  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper--row-3">
             <label class="form__label"  for="location">Расположение</label>
             <input class="hide"
                    id=""
