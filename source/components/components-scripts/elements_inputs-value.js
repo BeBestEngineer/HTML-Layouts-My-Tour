@@ -43,7 +43,9 @@ function setValuePassengers( inputId, inputValue, outputId, textId ) {
   //Поле в которое будет вставляться строка содержащая текст для родителей или детей
   var text   = document.getElementById( textId );
 
-  output.setAttribute( "value", inputValue );
+  // output.setAttribute( "value", inputValue );
+
+  output.innerHTML = inputValue;
 
   text.innerHTML = '';
 
