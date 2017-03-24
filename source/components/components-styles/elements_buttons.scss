@@ -42,7 +42,7 @@
                 $padding: '5px 15px',
                 $color: $color-10-layout,
                 $backgroundColor: $color-tr-layout,
-                $borderRadius: '25px'
+                $borderRadius: '#{$border-radius-buttons}'
       );
       &:hover {
         background-color: $color-10-layout;
