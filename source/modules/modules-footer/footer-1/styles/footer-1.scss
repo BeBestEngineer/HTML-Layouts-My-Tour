@@ -1,11 +1,27 @@
 .footer-1 {
   /*Position ( begin )*/
   padding: 50px 0px;
+  padding-left: 20px;
+  padding-right: 20px;
 
+  &__row-container {
+    margin-bottom: 40px;
+  }
+
+  .col {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .col-title {
+    height: 20px;
+    display: block;
+    margin-bottom: 20px;
+  }
 
   /*Position ( end )*/
   /*Fonts ( begin )*/
-  .company-name {
+  .col-title {
     @include font( $size: 13px, $text-transform: 'up' );
   }
   /*Fonts ( end )*/
