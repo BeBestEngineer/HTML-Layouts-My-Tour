@@ -16,6 +16,11 @@
     border: 1px solid $color-tr-layout;
     border-radius: 0px;
   }
+  &__input::-moz-placeholder {
+    color: $color-2-layout;
+    opacity: 1;
+  }
+
   &__input--prices {
     width: auto;
     min-width: 50px;
@@ -68,9 +73,9 @@
   &__container {
     margin-bottom: 30px;
   }
-  &__area {
+  &__area--regions {
     padding: 15px;
-    border-radius: 2px;
+    margin-bottom: 25px;
   }
   &__area-group {
     margin-bottom: 15px;
@@ -114,6 +119,16 @@
     padding-right: 5px;
     box-sizing: border-box;
     border: 1px solid $color-13-layout;
+  }
+
+  &__area--regions {
+    border: 1px solid $color-13-layout;
+    border-radius: $border-radius-fields;
+  }
+
+  &__dropdown-menu-placeholder {
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
 
@@ -179,6 +194,9 @@
   &__label {
     color: $color-13-layout;
   }
+  &__input-text {
+    color: $color-2-layout;
+  }
   /*Colors ( end )*/
   /*Decorate ( begin )*/
 
@@ -202,10 +220,24 @@
   }
 
 
-  &__input-wrapper--row-2 {
+  &__input-wrapper--row-1,
+  &__input-wrapper--row-2,
+  &__input-wrapper--row-3 {
     margin-left: -1px;
     margin-top: -1px;
   }
+
+
+  &__input-wrapper--row-1:nth-child(1) .form__dropdown-menu-button {
+    border-top-left-radius:    $border-radius-fields;
+    border-bottom-left-radius: $border-radius-fields;
+  }
+  &__input-wrapper--row-1:nth-child(2) .form__dropdown-menu-button {
+    border-top-right-radius:    $border-radius-fields;
+    border-bottom-right-radius: $border-radius-fields;
+  }
+
+
   &__input-wrapper--row-2:nth-child(1) .form__dropdown-menu-button {
     border-top-left-radius:    $border-radius-fields;
     border-bottom-left-radius: $border-radius-fields;
@@ -216,10 +248,6 @@
   }
 
 
-  &__input-wrapper--row-3 {
-    margin-left: -1px;
-    margin-top: -1px;
-  }
   &__input-wrapper--row-3:nth-child(1) .form__dropdown-menu-button {
     border-top-left-radius:    $border-radius-fields;
     border-bottom-left-radius: $border-radius-fields;
@@ -248,7 +276,7 @@
       border-top-right-radius:    $border-radius-fields;
       border-bottom-right-radius: $border-radius-fields;
     }
-    
+
 
     &__input-wrapper--row-3:nth-child(3) .form__dropdown-menu-button {
       border-top-right-radius:    $border-radius-fields;
@@ -274,6 +302,8 @@
 
 @media ( max-width: 767px ) {
   .form--clients-interests {
-
+    &__input-wrapper--row-1 .form__dropdown-menu-button {
+      border-radius: $border-radius-fields;
+    }
   }
 }

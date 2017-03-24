@@ -2,20 +2,21 @@
   <form action="" class="form--clients-interests" method="post">
 
     <div class="row__wrapper  form__container">
-      <div class="row">
+      <div class="row  form--clients-interests__fields-row">
 
-        <div class="col  col-lg-5  col-md-5  col-sm-10  col-xs-20  flex__container  flex__direction--column">
+        <div class="col  col-lg-5  col-md-5  col-sm-10  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper--row-1">
           <label class="form__label" for="selection-name">Название подборки</label>
-          <input class="form__input" type="text" id="selection-name" name="selection-name" placeholder="Введите название подборки">
+          <div class="form__dropdown-menu-button  form__input-text">
+            <input class="form__input" type="text" id="selection-name" name="selection-name" placeholder="Введите название подборки">
+          </div>
         </div>
 
 
-        <div class="col  col-lg-5  col-md-5  col-sm-10  col-xs-20  flex__container  flex__direction--column">
+        <div class="col  col-lg-5  col-md-5  col-sm-10  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper--row-1">
           <label class="form__label" for="selection-name">Ваш город</label>
-          <!--                    <input class="form__input" type="text" id="selection__city" name="selection-client-city" placeholder="Введите название вашего города">-->
-          <div class="form__input  form__input--cities  dropdown-menu__button"
+          <div class="flex__container  flex__direction--column  flex__justify-content--center  form__dropdown-menu-button"
                id="cities__modal-window--button">
-            <span id="cities__modal-window--placeholder-id">Выберите Ваш город</span>
+            <span id="cities__modal-window--placeholder-id" class="form__dropdown-menu-placeholder">Выберите Ваш город</span>
 
 
             <div id="location-pills-container">
@@ -66,9 +67,9 @@
       <!--                  <input class="form__input  form__input--regions" type="text" name="selection-regions" placeholder="Выберите регион мира и страну для добавления к подборке" value="">-->
       <!--todo: заменить на группу input, наверное динамически надо генерировать-->
 
-      <div class="flex__container  flex__direction--column  form__area"
+      <div class="flex__container  flex__direction--column  form__area--regions"
            id="regions--pills-container"><!--      область для placeholder и групп Регион-Страны              -->
-        <span id="regions__modal-window--placeholder-id">Нажмите кнопку "Добавить регион"</span>
+        <span id="regions__modal-window--placeholder-id" class="form__input-text">Нажмите кнопку "Добавить регион"</span>
         <!-- сюда вставляетмя пилюля для регионов -->
       </div>
 
