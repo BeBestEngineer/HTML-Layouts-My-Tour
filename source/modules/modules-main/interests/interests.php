@@ -20,8 +20,6 @@
                 </a>
                 <a class="links  tabs__title"          href="javascript:void(0)"  onclick="openTab(event, 'selection-2')">
                   Подборка 2
-                  <i></i>
-                  <i></i>
                   <span class="tabs__title-marker--bottom"></span>
                 </a>
               </div>
@@ -46,7 +44,7 @@
                 <?php require_once 'modules/modules-widgets/forms/form-client-interests/form-client-interests.php'; ?>
               </div>
               <div class="tabs__content"                      id="selection-2">
-                Подборка 2
+<!--                Подборка 2-->
               </div>
             </div>
 
