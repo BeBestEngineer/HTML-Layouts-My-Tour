@@ -149,40 +149,41 @@
     <div class="form__container">
       <div class="row__wrapper">
 
-        <div class="row  form__container">
+        <div class="row  form--clients-interests__fields-row  form__container  "><!--... строка-->
 
-          <div class="col  col-lg-5  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--column">
+          <div class="col  col-lg-5  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper">
             <div class="flex__container">
               <!--                        todo: добавить плавное появление для datepicker-->
-              <label class="form__label"  for="departure-date">Дата вылета</label>
-              <label class="form__label  hide__label"  for="arrival-date">Дата прилёта</label>
+              <label class="form__label"  for="departure-date">Даты вылета</label>
+              <label class="form__label  form__label--hide"  for="arrival-date">Дата прилёта</label>
             </div>
 
-            <div class="flex__container">
+            <div class="flex__container  form__dropdown-menu-button">
               <input class="form__input  form__input--departure-date"  id="departure-date"   name="selection-departure-date"  type="text"  placeholder="дата вылета">
               <input class="form__input  form__input--arrival-date"  id="arrival-date"   name="selection-arrival-date"  type="text"  placeholder="дата прилёта">
             </div>
           </div>
 
 
-          <div class="col  col-lg-5  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--column">
+          <div class="col  col-lg-5  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper">
             <!--                      todo: вместо flex__direction--column указать flex__direction т.е. без --column-->
             <label class="form__label"  for="dates__dropdown-menu--button">На сколько</label>
 
-            <div class="flex__container">
-              <input class="form__input  form__input--dates  form__input--1-2  dropdown-menu__button"
+            <div class="flex__container    form__dropdown-menu-button">
+              <input class="form__input  form__input--dates  dropdown-menu__button"
                      id="dates-min__dropdown-menu--button"
                      onclick="openDropdownMenu( event, 'dates__dropdown-menu--content-id', 'dropdown-menu__content' )"
                      name="selection-dates-min"
                      type="text"
                      placeholder="7 ночей">
-              <span>-</span>
-              <input class="form__input  form__input--dates  form__input--1-2  dropdown-menu__button"
+              <span class="flex__container  flex__direction--column  flex__justify-content--center">-</span>
+              <input class="form__input  form__input--dates  dropdown-menu__button"
                      id="dates-max__dropdown-menu--button"
                      onclick="openDropdownMenu( event, 'dates__dropdown-menu--content-id', 'dropdown-menu__content' )"
                      name="selection-dates-max"
                      type="text"
                      placeholder="14 ночей">
+              <span class="flex__container  flex__direction--column  flex__justify-content--center">ночей</span>
             </div>
             <div class="dropdown-menu__wrapper">
               <div id="dates__dropdown-menu--content-id" class="dropdown-menu__content  dates__dropdown-menu--content">
@@ -196,12 +197,12 @@
           </div>
 
 
-          <div class="col  col-lg-5  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--column">
+          <div class="col  col-lg-5  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper">
             <div class="flex__container  ">
               <label class="form__label  "                  for="passengers">Количество пассажиров</label>
               <label class="form__label  form__label--hide" for="passengers-childs">Количество пассажиров</label>
             </div>
-            <div class="flex__container">
+            <div class="flex__container  form__dropdown-menu-button">
               <input class="form__input  form__input--passengers  dropdown-menu__button"
                      id="parents__dropdown-menu--button"
                      onclick="openDropdownMenu( event, 'passengers__dropdown-menu--content-id', 'dropdown-menu__content' )"
@@ -210,6 +211,7 @@
                      type="text"
                      placeholder="Пассажиры">
               <span class="flex__container  flex__align-items--center  form__text--passengers" id="parents__text">взрослый</span>
+              <span class="flex__container  flex__direction--column  flex__justify-content--center  form__text--passengers-parents">,</span>
               <input class="form__input  form__input--passengers  dropdown-menu__button"
                      id="childs__dropdown-menu--button"
                      onclick="openDropdownMenu( event, 'passengers__dropdown-menu--content-id', 'dropdown-menu__content' )"
@@ -289,22 +291,39 @@
           </div>
 
 
-          <div class="col  col-lg-5  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--column">
+          <div class="col  col-lg-5  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--column    form--clients-interests__input-wrapper">
             <label class="form__label"  for="price">Стоимость тура</label>
-            <div class="flex__container">
-              <input class="form__input  form__input--prices  form__input--1-2  dropdown-menu__button"
+            <div class="flex__container  form__dropdown-menu-button">
+<!--
+              <input class="form__input  form__input--prices  dropdown-menu__button"
                      id="prices-min__dropdown-menu--button"
                      onclick="openDropdownMenu( event, 'prices__dropdown-menu--content-id', 'dropdown-menu__content' )"
                      name="selection-prices-min"
                      type="text"
                      placeholder="7 ночей">
-              <span>-</span>
-              <input class="form__input  form__input--prices  form__input--1-2  dropdown-menu__button"
+-->
+<!---->
+              <span id="prices-min__dropdown-menu--button"
+                    onclick="openDropdownMenu( event, 'prices__dropdown-menu--content-id', 'dropdown-menu__content' )"
+                    class="flex__container  flex__direction--column  flex__justify-content--center  form__input  form__input--prices  dropdown-menu__button">
+              </span>
+<!---->
+              <span class="flex__container  flex__direction--column  flex__justify-content--center">-</span>
+
+<!---->
+              <span id="prices-max__dropdown-menu--button"
+                    onclick="openDropdownMenu( event, 'prices__dropdown-menu--content-id', 'dropdown-menu__content' )"
+                    class="flex__container  flex__direction--column  flex__justify-content--center  form__input  form__input--prices  dropdown-menu__button">
+              </span>
+<!--->
+<!--
+              <input class="form__input  form__input--prices  dropdown-menu__button"
                      id="prices-max__dropdown-menu--button"
                      onclick="openDropdownMenu( event, 'prices__dropdown-menu--content-id', 'dropdown-menu__content' )"
                      name="selection-prices-max"
                      type="text"
                      placeholder="14 ночей">
+-->
             </div>
             <div class="dropdown-menu__wrapper">
               <div id="prices__dropdown-menu--content-id" class="dropdown-menu__content  prices__dropdown-menu--content">
@@ -319,7 +338,7 @@
         </div>
 
 
-        <div class="row">
+        <div class="row  form--clients-interests__fields-row"><!--последняя строка-->
 
           <div class="col  col-lg-3  col-md-5  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper">
             <label class="form__label"  for="hotel-stars">Категория отелей от</label>
@@ -843,12 +862,6 @@
           </div>
 
 
-          <!--
-            todo: сделать input как в яндекс авиа
-            todo: скрыть инпут и добавить readonly="readonly", значения вставлять в div
-           -->
-
-
           <div class="col  col-lg-5  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--row-reverse  flex__align-items--flex-end">
             <button class="buttons  buttons__interests-form--clear-selection" type="button">
                         <span class="allign-middle  icons__wrapper">
@@ -859,6 +872,11 @@
               <span class="allign-middle">Удалить подборку</span>
             </button>
           </div>
+
+          <!--
+            todo: сделать input как в яндекс авиа
+            todo: скрыть инпут и добавить readonly="readonly", значения вставлять в div
+           -->
         </div>
 
       </div>
