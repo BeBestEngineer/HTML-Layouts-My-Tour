@@ -26,21 +26,19 @@
       </div>
 
 
-      <aside class="col--test  col  col-lg-2   col-md-2   col-sm-4   col-xs-20  col--order--1">
+      <aside class="  col  col-lg-2   col-md-2   col-sm-4   col-xs-20  col--order--1">
         <!--        col-lg-2   col-md-5   col-sm-10  col-xs-20  col--order--1-->
 
         <a href="#" class="logo-link  image-wrapper">
-          <img class="image" src="images/logo/logo.jpg" alt="logo">
+          <img class="image" src="images/logo/myTour-Logo.png" alt="logo">
         </a>
       </aside>
 
 
-      <aside class="col--test  col  col-lg-2   col-md-2   col-sm-4   col-xs-20">
+      <aside class="  col  col-lg-2   col-md-2   col-sm-4   col-xs-20">
         <!--        col-lg-2   col-md-5   col-sm-10  col-xs-20-->
-        Empty Aside
+<!--        Empty Aside-->
       </aside>
     </div>
-    <div class="row">Empty row 1</div>
-    <div class="row">Empty row 2</div>
   </div>
 </header>
