@@ -4,7 +4,15 @@
     <div class="row__wrapper  form__container">
       <div class="row  form--clients-interests__fields-row">
 
-        <div class="col  col-lg-5  col-md-5  col-sm-10  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper--row-1">
+        <div class="col
+                    col-lg-5
+                    col-md-5
+                    col-sm-10
+                    col-xs-20
+                               flex__container
+                               flex__direction--column
+                                                        form--clients-interests__input-wrapper--row-1
+                                                                                                       margin-bottom-30-xs">
           <label class="form__label" for="selection-name">Название подборки</label>
           <div class="form__dropdown-menu-button  form__input-text">
             <input class="form__input" type="text" id="selection-name" name="selection-name" placeholder="Введите название подборки">
@@ -12,7 +20,15 @@
         </div>
 
 
-        <div class="col  col-lg-5  col-md-5  col-sm-10  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper--row-1">
+        <div class="col
+                    col-lg-5
+                    col-md-5
+                    col-sm-10
+                    col-xs-20
+                               flex__container
+                               flex__direction--column
+                                                        form--clients-interests__input-wrapper--row-1
+                                                                                                       margin-bottom-30-sm">
           <label class="form__label" for="selection-name">Ваш город</label>
           <div class="flex__container  flex__direction--column  flex__justify-content--center  form__dropdown-menu-button"
                id="cities__modal-window--button">
@@ -44,7 +60,14 @@
 
 
         <!--Submit button ( begin )-->
-        <div class="col  col-lg-10  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--row-reverse  flex__align-items--flex-end">
+        <div class="col
+                    col-lg-10
+                    col-md-10
+                    col-sm-20
+                    col-xs-20
+                               flex__container
+                               flex__direction--row-reverse
+                                                             flex__align-items--flex-end">
           <button class="buttons  buttons__interests-form--submit" type="submit" name="Button_pressed">
             <span class="allign-middle">Смотреть результаты</span>
                       <span class="allign-middle  icons__wrapper">
@@ -152,7 +175,15 @@
 
         <div class="row  form--clients-interests__fields-row  form__container  "><!--... строка-->
 
-          <div class="col  col-lg-6  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper--row-2">
+          <div class="col
+                      col-lg-6
+                      col-md-10
+                      col-sm-10
+                      col-xs-20
+                                 flex__container
+                                 flex__direction--column
+                                                          form--clients-interests__input-wrapper--row-2
+                                                                                                         margin-bottom-30-md">
             <div class="flex__container">
               <!--                        todo: добавить плавное появление для datepicker-->
               <label class="form__label"  for="departure-date">Даты вылета</label>
@@ -166,7 +197,15 @@
           </div>
 
 
-          <div class="col  col-lg-4  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper--row-2">
+          <div class="col
+                      col-lg-4
+                      col-md-10
+                      col-sm-10
+                      col-xs-20
+                                 flex__container
+                                 flex__direction--column
+                                                          form--clients-interests__input-wrapper--row-2
+                                                                                                         margin-bottom-30-xs">
             <!--                      todo: вместо flex__direction--column указать flex__direction т.е. без --column-->
             <label class="form__label"  for="dates__dropdown-menu--button">На сколько</label>
 
@@ -199,7 +238,15 @@
           </div>
 
 
-          <div class="col  col-lg-5  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper--row-2">
+          <div class="col
+                      col-lg-5
+                      col-md-10
+                      col-sm-10
+                      col-xs-20
+                                 flex__container
+                                 flex__direction--column
+                                                          form--clients-interests__input-wrapper--row-2
+                                                                                                         margin-bottom-30-xs">
             <div class="flex__container  ">
               <label class="form__label  "                  for="passengers">Количество пассажиров</label>
               <label class="form__label  form__label--hide" for="passengers-childs">Количество пассажиров</label>
@@ -291,7 +338,14 @@
           </div>
 
 
-          <div class="col  col-lg-5  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper--row-2">
+          <div class="col
+                      col-lg-5
+                      col-md-10
+                      col-sm-10
+                      col-xs-20
+                                 flex__container
+                                 flex__direction--column
+                                                          form--clients-interests__input-wrapper--row-2">
             <label class="form__label"  for="price">Стоимость тура</label>
             <div class="flex__container  form__dropdown-menu-button  form__input-text"
                  onclick="openDropdownMenu( event, 'prices__dropdown-menu--content-id', 'dropdown-menu__content' )">
@@ -322,7 +376,15 @@
 
         <div class="row  form--clients-interests__fields-row"><!--последняя строка-->
 
-          <div class="col  col-lg-3  col-md-5  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper--row-3">
+          <div class="col
+                      col-lg-3
+                      col-md-5
+                      col-sm-10
+                      col-xs-20
+                                 flex__container
+                                 flex__direction--column
+                                                          form--clients-interests__input-wrapper--row-3
+                                                                                                         margin-bottom-30-md">
             <label class="form__label"  for="hotel-stars">Категория отелей от</label>
             <!--todo: синхронизироать id для input и label-->
             <input class="form__checkbox--hotel-stars  hide"  id="hotel-stars--5"  name="selection__hotel-5-stars"  type="checkbox">
@@ -428,7 +490,15 @@
           </div>
 
 
-          <div class="col  col-lg-4  col-md-5  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper--row-3">
+          <div class="col
+                      col-lg-4
+                      col-md-5
+                      col-sm-10
+                      col-xs-20
+                                 flex__container
+                                 flex__direction--column
+                                                          form--clients-interests__input-wrapper--row-3
+                                                                                                       margin-bottom-30-xs">
             <label class="form__label"  for="hotel-rating">Рейтинг TopHotels</label>
             <input class="form__checkbox--hotel-rating  hide"  id="hotel-rating--50"  name="selection__hotel-rating-5-0"  type="checkbox">
             <input class="form__checkbox--hotel-rating  hide"  id="hotel-rating--40"  name="selection__hotel-rating-4-0"  type="checkbox">
@@ -572,7 +642,15 @@
           </div>
 
 
-          <div class="col  col-lg-3  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper--row-3">
+          <div class="col
+                      col-lg-3
+                      col-md-10
+                      col-sm-10
+                      col-xs-20
+                                 flex__container
+                                 flex__direction--column
+                                                          form--clients-interests__input-wrapper--row-3
+                                                                                                         margin-bottom-30-xs">
             <label class="form__label"  for="nutrition">Тип питания</label>
             <input class="hide"
                    id=""
@@ -679,7 +757,15 @@
           </div>
 
 
-          <div class="col  col-lg-5  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--column  form--clients-interests__input-wrapper--row-3">
+          <div class="col
+                      col-lg-5
+                      col-md-10
+                      col-sm-10
+                      col-xs-20
+                                 flex__container
+                                 flex__direction--column
+                                                          form--clients-interests__input-wrapper--row-3
+                                                                                                         margin-bottom-30-sm">
             <label class="form__label"  for="location">Расположение</label>
             <input class="hide"
                    id=""
@@ -844,7 +930,14 @@
           </div>
 
 
-          <div class="col  col-lg-5  col-md-10  col-sm-20  col-xs-20  flex__container  flex__direction--row-reverse  flex__align-items--flex-end">
+          <div class="col
+                      col-lg-5
+                      col-md-10
+                      col-sm-20
+                      col-xs-20
+                                 flex__container
+                                 flex__direction--row-reverse
+                                                               flex__align-items--flex-end">
             <button class="buttons  buttons__interests-form--clear-selection" type="button">
                         <span class="allign-middle  icons__wrapper">
                           <svg class="icons  icons__svg" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
