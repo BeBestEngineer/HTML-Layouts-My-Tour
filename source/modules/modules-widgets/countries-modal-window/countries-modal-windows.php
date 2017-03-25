@@ -1,11 +1,12 @@
-<?php require_once 'modules/modules-widgets/countries-modal-window/countries-modal-window--australia-and-oceania.php'; ?>
+<?php require $modal_windows_Countries_lists -> Get_data( 'interests-form', 'africa' )['path-this-module']; ?>
 
-<?php require_once 'modules/modules-widgets/countries-modal-window/countries-modal-window--asia.php'; ?>
+<?php require $modal_windows_Countries_lists -> Get_data( 'interests-form', 'america' )['path-this-module']; ?>
 
-<?php require_once 'modules/modules-widgets/countries-modal-window/countries-modal-window--america.php'; ?>
+<?php require $modal_windows_Countries_lists -> Get_data( 'interests-form', 'asia' )['path-this-module']; ?>
 
-<?php require_once 'modules/modules-widgets/countries-modal-window/countries-modal-window--africa.php'; ?>
+<?php require $modal_windows_Countries_lists -> Get_data( 'interests-form', 'australia-and-oceania' )['path-this-module']; ?>
 
-<?php require_once 'modules/modules-widgets/countries-modal-window/countries-modal-window--europe.php'; ?>
+<?php require $modal_windows_Countries_lists -> Get_data( 'interests-form', 'euroasia' )['path-this-module']; ?>
 
-<?php require_once 'modules/modules-widgets/countries-modal-window/countries-modal-window--euroasia.php'; ?> 
+<?php require $modal_windows_Countries_lists -> Get_data( 'interests-form', 'europe' )['path-this-module']; ?>
+
