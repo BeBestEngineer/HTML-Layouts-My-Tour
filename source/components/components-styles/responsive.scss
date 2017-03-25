@@ -1,0 +1,42 @@
+//Phones
+//-xs-
+
+
+
+
+//Phones
+@media ( max-width: 767px ) {
+//-sm-
+  .margin-bottom-30-xs {
+    margin-bottom: 30px;
+  }
+}
+
+
+
+
+//Tabs
+@media ( max-width: 991px ) {
+//-md-
+  .margin-bottom-30-sm {
+    margin-bottom: 30px;
+  }
+  .margin-top-100-sm {
+    margin-top: 100px;
+  }
+}
+
+
+
+
+//Desktops and tabs
+@media ( max-width: 1199px ) {
+//-lg-
+  .margin-bottom-30-md {
+    margin-bottom: 30px;
+  }
+
+
+}
+
+
