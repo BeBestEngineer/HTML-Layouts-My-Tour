@@ -177,55 +177,6 @@ html, body {
   }
 }
 
-.main-wrapper {
-  margin-bottom: 90px;
-}
-
-/*
-.pills {
-  padding: 5px 10px 5px 15px;
-  border-radius: 20px;
-  border: 1px solid #2b2b2b;
-  margin-right: 15px;
-
-  &__text {
-    @include font( $size: 15px);
-  }
-  
-  &__icon-wrapper {
-    position: relative;
-    width: 20px;
-    height: 20px;
-  }
-  &__icon-wrapper:before, &__icon-wrapper:after {
-    position: absolute;
-    left: 10px;
-    content: ' ';
-    height: 20px;
-    width: 2px;
-    background-color: #2b2b2b;
-  }
-  &__icon-wrapper:before {
-    transform: rotate(45deg);
-  }
-  &__icon-wrapper:after {
-    transform: rotate(-45deg);
-  }
-  
-  &__icon {
-    @include absolute_alignment;
-    @include max_stretching;
-  }
-
-  &__image--wrapper {
-    display: inline-block;
-    width: 30px;
-    height: 20px;
-  }
-}
-*/
-
-
 
 
 
@@ -281,7 +232,7 @@ html, body {
 
 
 .col--test {
-  background-color: #85ffe7;
+  //background-color: #85ffe7;
   color: #309ac6;
   font-size: 15px;
 
@@ -294,3 +245,43 @@ html, body {
 .noUi-tooltip {
   white-space: nowrap;
 }
+
+
+
+.text {
+  &-left {
+    text-align: left;
+  }
+
+  &-right {
+    text-align: right;
+  }
+}
+
+
+
+
+
+
+.main-wrapper {
+  margin-bottom: 90px;
+}
+
+
+
+//Banners
+.banner__top {
+  height: 100px;
+}
+.banner__bottom {
+  height: 100px;
+}
+
+
+
+
+//Layout margins and paddings
+.margin-bottom-20 {
+  margin-bottom: 20px;
+}
+
