@@ -1,13 +1,4 @@
-<!-- The Modal -->
-<div id="modal-windows__countries--africa-list" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close" id="countries--africa__modal-window-close-button">&times;</span>
-    </div>
-    <div class="">
-      <ul>
+<ul class="row">
         <!--        todo: распарсить через дерево-->
 
 <!--               onclick="addCheckedElement(
@@ -20,7 +11,11 @@
                                                 'countries__modal-window--placeholder-id'   -
                                               )"
 -->
-        <li>
+  <li class="col-lg-5
+             col-md-10
+             col-sm-10
+             col-xs-20
+                        margin-bottom-20">
           <label class="custom-checkbox__label">
             <span id="countries-aljir--label-text-id">Алжир</span>
 
@@ -45,7 +40,11 @@
                     </span>
           </label>
         </li>
-        <li>
+  <li class="col-lg-5
+             col-md-10
+             col-sm-10
+             col-xs-20
+                        margin-bottom-20">
           <label class="custom-checkbox__label">
             <span id="countries-egipet--label-text-id">Еги́пет</span>
 
@@ -70,7 +69,11 @@
                     </span>
           </label>
         </li>
-        <li>
+  <li class="col-lg-5
+             col-md-10
+             col-sm-10
+             col-xs-20
+                        margin-bottom-20">
           <label class="custom-checkbox__label">
             <span id="countries-madagaskar--label-text-id">Мадагаскар</span>
 
@@ -96,8 +99,4 @@
           </label>
         </li>
         
-      </ul>
-    </div>
-  </div>
-
-</div>
+</ul>
