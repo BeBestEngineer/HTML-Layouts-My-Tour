@@ -260,14 +260,14 @@
 )
 {
   .tabs {
-    padding-left:  unquote( $paddingTabs );
-    padding-right: unquote( $paddingTabs );
+    //padding-left:  unquote( $paddingTabs );
+    //padding-right: unquote( $paddingTabs );
   }
   .tabs__title {
     padding: unquote( $paddingTopBottom + ' ' + $paddingLeftRight );
   }
   .tabs__title:first-child {
-    margin-left: - unquote( $paddingLeftRight );
+    margin-left: 4px;
   }
   .tabs__title.active {
     .tabs__title-marker--bottom {
