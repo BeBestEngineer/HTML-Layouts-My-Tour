@@ -13,3 +13,8 @@ body {
     @include font( $size: 22px, $line-height: 25px );
   }
 }
+
+
+.buttons-text__dropdowns--remove {
+  @include font( $size: 15px, $line-height: 20px );
+}
