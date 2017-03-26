@@ -1,0 +1,1 @@
+<?php require_once 'icons-templates/icons--close-template.php'?>
