@@ -8002,7 +8002,7 @@ $.fn.dropdown.settings.templates = {
 
   // generates label for multiselect
   label: function(value, text) {
-    return text + '<span class="delete  icon  icons__wrapper  allign-middle">' + templateIconsClose() + '</span>';
+    return '<span class="allign-middle  buttons-text__dropdowns--remove">' + text + '</span>' + '<div class="delete  icon  button  buttons__dropdowns--remove-pills  allign-middle">' + templateIconsClose() + '</div>';
   },
 
 
