@@ -70,8 +70,36 @@
       height: 50px;
       padding: 0px 10px;
       .icons {
-        transform: rotate(45deg);;
+        transform: rotate(45deg);
       }
     }
+    &--more-less-passengers {
+      @include  font( $size: 15px, $text-transform: 'up' );
+      @include  buttons__text-and-icon-with-bg (
+              $height: 'auto',
+              $border: '1px solid #{$color-tr-layout}',
+              $padding: '0px 0px 0px 0px',
+              $color: $color-16-layout,
+              $backgroundColor: $color-tr-layout,
+              $iconWrapperColor: $color-16-layout,
+              $widthIcon: '8px',
+              $heightIcon: '8px',
+              $marginIconWrapper: '5px'
+      );
+      &:hover {
+
+      }
+      .icons--rotate {
+        transform: rotate(45deg);
+      }
+      .icons--opacity {
+        opacity: 0.8;
+      }
+    }
+    &--input-passengers {
+      width: 20px;
+      text-align: center;
+    }
+
   }
 }
