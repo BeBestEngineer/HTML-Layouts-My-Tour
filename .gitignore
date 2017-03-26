@@ -11,23 +11,12 @@ node_modules/
 layout.css.map
 
 
-build/
-build/wp-content/themes/moddest/css/*
-build/wp-content/themes/moddest/js/*
-build/wp-content/themes/moddest/images/sections/**/*
-
-
 source/images/logo-theme/
 source/components/components-styles/collected-styles/*
 source/components/components-scripts/collected-scripts/*
 
 
-!build/wp-content/themes/moddest/
-
-
-
-
-
+screenshots/
 
 
 
