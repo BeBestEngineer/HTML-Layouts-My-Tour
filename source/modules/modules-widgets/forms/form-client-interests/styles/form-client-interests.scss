@@ -213,6 +213,11 @@
 
 //todo: Разбить стили для всех ворм и для контектной формы
 .form--clients-interests {
+  .widget__passengers-range {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
   &__fields-row {
     position: relative;
     left: 1px;
