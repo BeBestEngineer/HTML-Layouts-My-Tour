@@ -270,67 +270,82 @@
             </div>
             <div class="">
               <div class="dropdown-menu__wrapper">
-                <div id="passengers__dropdown-menu--content-id" class="dropdown-menu__content">
+                <div class="dropdown-menu__content  dropdown-menu__content--passengers" id="passengers__dropdown-menu--content-id">
 
-                  <div class="widget__passengers-range">
-                    <span class="allign-middle">Взрослые:</span>
+                  <div class="row__wrapper">
+                    <div class="row">
+                      <div class="col-xs-20">
+                        <div class="widget__passengers-range  flex__container  flex__justify-content--space-between  flex__align-items--baseline">
+                          <span class="allign-middle">Взрослые:</span>
 
-                    <button class="allign-middle  widget__passengers-range--button"
-                            id="widget__passengers-range--button-more"
-                            onclick="ChangeInputValueMore( event, 'widget__passengers-range-parents--input', 'parents__dropdown-menu--button', 'parents__text' )"
-                            type="button">
-                      <svg width="20" height="20" viewBox="0 0 1792 1792">
-                        <path class="icons__svg-color" d="M1395 1184q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"></path>
-                      </svg>
-                    </button>
+                          <div class="">
+                            <button class="allign-middle  buttons__interests-form--more-less-passengers"
+                                    id="widget__passengers-range--button-less"
+                                    onclick="ChangeInputValueLess( event, 'widget__passengers-range-parents--input', 'parents__dropdown-menu--button', 'parents__text' )"
+                                    type="button">
+                              <span class="allign-middle  icons__wrapper">
+                                <svg class="icons  icons__svg  icons--opacity" viewBox="0 0 100 100">
+                                  <rect height="16" width="100" x="0" y="42"></rect>
+                                </svg>
+                              </span>
+                            </button>
 
-                    <input class="allign-middle  widget__passengers-range--input"
-                           id="widget__passengers-range-parents--input"
-                           name="selection-passengers-parents"
-                           value="1"
-                           type="text">
+                            <input class="allign-middle  buttons__interests-form--input-passengers"
+                                   id="widget__passengers-range-parents--input"
+                                   name="selection-passengers-parents"
+                                   value="1"
+                                   type="text">
 
-                    <button class="allign-middle  widget__passengers-range--button"
-                            id="widget__passengers-range--button-less"
-                            onclick="ChangeInputValueLess( event, 'widget__passengers-range-parents--input', 'parents__dropdown-menu--button', 'parents__text' )"
-                            type="button">
-                      <svg width="20" height="20" viewBox="0 0 1792 1792">
-                        <path class="icons__svg-color" d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"></path>
-                      </svg>
-                    </button>
+                            <button class="allign-middle  buttons__interests-form--more-less-passengers"
+                                    id="widget__passengers-range--button-more"
+                                    onclick="ChangeInputValueMore( event, 'widget__passengers-range-parents--input', 'parents__dropdown-menu--button', 'parents__text' )"
+                                    type="button">
+                              <span class="allign-middle  icons__wrapper">
+                                <svg class="icons  icons__svg  icons--rotate" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
+                                  <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
+                                </svg>
+                              </span>
+                            </button>
+                          </div>
 
+                        </div>
+                        <div class="widget__passengers-range  flex__container  flex__justify-content--space-between  flex__align-items--baseline">
+                          <span class="allign-middle">Дети:</span>
+
+                          <div class="">
+                            <button class="allign-middle  buttons__interests-form--more-less-passengers"
+                                    id="widget__passengers-range--button-less"
+                                    onclick="ChangeInputValueLess( event, 'widget__passengers-range-childs--input', 'childs__dropdown-menu--button', 'childs__text' )"
+                                    type="button">
+                              <span class="allign-middle  icons__wrapper">
+                                <svg class="icons  icons__svg  icons--opacity" viewBox="0 0 100 100">
+                                  <rect height="16" width="100" x="0" y="42"></rect>
+                                </svg>
+                              </span>
+                            </button>
+
+                            <input class="allign-middle  buttons__interests-form--input-passengers"
+                                   id="widget__passengers-range-childs--input"
+                                   name="selection-passengers-childs"
+                                   value="0"
+                                   type="text">
+
+                            <button class="allign-middle  buttons__interests-form--more-less-passengers"
+                                    id="widget__passengers-range--button-more"
+                                    onclick="ChangeInputValueMore( event, 'widget__passengers-range-childs--input', 'childs__dropdown-menu--button', 'childs__text' )"
+                                    type="button">
+                              <span class="allign-middle  icons__wrapper">
+                                <svg class="icons  icons__svg  icons--rotate" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
+                                  <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
+                                </svg>
+                              </span>
+                            </button>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
                   </div>
-
-
-                  <div class="widget__passengers-range">
-                    <span class="allign-middle">Дети:</span>
-
-                    <button class="allign-middle  widget__passengers-range--button"
-                            id="widget__passengers-range--button-more"
-                            onclick="ChangeInputValueMore( event, 'widget__passengers-range-childs--input', 'childs__dropdown-menu--button', 'childs__text' )"
-                            type="button">
-                      <svg width="20" height="20" viewBox="0 0 1792 1792">
-                        <path class="icons__svg-color" d="M1395 1184q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"></path>
-                      </svg>
-                    </button>
-
-                    <input class="allign-middle  widget__passengers-range--input"
-                           id="widget__passengers-range-childs--input"
-                           name="selection-passengers-childs"
-                           value="0"
-                           type="text">
-
-                    <button class="allign-middle  widget__passengers-range--button"
-                            id="widget__passengers-range--button-less"
-                            onclick="ChangeInputValueLess( event, 'widget__passengers-range-childs--input', 'childs__dropdown-menu--button', 'childs__text' )"
-                            type="button">
-                      <svg width="20" height="20" viewBox="0 0 1792 1792">
-                        <path class="icons__svg-color" d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"></path>
-                      </svg>
-                    </button>
-
-                  </div>
-
 
                 </div>
               </div>
