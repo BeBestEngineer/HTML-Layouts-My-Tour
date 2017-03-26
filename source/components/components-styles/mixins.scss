@@ -57,6 +57,7 @@
            ) {
   font-family: $family, unquote( $contour );
   font-size:   ( $size );
+  font-weight: normal;
 
   @if ( $text-transform == 'up' ) {
     text-transform: uppercase;
