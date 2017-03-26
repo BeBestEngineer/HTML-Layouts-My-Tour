@@ -100,6 +100,29 @@
       width: 20px;
       text-align: center;
     }
+  }
 
+  &__dropdowns {
+    &--remove-pills {
+      @include  buttons__text-and-icon-with-bg (
+              $height: 'auto',
+              $border: '1px solid #{$color-tr-layout}',
+              $padding: '0px 0px 0px 0px',
+              $color: $color-2-layout,
+              $backgroundColor: $color-tr-layout,
+              $iconWrapperColor: $color-16-layout,
+              $widthIconWrapper:  '15px',
+              $heightIconWrapper: '15px',
+              $widthIcon: '8px',
+              $heightIcon: '8px',
+              $marginIconWrapper: '-1px'
+      );
+      &:hover {
+
+      }
+      .icons--opacity {
+        opacity: 0.8;
+      }
+    }
   }
 }
