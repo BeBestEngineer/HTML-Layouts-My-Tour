@@ -30,7 +30,8 @@ module.exports = {
   scripts: {
     files: [
       'source/**/*.js',
-      '!source/components/components-scripts/collected-scripts/layout.js'
+      '!source/components/components-scripts/collected-scripts/layout.js',
+      '!source/components/components-frameworks/SemanticUI/semantic.js'
     ],
     tasks: [
       'clean:sourceLayoutScripts', 'clean:buildLayoutScripts',
