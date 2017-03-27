@@ -9,8 +9,10 @@
     <!--429 кб!!!!!!! - заменить-->
     <!--<script src="components/components-libs/moment/moment.js"></script>-->
     <!--51 кб - заменить-->
-    <script src="components/components-libs/moment/moment.min.js"></script>
-    <script src="components/components-libs/pikaday/pikaday.js"></script>
+<!--    <script src="components/components-libs/moment/moment.min.js"></script>-->
+<!--    <script src="components/components-libs/pikaday/pikaday.js"></script>-->
+
+    <script src="components/components-libs/flatpikr/flatpickr.js"></script>
 
 
     <script src="components/components-libs/noUIslider/nouislider.js"></script>
