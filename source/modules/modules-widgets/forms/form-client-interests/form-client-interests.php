@@ -401,19 +401,98 @@
                                                           form--clients-interests__input-wrapper--row-3
                                                                                                          margin-bottom-30-md">
             <label class="form__label"  for="hotel-stars">Категория отелей от</label>
-            <!--todo: синхронизироать id для input и label-->
-            <input class="form__checkbox--hotel-stars  hide"  id="hotel-stars--5"  name="selection__hotel-5-stars"  type="checkbox">
-            <input class="form__checkbox--hotel-stars  hide"  id="hotel-stars--4"  name="selection__hotel-4-stars"  type="checkbox">
-            <input class="form__checkbox--hotel-stars  hide"  id="hotel-stars--3"  name="selection__hotel-3-stars"  type="checkbox">
-            <input class="form__checkbox--hotel-stars  hide"  id="hotel-stars--2"  name="selection__hotel-2-stars"  type="checkbox">
 
+
+            <div class="flex__container
+                        flex__direction--column
+                        flex__justify-content--center">
+
+              <select class="ui  fluid  multiple  selection  dropdown
+                             form__dropdown-menu-button
+                             semantic__dropdown-menu
+                             flex__container
+                             flex__wrap
+                             flex__justify-content--flex-start
+                             flex__align-items--center"
+                      name="regions"
+                      id="interests-form__selection-dropdown--hotels-stars">
+                <option class="form__dropdown-menu-placeholder" value="">Выберите уровень отеля</option>
+
+                <option value="hotels-rating-1">
+                  <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
+                       id="rating--5-wrapper-id"
+                       onclick="addSelectElement( event, 'rating--5-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--5-remove-button', 'hotels__dropdown-menu--button', 'hotel-stars--N' )">
+                    <div class="rating  rating--5-stars"
+                         id="rating--5-stars-id">
+                      <!--                            JavaScript create stars-->
+                      <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
+                        <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
+                      </svg>
+                    </div>
+                  </div>
+                </option>
+                <option value="hotels-rating-2">
+                  <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
+                       id="rating--5-wrapper-id"
+                       onclick="addSelectElement( event, 'rating--5-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--5-remove-button', 'hotels__dropdown-menu--button', 'hotel-stars--N' )">
+                    <div class="rating  rating--5-stars"
+                         id="rating--5-stars-id">
+                      <!--                            JavaScript create stars-->
+                      <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
+                        <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
+                      </svg>
+                    </div>
+                  </div>
+                </option>
+                <option value="hotels-rating-3">
+                  <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
+                       id="rating--5-wrapper-id"
+                       onclick="addSelectElement( event, 'rating--5-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--5-remove-button', 'hotels__dropdown-menu--button', 'hotel-stars--N' )">
+                    <div class="rating  rating--5-stars"
+                         id="rating--5-stars-id">
+                      <!--                            JavaScript create stars-->
+                      <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
+                        <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
+                      </svg>
+                    </div>
+                  </div>
+                </option>
+                <option value="hotels-rating-4">
+                  <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
+                       id="rating--5-wrapper-id"
+                       onclick="addSelectElement( event, 'rating--5-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--5-remove-button', 'hotels__dropdown-menu--button', 'hotel-stars--N' )">
+                    <div class="rating  rating--5-stars"
+                         id="rating--5-stars-id">
+                      <!--                            JavaScript create stars-->
+                      <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
+                        <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
+                      </svg>
+                    </div>
+                  </div>
+                </option>
+                <option value="hotels-rating-5">
+                  <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
+                       id="rating--5-wrapper-id"
+                       onclick="addSelectElement( event, 'rating--5-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--5-remove-button', 'hotels__dropdown-menu--button', 'hotel-stars--N' )">
+                    <div class="rating  rating--5-stars"
+                         id="rating--5-stars-id">
+                      <!--                            JavaScript create stars-->
+                      <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
+                        <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
+                      </svg>
+                    </div>
+                  </div>
+                </option>
+              </select>
+
+            </div>
+<!--
             <div class="flex__container  flex__direction--column  flex__justify-content--center  form__dropdown-menu-button"
                  id="hotels__dropdown-menu--button"
                  onclick="openDropdownMenu( event, 'hotels__dropdown-menu--content-id', 'dropdown-menu__content' )">
               <span class="form__dropdown-menu-placeholder" id="hotels__dropdown-menu--placeholder-id">Выберите уровень отеля</span>
             </div>
-            <div class="dropdown-menu__wrapper">
-              <div id="hotels__dropdown-menu--content-id" class="dropdown-menu__content  hotels__dropdown-menu--content">
+
 
 
                 <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
@@ -421,20 +500,11 @@
                      onclick="addSelectElement( event, 'rating--5-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--5-remove-button', 'hotels__dropdown-menu--button', 'hotel-stars--N' )">
                   <div class="rating  rating--5-stars"
                        id="rating--5-stars-id">
-                    <!--                            JavaScript create stars-->
+
                     <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
                       <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
                     </svg>
                   </div>
-                  <!--                                    todo: разобраться с названиями классов и идентификаторов по БЭМ-->
-                  <button class="allign-middle  icons__wrapper  hide"
-                          type="button"
-                          id="rating--5-remove-button"
-                          onclick="removeSelectElement( event, 'rating--5-wrapper-id', 'hotels__dropdown-menu--placeholder-id', 'form__rating-hotels-wrapper', 'hotel-stars--N' )">
-                    <svg class="icons  icons__svg  icons__svg--rating-hotels" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
-                      <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
-                    </svg>
-                  </button>
                 </div>
 
 
@@ -443,19 +513,11 @@
                      onclick="addSelectElement( event, 'rating--4-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--4-remove-button', 'hotels__dropdown-menu--button', 'hotel-stars--N' )">
                   <div class="rating  rating--4-stars"
                        id="rating--4-stars-id">
-                    <!--                            JavaScript create stars-->
+
                     <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
                       <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
                     </svg>
                   </div>
-                  <button class="allign-middle  icons__wrapper  hide"
-                          type="button"
-                          id="rating--4-remove-button"
-                          onclick="removeSelectElement( event, 'rating--4-wrapper-id', 'hotels__dropdown-menu--placeholder-id', 'form__rating-hotels-wrapper', 'hotel-stars--N' )">
-                    <svg class="icons  icons__svg  icons__svg--rating-hotels" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
-                      <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
-                    </svg>
-                  </button>
                 </div>
 
 
@@ -464,19 +526,11 @@
                      onclick="addSelectElement( event, 'rating--3-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--3-remove-button', 'hotels__dropdown-menu--button', 'hotel-stars--N' )">
                   <div class="rating  rating--3-stars"
                        id="rating--3-stars-id">
-                    <!--                            JavaScript create stars-->
+
                     <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
                       <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
                     </svg>
                   </div>
-                  <button class="allign-middle  icons__wrapper  hide"
-                          type="button"
-                          id="rating--3-remove-button"
-                          onclick="removeSelectElement( event, 'rating--3-wrapper-id', 'hotels__dropdown-menu--placeholder-id', 'form__rating-hotels-wrapper', 'hotel-stars--N' )">
-                    <svg class="icons  icons__svg  icons__svg--rating-hotels" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
-                      <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
-                    </svg>
-                  </button>
                 </div>
 
 
@@ -485,23 +539,14 @@
                      onclick="addSelectElement( event, 'rating--2-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--2-remove-button', 'hotels__dropdown-menu--button', 'hotel-stars--N' )">
                   <div class="rating  rating--2-stars"
                        id="rating--2-stars-id">
-                    <!--                            JavaScript create stars-->
+
                     <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
                       <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
                     </svg>
                   </div>
-                  <button class="allign-middle  icons__wrapper  hide"
-                          type="button"
-                          id="rating--2-remove-button"
-                          onclick="removeSelectElement( event, 'rating--2-wrapper-id', 'hotels__dropdown-menu--placeholder-id', 'form__rating-hotels-wrapper', 'hotel-stars--N' )">
-                    <svg class="icons  icons__svg  icons__svg--rating-hotels" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
-                      <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
-                    </svg>
-                  </button>
                 </div>
+                -->
 
-              </div>
-            </div>
           </div>
 
 
@@ -515,144 +560,61 @@
                                                           form--clients-interests__input-wrapper--row-3
                                                                                                        margin-bottom-30-xs">
             <label class="form__label"  for="hotel-rating">Рейтинг TopHotels</label>
-            <input class="form__checkbox--hotel-rating  hide"  id="hotel-rating--50"  name="selection__hotel-rating-5-0"  type="checkbox">
-            <input class="form__checkbox--hotel-rating  hide"  id="hotel-rating--40"  name="selection__hotel-rating-4-0"  type="checkbox">
-            <input class="form__checkbox--hotel-rating  hide"  id="hotel-rating--30"  name="selection__hotel-rating-3-0"  type="checkbox">
-            <input class="form__checkbox--hotel-rating  hide"  id="hotel-rating--20"  name="selection__hotel-rating-2-0"  type="checkbox">
-            <input class="form__checkbox--hotel-rating  hide"  id="hotel-rating--10"  name="selection__hotel-rating-1-0"  type="checkbox">
 
-            <div class="flex__container  flex__direction--column  flex__justify-content--center  form__dropdown-menu-button"
-                 id="hotels-rating__dropdown-menu--button"
-                 onclick="openDropdownMenu( event, 'hotel-rating__dropdown-menu--content-id', 'dropdown-menu__content' )">
-              <span class="form__dropdown-menu-placeholder" id="hotels-rating__dropdown-menu--placeholder-id">Выберите рейтинг отеля</span>
-              <ul id="hotels-rating-list">
+            <div class="flex__container
+                        flex__direction--column
+                        flex__justify-content--center">
 
-              </ul>
-            </div>
-            <div class="dropdown-menu__wrapper">
-              <div id="hotel-rating__dropdown-menu--content-id" class="dropdown-menu__content  hotel-rating__dropdown-menu--content">
+              <select class="ui  fluid  multiple  selection  dropdown
+                             form__dropdown-menu-button
+                             semantic__dropdown-menu
+                             flex__container
+                             flex__wrap
+                             flex__justify-content--flex-start
+                             flex__align-items--center"
+                      name="regions"
+                      id="interests-form__selection-dropdown--hotels-rating">
+                <option class="form__dropdown-menu-placeholder" value="">Выберите рейтинг отеля</option>
 
-                <ul class="hotels-rating-list  hotels-rating-5-list" id="hotels-rating-list__dropdown-id">
+                <option value="hotels-rating-1">
+                  <span class="hotels-rating-list__text">Не ниже</span>
+                  <div class="">
+                  <svg class="allign-bottom  icons__svg  hotels-rating-list__icon" width="20" height="20" viewBox="0 0 24 24" >
+                    <path d="M21 22h-18v-4h18v4zm-2.266-12.906c-3.749 2.293-5.296-2.125-6.734-7.094-1.433 4.951-2.984 9.388-6.734 7.094-1.305-.798-5.266-4.094-5.266-4.094 1.796 3.797 2.75 6.292 3 11h18c.25-4.708 1.203-7.203 3-11 0 0-3.961 3.296-5.266 4.094z"/>
+                  </svg>
+                  </div>
+                  1.0
+                </option>
+                <option value="hotels-rating-2">
+                  <span class="hotels-rating-list__text">Не ниже</span>
+                  <svg class="allign-bottom  icons__svg  hotels-rating-list__icon" width="20" height="20" viewBox="0 0 24 24" >
+                    <path d="M21 22h-18v-4h18v4zm-2.266-12.906c-3.749 2.293-5.296-2.125-6.734-7.094-1.433 4.951-2.984 9.388-6.734 7.094-1.305-.798-5.266-4.094-5.266-4.094 1.796 3.797 2.75 6.292 3 11h18c.25-4.708 1.203-7.203 3-11 0 0-3.961 3.296-5.266 4.094z"/>
+                  </svg>
+                  2.0
+                </option>
+                <option value="hotels-rating-3">
+                  <span class="hotels-rating-list__text">Не ниже</span>
+                  <svg class="allign-bottom  icons__svg  hotels-rating-list__icon" width="20" height="20" viewBox="0 0 24 24" >
+                    <path d="M21 22h-18v-4h18v4zm-2.266-12.906c-3.749 2.293-5.296-2.125-6.734-7.094-1.433 4.951-2.984 9.388-6.734 7.094-1.305-.798-5.266-4.094-5.266-4.094 1.796 3.797 2.75 6.292 3 11h18c.25-4.708 1.203-7.203 3-11 0 0-3.961 3.296-5.266 4.094z"/>
+                  </svg>
+                  3.0
+                </option>
+                <option value="hotels-rating-4">
+                  <span class="hotels-rating-list__text">Не ниже</span>
+                  <svg class="allign-bottom  icons__svg  hotels-rating-list__icon" width="20" height="20" viewBox="0 0 24 24" >
+                    <path d="M21 22h-18v-4h18v4zm-2.266-12.906c-3.749 2.293-5.296-2.125-6.734-7.094-1.433 4.951-2.984 9.388-6.734 7.094-1.305-.798-5.266-4.094-5.266-4.094 1.796 3.797 2.75 6.292 3 11h18c.25-4.708 1.203-7.203 3-11 0 0-3.961 3.296-5.266 4.094z"/>
+                  </svg>
+                  4.0
+                </option>
+                <option value="hotels-rating-5">
+                  <span class="hotels-rating-list__text">Не ниже</span>
+                  <svg class="allign-bottom  icons__svg  hotels-rating-list__icon" width="20" height="20" viewBox="0 0 24 24" >
+                    <path d="M21 22h-18v-4h18v4zm-2.266-12.906c-3.749 2.293-5.296-2.125-6.734-7.094-1.433 4.951-2.984 9.388-6.734 7.094-1.305-.798-5.266-4.094-5.266-4.094 1.796 3.797 2.75 6.292 3 11h18c.25-4.708 1.203-7.203 3-11 0 0-3.961 3.296-5.266 4.094z"/>
+                  </svg>
+                  5.0
+                </option>
+              </select>
 
-                  <li class="flex__container  flex__justify-content--space-between  hotels-rating-list__item  form__rating-hotels-number-wrapper"
-                      id="hotel-rating--10-wrapper-id"
-                      onclick="addSelectElement( event, 'hotel-rating--10-wrapper-id' ,'hotels-rating__dropdown-menu--placeholder-id', 'hotels-rating-list', 'hotels-rating--10-remove-button', 'hotels-rating__dropdown-menu--button', 'hotel-rating--N' )">
-                    <div class="">
-                      <span class="hotels-rating-list__text">Не ниже</span>
-                      <svg class="allign-bottom  icons__svg  hotels-rating-list__icon" width="20" height="20" viewBox="0 0 24 24" >
-                        <path d="M21 22h-18v-4h18v4zm-2.266-12.906c-3.749 2.293-5.296-2.125-6.734-7.094-1.433 4.951-2.984 9.388-6.734 7.094-1.305-.798-5.266-4.094-5.266-4.094 1.796 3.797 2.75 6.292 3 11h18c.25-4.708 1.203-7.203 3-11 0 0-3.961 3.296-5.266 4.094z"/>
-                      </svg>
-                      <span id="hotels-rating-select__value-id" class="hotels-rating-list__value">1.0</span>
-                    </div>
-                    <div class="">
-                      <button class="allign-middle  icons__wrapper  hide"
-                              type="button"
-                              id="hotels-rating--10-remove-button"
-                              onclick="removeSelectElement( event, 'hotel-rating--10-wrapper-id', 'hotels-rating__dropdown-menu--placeholder-id', 'hotels-rating-list__item', 'hotel-rating--N' )">
-                        <svg class="icons  icons__svg  icons__svg--rating-hotels" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
-                          <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
-                        </svg>
-                      </button>
-                    </div>
-                  </li>
-
-
-                  <li class="flex__container  flex__justify-content--space-between  hotels-rating-list__item  form__rating-hotels-number-wrapper"
-                      id="hotel-rating--20-wrapper-id"
-                      onclick="addSelectElement( event, 'hotel-rating--20-wrapper-id' ,'hotels-rating__dropdown-menu--placeholder-id', 'hotels-rating-list', 'hotels-rating--20-remove-button', 'hotels-rating__dropdown-menu--button', 'hotel-rating--N' )">
-                    <div class="">
-                      <span class="hotels-rating-list__text">Не ниже</span>
-                      <svg class="allign-bottom  icons__svg  hotels-rating-list__icon" width="20" height="20" viewBox="0 0 24 24" >
-                        <path d="M21 22h-18v-4h18v4zm-2.266-12.906c-3.749 2.293-5.296-2.125-6.734-7.094-1.433 4.951-2.984 9.388-6.734 7.094-1.305-.798-5.266-4.094-5.266-4.094 1.796 3.797 2.75 6.292 3 11h18c.25-4.708 1.203-7.203 3-11 0 0-3.961 3.296-5.266 4.094z"/>
-                      </svg>
-                      <span id="hotels-rating-select__value-id" class="hotels-rating-list__value">2.0</span>
-                    </div>
-                    <div class="">
-                      <button class="allign-middle  icons__wrapper  hide"
-                              type="button"
-                              id="hotels-rating--20-remove-button"
-                              onclick="removeSelectElement( event, 'hotel-rating--20-wrapper-id', 'hotels-rating__dropdown-menu--placeholder-id', 'hotels-rating-list__item', 'hotel-rating--N' )">
-                        <svg class="icons  icons__svg  icons__svg--rating-hotels" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
-                          <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
-                        </svg>
-                      </button>
-                    </div>
-                  </li>
-
-
-                  <li class="flex__container  flex__justify-content--space-between  hotels-rating-list__item  form__rating-hotels-number-wrapper"
-                      id="hotel-rating--30-wrapper-id"
-                      onclick="addSelectElement( event, 'hotel-rating--30-wrapper-id' ,'hotels-rating__dropdown-menu--placeholder-id', 'hotels-rating-list', 'hotels-rating--30-remove-button', 'hotels-rating__dropdown-menu--button', 'hotel-rating--N' )">
-                    <div class="">
-                      <span class="hotels-rating-list__text">Не ниже</span>
-                      <svg class="allign-bottom  icons__svg  hotels-rating-list__icon" width="20" height="20" viewBox="0 0 24 24" >
-                        <path d="M21 22h-18v-4h18v4zm-2.266-12.906c-3.749 2.293-5.296-2.125-6.734-7.094-1.433 4.951-2.984 9.388-6.734 7.094-1.305-.798-5.266-4.094-5.266-4.094 1.796 3.797 2.75 6.292 3 11h18c.25-4.708 1.203-7.203 3-11 0 0-3.961 3.296-5.266 4.094z"/>
-                      </svg>
-                      <span id="hotels-rating-select__value-id" class="hotels-rating-list__value">3.0</span>
-                    </div>
-                    <div class="">
-                      <button class="allign-middle  icons__wrapper  hide"
-                              type="button"
-                              id="hotels-rating--30-remove-button"
-                              onclick="removeSelectElement( event, 'hotel-rating--30-wrapper-id', 'hotels-rating__dropdown-menu--placeholder-id', 'hotels-rating-list__item', 'hotel-rating--N' )">
-                        <svg class="icons  icons__svg  icons__svg--rating-hotels" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
-                          <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
-                        </svg>
-                      </button>
-                    </div>
-                  </li>
-
-
-                  <li class="flex__container  flex__justify-content--space-between  hotels-rating-list__item  form__rating-hotels-number-wrapper"
-                      id="hotel-rating--40-wrapper-id"
-                      onclick="addSelectElement( event, 'hotel-rating--40-wrapper-id' ,'hotels-rating__dropdown-menu--placeholder-id', 'hotels-rating-list', 'hotels-rating--40-remove-button', 'hotels-rating__dropdown-menu--button', 'hotel-rating--N' )">
-                    <div class="">
-                      <span class="hotels-rating-list__text">Не ниже</span>
-                      <svg class="allign-bottom  icons__svg  hotels-rating-list__icon" width="20" height="20" viewBox="0 0 24 24" >
-                        <path d="M21 22h-18v-4h18v4zm-2.266-12.906c-3.749 2.293-5.296-2.125-6.734-7.094-1.433 4.951-2.984 9.388-6.734 7.094-1.305-.798-5.266-4.094-5.266-4.094 1.796 3.797 2.75 6.292 3 11h18c.25-4.708 1.203-7.203 3-11 0 0-3.961 3.296-5.266 4.094z"/>
-                      </svg>
-                      <span id="hotels-rating-select__value-id" class="hotels-rating-list__value">4.0</span>
-                    </div>
-                    <div class="">
-                      <button class="allign-middle  icons__wrapper  hide"
-                              type="button"
-                              id="hotels-rating--40-remove-button"
-                              onclick="removeSelectElement( event, 'hotel-rating--40-wrapper-id', 'hotels-rating__dropdown-menu--placeholder-id', 'hotels-rating-list__item', 'hotel-rating--N' )">
-                        <svg class="icons  icons__svg  icons__svg--rating-hotels" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
-                          <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
-                        </svg>
-                      </button>
-                    </div>
-                  </li>
-
-
-                  <li class="flex__container  flex__justify-content--space-between  hotels-rating-list__item  form__rating-hotels-number-wrapper"
-                      id="hotel-rating--50-wrapper-id"
-                      onclick="addSelectElement( event, 'hotel-rating--50-wrapper-id' ,'hotels-rating__dropdown-menu--placeholder-id', 'hotels-rating-list', 'hotels-rating--50-remove-button', 'hotels-rating__dropdown-menu--button', 'hotel-rating--N' )">
-                    <div class="">
-                      <span class="hotels-rating-list__text">Не ниже</span>
-                      <svg class="allign-bottom  icons__svg  hotels-rating-list__icon" width="20" height="20" viewBox="0 0 24 24" >
-                        <path d="M21 22h-18v-4h18v4zm-2.266-12.906c-3.749 2.293-5.296-2.125-6.734-7.094-1.433 4.951-2.984 9.388-6.734 7.094-1.305-.798-5.266-4.094-5.266-4.094 1.796 3.797 2.75 6.292 3 11h18c.25-4.708 1.203-7.203 3-11 0 0-3.961 3.296-5.266 4.094z"/>
-                      </svg>
-                      <span id="hotels-rating-select__value-id" class="hotels-rating-list__value">5.0</span>
-                    </div>
-                    <div class="">
-                      <button class="allign-middle  icons__wrapper  hide"
-                              type="button"
-                              id="hotels-rating--50-remove-button"
-                              onclick="removeSelectElement( event, 'hotel-rating--50-wrapper-id', 'hotels-rating__dropdown-menu--placeholder-id', 'hotels-rating-list__item', 'hotel-rating--N' )">
-                        <svg class="icons  icons__svg  icons__svg--rating-hotels" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
-                          <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
-                        </svg>
-                      </button>
-                    </div>
-                  </li>
-
-
-
-                </ul>
-
-              </div>
             </div>
           </div>
 
@@ -667,108 +629,31 @@
                                                           form--clients-interests__input-wrapper--row-3
                                                                                                          margin-bottom-30-xs">
             <label class="form__label"  for="nutrition">Тип питания</label>
-            <input class="hide"
-                   id=""
-                   name="selection-nutrition"
-                   type="text"
-                   placeholder="Выберите питание">
-            <div class="flex__container  flex__direction--column  flex__justify-content--center  form__dropdown-menu-button"
-                 id="nutrition__dropdown-menu--button"
-                 onclick="openDropdownMenu( event, 'nutrition__dropdown-menu--content-id', 'dropdown-menu__content' )">
-              <span class="form__dropdown-menu-placeholder" id="nutrition__dropdown-menu--placeholder-id">Выберите тип питания</span>
-              <div id="nutrition-pills-container">
 
+            <div class="flex__container
+                        flex__direction--column
+                        flex__justify-content--center">
 
-                <!--                          pills ( begin )-->
-                <div class="pills__interests-form--nutrition  someClass  hide"
-                     id="pills__wrapper--nutrition-id">
-                  <span class="allign-middle" id="pills__text--nutrition-id">Nuttrition type</span>
-                  <button class="allign-middle  icons__wrapper"
-                          type="button"
-                          id="pills__button--nutrition-id"
-                          onclick="removeCheckedElement( event, 'nutrition__dropdown-menu--placeholder-id', 'pills__interests-form--nutrition' )">
-                    <svg class="icons  icons__svg" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
-                      <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
-                    </svg>
-                  </button>
-                </div>
-                <!--                          pills ( end )-->
+              <select class="ui  fluid  multiple  selection  dropdown
+                             form__dropdown-menu-button
+                             semantic__dropdown-menu
+                             flex__container
+                             flex__wrap
+                             flex__justify-content--flex-start
+                             flex__align-items--center"
+                      name="regions"
+                      id="interests-form__selection-dropdown--nutrition">
+                <option class="form__dropdown-menu-placeholder" value="">Выберите тип питания</option>
 
-              </div>
+                <option value="nutrition-active">Room only</option>
+                <option value="nutrition-calm">Bed &amp; breakfast</option>
+                <option value="nutrition-family">Half board</option>
+                <option value="nutrition-health">Full board</option>
+                <option value="nutrition-city">All inclusive</option>
+              </select>
+
             </div>
-            <div class="dropdown-menu__wrapper">
-              <div id="nutrition__dropdown-menu--content-id" class="dropdown-menu__content  nutrition__dropdown-menu--content">
 
-                <ul>
-                  <li>
-                    <label class="custom-checkbox__label">
-                      <input class="nutrition__dropdown-menu-option  custom-checkbox__input"
-                             id="nutrition-room-only--input-id"
-                             onclick="addCheckedElement( event, 'nutrition-room-only--label-text-id', 'pills__wrapper--nutrition-id', 'pills__text--nutrition-id', 'pills__button--nutrition-id', 'nutrition__dropdown-menu--button', 'nutrition__dropdown-menu--placeholder-id' )"
-                             type="checkbox"
-                             name="nutrition-room-only" >
-                                <span class="cr">
-                                  <i class="cr-icon custom-checkbox__icon"></i>
-                                </span>
-                      <span id="nutrition-room-only--label-text-id">Room only</span>
-                    </label>
-                  </li>
-                  <li>
-                    <label class="custom-checkbox__label">
-                      <input class="nutrition__dropdown-menu-option  custom-checkbox__input"
-                             id="nutrition-bed-and-breakfast--input-id"
-                             onclick="addCheckedElement( event, 'nutrition-bed-and-breakfast--label-text-id', 'pills__wrapper--nutrition-id', 'pills__text--nutrition-id', 'pills__button--nutrition-id', 'nutrition__dropdown-menu--button', 'nutrition__dropdown-menu--placeholder-id' )"
-                             type="checkbox"
-                             name="nutrition-bed-and-breakfast" >
-                                <span class="cr">
-                                  <i class="cr-icon custom-checkbox__icon"></i>
-                                </span>
-                      <span id="nutrition-bed-and-breakfast--label-text-id">Bed &amp; breakfast</span>
-                    </label>
-                  </li>
-                  <li>
-                    <label class="custom-checkbox__label">
-                      <input class="nutrition__dropdown-menu-option  custom-checkbox__input"
-                             id="nutrition-half-board--input-id"
-                             onclick="addCheckedElement( event, 'nutrition-half-board--label-text-id', 'pills__wrapper--nutrition-id', 'pills__text--nutrition-id', 'pills__button--nutrition-id', 'nutrition__dropdown-menu--button', 'nutrition__dropdown-menu--placeholder-id' )"
-                             type="checkbox"
-                             name="nutrition-half-board" >
-                                <span class="cr">
-                                  <i class="cr-icon custom-checkbox__icon"></i>
-                                </span>
-                      <span id="nutrition-half-board--label-text-id">Half board</span>
-                    </label>
-                  </li>
-                  <li>
-                    <label class="custom-checkbox__label">
-                      <input class="nutrition__dropdown-menu-option  custom-checkbox__input"
-                             id="nutrition-full-board--input-id"
-                             onclick="addCheckedElement( event, 'nutrition-full-board--label-text-id', 'pills__wrapper--nutrition-id', 'pills__text--nutrition-id', 'pills__button--nutrition-id', 'nutrition__dropdown-menu--button', 'nutrition__dropdown-menu--placeholder-id' )"
-                             type="checkbox"
-                             name="nutrition-full-board" >
-                                <span class="cr">
-                                  <i class="cr-icon custom-checkbox__icon"></i>
-                                </span>
-                      <span id="nutrition-full-board--label-text-id">Full board</span>
-                    </label>
-                  </li>
-                  <li>
-                    <label class="custom-checkbox__label">
-                      <input class="nutrition__dropdown-menu-option  custom-checkbox__input"
-                             id="nutrition-all-inclusive--input-id"
-                             onclick="addCheckedElement( event, 'nutrition-all-inclusive--label-text-id', 'pills__wrapper--nutrition-id', 'pills__text--nutrition-id', 'pills__button--nutrition-id', 'nutrition__dropdown-menu--button', 'nutrition__dropdown-menu--placeholder-id' )"
-                             type="checkbox"
-                             name="nutrition-all-inclusive" >
-                                <span class="cr">
-                                  <i class="cr-icon custom-checkbox__icon"></i>
-                                </span>
-                      <span id="nutrition-all-inclusive--label-text-id">All inclusive</span>
-                    </label>
-                  </li>
-                </ul>
-
-              </div>
-            </div>
           </div>
 
 
@@ -782,165 +667,34 @@
                                                           form--clients-interests__input-wrapper--row-3
                                                                                                          margin-bottom-30-sm">
             <label class="form__label"  for="location">Расположение</label>
-            <input class="hide"
-                   id=""
-                   name="selection-location"
-                   type="text"
-                   placeholder="Выберите расположение">
-            <div class="flex__container  flex__direction--column  flex__justify-content--center  form__dropdown-menu-button"
-                 id="location__dropdown-menu--button"
-                 onclick="openDropdownMenu( event, 'location__dropdown-menu--content-id', 'dropdown-menu__content' )">
-              <span class="form__dropdown-menu-placeholder" id="location__dropdown-menu--placeholder-id">Выберите расположение</span>
-              <div id="location-pills-container">
 
+            <div class="flex__container
+                        flex__direction--column
+                        flex__justify-content--center">
 
-                <!--                          pills ( begin )-->
-                <div class="pills__interests-form--location  someClass  hide"
-                     id="pills__wrapper--location-id">
-                  <span class="allign-middle" id="pills__text--location-id">Location place</span>
-                  <button class="allign-middle  icons__wrapper"
-                          type="button"
-                          id="pills__button--location-id"
-                          onclick="removeCheckedElement( event, 'location__dropdown-menu--placeholder-id', 'pills__interests-form--location' )">
-                    <svg class="icons  icons__svg" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
-                      <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
-                    </svg>
-                  </button>
-                </div>
-                <!--                          pills ( end )-->
+              <select class="ui  fluid  multiple  selection  dropdown
+                             form__dropdown-menu-button
+                             semantic__dropdown-menu
+                             flex__container
+                             flex__wrap
+                             flex__justify-content--flex-start
+                             flex__align-items--center"
+                      name="regions"
+                      id="interests-form__selection-dropdown--locations">
+                <option class="form__dropdown-menu-placeholder" value="">Выберите расположение</option>
 
-              </div>
-            </div>
-            <div class="dropdown-menu__wrapper">
-              <div id="location__dropdown-menu--content-id" class="dropdown-menu__content  location__dropdown-menu--content">
+                <option value="location-active">Активный</option>
+                <option value="location-calm">Спокойный</option>
+                <option value="location-family">Семейный</option>
+                <option value="location-health">Здоровье</option>
+                <option value="location-city">Городской</option>
+                <option value="location-beach">Пляжный</option>
 
+                <option value="location-1-line">1-я Линия</option>
+                <option value="location-2-line">2-я Линия</option>
+                <option value="location-3-line">3-я Линия</option>
+              </select>
 
-                <div class="flex__container">
-                  <ul>
-                    <li>
-                      <label class="custom-checkbox__label">
-                        <input class="location__dropdown-menu-option  custom-checkbox__input"
-                               id="location-active--input-id"
-                               onclick="addCheckedElement( event, 'location-active--label-text-id', 'pills__wrapper--location-id', 'pills__text--location-id', 'pills__button--location-id', 'location__dropdown-menu--button', 'location__dropdown-menu--placeholder-id' )"
-                               type="checkbox"
-                               name="location-active" >
-                                <span class="cr">
-                                  <i class="cr-icon custom-checkbox__icon"></i>
-                                </span>
-                        <span id="location-active--label-text-id">Активный</span>
-                      </label>
-                    </li>
-                    <li>
-                      <label class="custom-checkbox__label">
-                        <input class="location__dropdown-menu-option  custom-checkbox__input"
-                               id="location-calm--input-id"
-                               onclick="addCheckedElement( event, 'location-calm--label-text-id', 'pills__wrapper--location-id', 'pills__text--location-id', 'pills__button--location-id', 'location__dropdown-menu--button', 'location__dropdown-menu--placeholder-id' )"
-                               type="checkbox"
-                               name="location-calm" >
-                                <span class="cr">
-                                  <i class="cr-icon custom-checkbox__icon"></i>
-                                </span>
-                        <span id="location-calm--label-text-id">Спокойный</span>
-                      </label>
-                    </li>
-                    <li>
-                      <label class="custom-checkbox__label">
-                        <input class="location__dropdown-menu-option  custom-checkbox__input"
-                               id="location-family--input-id"
-                               onclick="addCheckedElement( event, 'location-family--label-text-id', 'pills__wrapper--location-id', 'pills__text--location-id', 'pills__button--location-id', 'location__dropdown-menu--button', 'location__dropdown-menu--placeholder-id' )"
-                               type="checkbox"
-                               name="location-family" >
-                                <span class="cr">
-                                  <i class="cr-icon custom-checkbox__icon"></i>
-                                </span>
-                        <span id="location-family--label-text-id">Семейный</span>
-                      </label>
-                    </li>
-                    <li>
-                      <label class="custom-checkbox__label">
-                        <input class="location__dropdown-menu-option  custom-checkbox__input"
-                               id="location-health--input-id"
-                               onclick="addCheckedElement( event, 'location-health--label-text-id', 'pills__wrapper--location-id', 'pills__text--location-id', 'pills__button--location-id', 'location__dropdown-menu--button', 'location__dropdown-menu--placeholder-id' )"
-                               type="checkbox"
-                               name="location-health" >
-                                <span class="cr">
-                                  <i class="cr-icon custom-checkbox__icon"></i>
-                                </span>
-                        <span id="location-health--label-text-id">Здоровье</span>
-                      </label>
-                    </li>
-                    <li>
-                      <label class="custom-checkbox__label">
-                        <input class="location__dropdown-menu-option  custom-checkbox__input"
-                               id="location-city--input-id"
-                               onclick="addCheckedElement( event, 'location-city--label-text-id', 'pills__wrapper--location-id', 'pills__text--location-id', 'pills__button--location-id', 'location__dropdown-menu--button', 'location__dropdown-menu--placeholder-id' )"
-                               type="checkbox"
-                               name="location-city" >
-                                <span class="cr">
-                                  <i class="cr-icon custom-checkbox__icon"></i>
-                                </span>
-                        <span id="location-city--label-text-id">Городской</span>
-                      </label>
-                    </li>
-                    <li>
-                      <label class="custom-checkbox__label">
-                        <input class="location__dropdown-menu-option  custom-checkbox__input"
-                               id="location-beachfront--input-id"
-                               onclick="addCheckedElement( event, 'location-beachfront--label-text-id', 'pills__wrapper--location-id', 'pills__text--location-id', 'pills__button--location-id', 'location__dropdown-menu--button', 'location__dropdown-menu--placeholder-id' )"
-                               type="checkbox"
-                               name="location-beachfront" >
-                                <span class="cr">
-                                  <i class="cr-icon custom-checkbox__icon"></i>
-                                </span>
-                        <span id="location-beachfront--label-text-id">Пляжный</span>
-                      </label>
-                    </li>
-                  </ul>
-                  <ul>
-                    <li>
-                      <label class="custom-checkbox__label">
-                        <input class="location__dropdown-menu-option  custom-checkbox__input"
-                               id="location-first-line--input-id"
-                               onclick="addCheckedElement( event, 'location-first-line--label-text-id', 'pills__wrapper--location-id', 'pills__text--location-id', 'pills__button--location-id', 'location__dropdown-menu--button', 'location__dropdown-menu--placeholder-id' )"
-                               type="checkbox"
-                               name="location-first-line" >
-                                <span class="cr">
-                                  <i class="cr-icon custom-checkbox__icon"></i>
-                                </span>
-                        <span id="location-first-line--label-text-id">1-я линия</span>
-                      </label>
-                    </li>
-                    <li>
-                      <label class="custom-checkbox__label">
-                        <input class="location__dropdown-menu-option  custom-checkbox__input"
-                               id="location-second-line--input-id"
-                               onclick="addCheckedElement( event, 'location-second-line--label-text-id', 'pills__wrapper--location-id', 'pills__text--location-id', 'pills__button--location-id', 'location__dropdown-menu--button', 'location__dropdown-menu--placeholder-id' )"
-                               type="checkbox"
-                               name="location-second-line" >
-                                <span class="cr">
-                                  <i class="cr-icon custom-checkbox__icon"></i>
-                                </span>
-                        <span id="location-second-line--label-text-id">2-я линия</span>
-                      </label>
-                    </li>
-                    <li>
-                      <label class="custom-checkbox__label">
-                        <input class="location__dropdown-menu-option  custom-checkbox__input"
-                               id="location-third-line--input-id"
-                               onclick="addCheckedElement( event, 'location-third-line--label-text-id', 'pills__wrapper--location-id', 'pills__text--location-id', 'pills__button--location-id', 'location__dropdown-menu--button', 'location__dropdown-menu--placeholder-id' )"
-                               type="checkbox"
-                               name="location-third-line" >
-                                <span class="cr">
-                                  <i class="cr-icon custom-checkbox__icon"></i>
-                                </span>
-                        <span id="location-third-line--label-text-id">3-я линия</span>
-                      </label>
-                    </li>
-                  </ul>
-                </div>
-
-
-              </div>
             </div>
           </div>
 
