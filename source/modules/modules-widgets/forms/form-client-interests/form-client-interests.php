@@ -185,14 +185,19 @@
                                                           form--clients-interests__input-wrapper--row-2
                                                                                                          margin-bottom-30-md">
             <div class="flex__container">
-              <!--                        todo: добавить плавное появление для datepicker-->
               <label class="form__label"  for="departure-date">Даты вылета</label>
               <label class="form__label  form__label--hide"  for="arrival-date">Дата прилёта</label>
             </div>
 
             <div class="flex__container  form__dropdown-menu-button  form__input-text">
-              <input class="form__input  form__input--departure-date"  id="departure-date"   name="selection-departure-date"  type="text"  placeholder="дата вылета">
-              <input class="form__input  form__input--arrival-date"  id="arrival-date"   name="selection-arrival-date"  type="text"  placeholder="дата прилёта">
+<!--              <input class="form__input  form__input--departure-date"  id="departure-date"   name="selection-departure-date"  type="text"  placeholder="дата вылета">-->
+<!--              <input class="form__input  form__input--arrival-date"    id="arrival-date"     name="selection-arrival-date"    type="text"  placeholder="дата прилёта">-->
+<!--              <div class="flatpickr__field" id="flatpickr__interests-form"></div>-->
+              <input class="form__input"
+                     id="flatpickr__interests-form"
+                     placeholder="Select Date.."
+                     readonly="readonly"
+                     type="text">
             </div>
           </div>
 
@@ -206,34 +211,48 @@
                                  flex__direction--column
                                                           form--clients-interests__input-wrapper--row-2
                                                                                                          margin-bottom-30-xs">
-            <!--                      todo: вместо flex__direction--column указать flex__direction т.е. без --column-->
+
             <label class="form__label"  for="dates__dropdown-menu--button">На сколько</label>
 
-<!--todo: сделать input для #dates-min__dropdown-menu--button и #dates-max__dropdown-menu--button-->
-            <div class="flex__container    form__dropdown-menu-button  form__input-text"
-                 onclick="openDropdownMenu( event, 'dates__dropdown-menu--content-id', 'dropdown-menu__content' )">
+            <div class="form__dropdown-menu-button
+                        semantic__dropdown-menu
+                        flex__container
+                        ui  selection  dropdown"
+                 id="period-dropdown-id">
 
               <span id="dates-min__dropdown-menu--button"
-                    class="flex__container  flex__direction--column  flex__justify-content--center  form__input--dates  dropdown-menu__button">
+                    class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text  dropdown-menu__button">
               </span>
 
-              <span class="flex__container  flex__direction--column  flex__justify-content--center">-</span>
+              <span class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text">-</span>
 
               <span id="dates-max__dropdown-menu--button"
-                    class="flex__container  flex__direction--column  flex__justify-content--center  form__input--dates  dropdown-menu__button">
+                    class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text  dropdown-menu__button">
               </span>
 
-              <span class="flex__container  flex__direction--column  flex__justify-content--center">ночей</span>
+              <span class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text">ночей</span>
 
-            </div>
-            <div class="dropdown-menu__wrapper">
-              <div id="dates__dropdown-menu--content-id" class="dropdown-menu__content  dates__dropdown-menu--content">
 
-                <div class="sliders__time-between-boardings-wrapper">
-                  <div class="sliders__time-between-boardings"  id="slider__time-between-boardings"></div>
+              <div class="menu">
+                <div class="item">
+                  <div class="sliders__time-between-boardings-wrapper">
+                    <div class="sliders__time-between-boardings"  id="slider__time-between-boardings"></div>
+                  </div>
                 </div>
-
               </div>
+
+              <div class="dropdown icon  semantic__dropdown-menu-open-button">
+                <div class="icons__wrapper">
+                  <svg class="allign-middle
+                                icons
+                                icons__svg-template--chevron-down
+                                icons__svg
+                                buttons--open-dropdown-menu" viewBox="0 0 1792 1792" width="15" height="15">
+                    <path class="icons__svg-color" d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"></path>
+                  </svg>
+                </div>
+              </div>
+
             </div>
           </div>
 
@@ -247,10 +266,126 @@
                                  flex__direction--column
                                                           form--clients-interests__input-wrapper--row-2
                                                                                                          margin-bottom-30-xs">
-            <div class="flex__container  ">
-              <label class="form__label  "                  for="passengers">Количество пассажиров</label>
-              <label class="form__label  form__label--hide" for="passengers-childs">Количество пассажиров</label>
+
+            <label class="form__label  "                  for="passengers">Количество пассажиров</label>
+            <label class="form__label  form__label--hide" for="passengers-childs">Количество пассажиров</label>
+
+            <div class="form__dropdown-menu-button
+                        semantic__dropdown-menu
+                        flex__container
+                        ui  selection  dropdown"
+                 id="passengers-dropdown-id">
+
+              <span id="parents__dropdown-menu--button"
+                    class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text  dropdown-menu__button">1
+              </span>
+              <span class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text"
+                    id="parents__text">взрослый
+              </span>
+              <span class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text">,</span>
+              <span id="childs__dropdown-menu--button"
+                    class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text  dropdown-menu__button">0
+              </span>
+              <span class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text"
+                    id="childs__text">детей
+              </span>
+
+
+              <div class="menu">
+                <div class="item">
+                  <div class="row__wrapper">
+                    <div class="row">
+                      <div class="col-xs-20">
+                        <div class="widget__passengers-range  flex__container  flex__justify-content--space-between  flex__align-items--baseline">
+                          <span class="allign-middle">Взрослые:</span>
+
+                          <div class="">
+                            <button class="allign-middle  buttons__interests-form--more-less-passengers"
+                                    id="widget__passengers-range--button-less"
+                                    onclick="ChangeInputValueLess( event, 'widget__passengers-range-parents--input', 'parents__dropdown-menu--button', 'parents__text' )"
+                                    type="button">
+                              <span class="allign-middle  icons__wrapper">
+                                <svg class="icons  icons__svg  icons--opacity" viewBox="0 0 100 100">
+                                  <rect height="16" width="100" x="0" y="42"></rect>
+                                </svg>
+                              </span>
+                            </button>
+
+                            <input class="allign-middle  buttons__interests-form--input-passengers"
+                                   id="widget__passengers-range-parents--input"
+                                   name="selection-passengers-parents"
+                                   value="1"
+                                   type="text">
+
+                            <button class="allign-middle  buttons__interests-form--more-less-passengers"
+                                    id="widget__passengers-range--button-more"
+                                    onclick="ChangeInputValueMore( event, 'widget__passengers-range-parents--input', 'parents__dropdown-menu--button', 'parents__text' )"
+                                    type="button">
+                              <span class="allign-middle  icons__wrapper">
+                                <svg class="icons  icons__svg  icons--rotate" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
+                                  <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
+                                </svg>
+                              </span>
+                            </button>
+                          </div>
+
+                        </div>
+                        <div class="widget__passengers-range  flex__container  flex__justify-content--space-between  flex__align-items--baseline">
+                          <span class="allign-middle">Дети:</span>
+
+                          <div class="">
+                            <button class="allign-middle  buttons__interests-form--more-less-passengers"
+                                    id="widget__passengers-range--button-less"
+                                    onclick="ChangeInputValueLess( event, 'widget__passengers-range-childs--input', 'childs__dropdown-menu--button', 'childs__text' )"
+                                    type="button">
+                              <span class="allign-middle  icons__wrapper">
+                                <svg class="icons  icons__svg  icons--opacity" viewBox="0 0 100 100">
+                                  <rect height="16" width="100" x="0" y="42"></rect>
+                                </svg>
+                              </span>
+                            </button>
+
+                            <input class="allign-middle  buttons__interests-form--input-passengers"
+                                   id="widget__passengers-range-childs--input"
+                                   name="selection-passengers-childs"
+                                   value="0"
+                                   type="text">
+
+                            <button class="allign-middle  buttons__interests-form--more-less-passengers"
+                                    id="widget__passengers-range--button-more"
+                                    onclick="ChangeInputValueMore( event, 'widget__passengers-range-childs--input', 'childs__dropdown-menu--button', 'childs__text' )"
+                                    type="button">
+                              <span class="allign-middle  icons__wrapper">
+                                <svg class="icons  icons__svg  icons--rotate" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
+                                  <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
+                                </svg>
+                              </span>
+                            </button>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dropdown icon  semantic__dropdown-menu-open-button">
+                <div class="icons__wrapper">
+                  <svg class="allign-middle
+                                icons
+                                icons__svg-template--chevron-down
+                                icons__svg
+                                buttons--open-dropdown-menu" viewBox="0 0 1792 1792" width="15" height="15">
+                    <path class="icons__svg-color" d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"></path>
+                  </svg>
+                </div>
+              </div>
+
             </div>
+
+
+<!--
             <div class="flex__container  form__dropdown-menu-button  form__input-text"
                  onclick="openDropdownMenu( event, 'passengers__dropdown-menu--content-id', 'dropdown-menu__content' )">
 
@@ -350,6 +485,8 @@
                 </div>
               </div>
             </div>
+
+-->
           </div>
 
 
@@ -362,31 +499,49 @@
                                  flex__direction--column
                                                           form--clients-interests__input-wrapper--row-2">
             <label class="form__label"  for="price">Стоимость тура</label>
-            <div class="flex__container  form__dropdown-menu-button  form__input-text"
-                 onclick="openDropdownMenu( event, 'prices__dropdown-menu--content-id', 'dropdown-menu__content' )">
+
+            <div class="form__dropdown-menu-button
+                        semantic__dropdown-menu
+                        flex__container
+                        ui  selection  dropdown"
+                 id="price-dropdown-id">
 
               <span id="prices-min__dropdown-menu--button"
-                    class="flex__container  flex__direction--column  flex__justify-content--center  form__input--prices  dropdown-menu__button">
+                    class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text  dropdown-menu__button">
               </span>
-              
-              <span class="flex__container  flex__direction--column  flex__justify-content--center">-</span>
-
+              <span class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text">-</span>
               <span id="prices-max__dropdown-menu--button"
-                    class="flex__container  flex__direction--column  flex__justify-content--center  form__input--prices  dropdown-menu__button">
+                    class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text  dropdown-menu__button">
               </span>
 
-            </div>
-            <div class="dropdown-menu__wrapper">
-              <div id="prices__dropdown-menu--content-id" class="dropdown-menu__content  prices__dropdown-menu--content">
 
-                <div class="sliders__interests-prices-wrapper">
-                  <div class="sliders__interests-prices"  id="slider__interests-prices"></div>
+                <div class="menu">
+                  <div class="item">
+                    <div class="sliders__interests-prices-wrapper">
+                      <div class="sliders__interests-prices"  id="slider__interests-prices"></div>
+                    </div>
+                  </div>
                 </div>
 
+              <div class="dropdown icon  semantic__dropdown-menu-open-button">
+                <div class="icons__wrapper">
+                  <svg class="allign-middle
+                                icons
+                                icons__svg-template--chevron-down
+                                icons__svg
+                                buttons--open-dropdown-menu" viewBox="0 0 1792 1792" width="15" height="15">
+                    <path class="icons__svg-color" d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"></path>
+                  </svg>
+                </div>
               </div>
+
             </div>
           </div>
+
+
         </div>
+
+
 
 
         <div class="row  form--clients-interests__fields-row"><!--последняя строка-->
@@ -402,150 +557,101 @@
                                                                                                          margin-bottom-30-md">
             <label class="form__label"  for="hotel-stars">Категория отелей от</label>
 
-
-            <div class="flex__container
-                        flex__direction--column
-                        flex__justify-content--center">
-
-              <select class="ui  fluid  multiple  selection  dropdown
-                             form__dropdown-menu-button
+              <div class="ui fluid multiple selection dropdown
+                          form__dropdown-menu-button
                              semantic__dropdown-menu
                              flex__container
                              flex__wrap
                              flex__justify-content--flex-start
                              flex__align-items--center"
-                      name="regions"
-                      id="interests-form__selection-dropdown--hotels-stars">
-                <option class="form__dropdown-menu-placeholder" value="">Выберите уровень отеля</option>
+                   id="interests-form__selection-dropdown--hotels-stars">
+                <input name="hotel-stars" type="hidden">
 
-                <option value="hotels-rating-1">
-                  <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
-                       id="rating--5-wrapper-id"
-                       onclick="addSelectElement( event, 'rating--5-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--5-remove-button', 'hotels__dropdown-menu--button', 'hotel-stars--N' )">
-                    <div class="rating  rating--5-stars"
-                         id="rating--5-stars-id">
-                      <!--                            JavaScript create stars-->
-                      <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
-                        <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
-                      </svg>
-                    </div>
-                  </div>
-                </option>
-                <option value="hotels-rating-2">
-                  <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
-                       id="rating--5-wrapper-id"
-                       onclick="addSelectElement( event, 'rating--5-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--5-remove-button', 'hotels__dropdown-menu--button', 'hotel-stars--N' )">
-                    <div class="rating  rating--5-stars"
-                         id="rating--5-stars-id">
-                      <!--                            JavaScript create stars-->
-                      <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
-                        <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
-                      </svg>
-                    </div>
-                  </div>
-                </option>
-                <option value="hotels-rating-3">
-                  <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
-                       id="rating--5-wrapper-id"
-                       onclick="addSelectElement( event, 'rating--5-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--5-remove-button', 'hotels__dropdown-menu--button', 'hotel-stars--N' )">
-                    <div class="rating  rating--5-stars"
-                         id="rating--5-stars-id">
-                      <!--                            JavaScript create stars-->
-                      <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
-                        <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
-                      </svg>
-                    </div>
-                  </div>
-                </option>
-                <option value="hotels-rating-4">
-                  <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
-                       id="rating--5-wrapper-id"
-                       onclick="addSelectElement( event, 'rating--5-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--5-remove-button', 'hotels__dropdown-menu--button', 'hotel-stars--N' )">
-                    <div class="rating  rating--5-stars"
-                         id="rating--5-stars-id">
-                      <!--                            JavaScript create stars-->
-                      <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
-                        <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
-                      </svg>
-                    </div>
-                  </div>
-                </option>
-                <option value="hotels-rating-5">
-                  <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
-                       id="rating--5-wrapper-id"
-                       onclick="addSelectElement( event, 'rating--5-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--5-remove-button', 'hotels__dropdown-menu--button', 'hotel-stars--N' )">
-                    <div class="rating  rating--5-stars"
-                         id="rating--5-stars-id">
-                      <!--                            JavaScript create stars-->
-                      <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
-                        <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
-                      </svg>
-                    </div>
-                  </div>
-                </option>
-              </select>
-
-            </div>
-<!--
-            <div class="flex__container  flex__direction--column  flex__justify-content--center  form__dropdown-menu-button"
-                 id="hotels__dropdown-menu--button"
-                 onclick="openDropdownMenu( event, 'hotels__dropdown-menu--content-id', 'dropdown-menu__content' )">
-              <span class="form__dropdown-menu-placeholder" id="hotels__dropdown-menu--placeholder-id">Выберите уровень отеля</span>
-            </div>
-
-
-
-                <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
-                     id="rating--5-wrapper-id"
-                     onclick="addSelectElement( event, 'rating--5-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--5-remove-button', 'hotels__dropdown-menu--button', 'hotel-stars--N' )">
-                  <div class="rating  rating--5-stars"
-                       id="rating--5-stars-id">
-
-                    <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
-                      <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
+                <div class="dropdown icon  semantic__dropdown-menu-open-button">
+                  <div class="icons__wrapper">
+                    <svg class="allign-middle
+                                icons
+                                icons__svg-template--chevron-down
+                                icons__svg
+                                buttons--open-dropdown-menu" viewBox="0 0 1792 1792" width="15" height="15">
+                      <path class="icons__svg-color" d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"></path>
                     </svg>
                   </div>
                 </div>
+                <div class="default text  form__dropdown-menu-placeholder">Выберите уровень отеля</div>
+                <div class="menu">
 
-
-                <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
-                     id="rating--4-wrapper-id"
-                     onclick="addSelectElement( event, 'rating--4-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--4-remove-button', 'hotels__dropdown-menu--button', 'hotel-stars--N' )">
-                  <div class="rating  rating--4-stars"
-                       id="rating--4-stars-id">
-
-                    <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
-                      <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
-                    </svg>
+                  <div class="item" data-value="hotel-stars--1-stars">
+                    <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
+                         id="rating--1-wrapper-id"
+                         onclick="addSelectElement( event, 'rating--1-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--1-remove-button', 'hotels__dropdown-menu--button', 'hotel-stars--N' )">
+                      <div class="rating  rating--1-stars"
+                           id="rating--1-stars-id">
+                        <svg class="icons__svg" width="25" height="25" viewBox="0 0 1792 1792">
+                          <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
+                        </svg>
+                      </div>
+                    </div>
                   </div>
-                </div>
 
 
-                <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
-                     id="rating--3-wrapper-id"
-                     onclick="addSelectElement( event, 'rating--3-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--3-remove-button', 'hotels__dropdown-menu--button', 'hotel-stars--N' )">
-                  <div class="rating  rating--3-stars"
-                       id="rating--3-stars-id">
-
-                    <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
-                      <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
-                    </svg>
+                  <div class="item" data-value="hotel-stars--2-stars">
+                    <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
+                         id="rating--2-wrapper-id"
+                         onclick="addSelectElement( event, 'rating--2-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--2-remove-button', 'hotels__dropdown-menu--button', 'hotel-stars--N' )">
+                      <div class="rating  rating--2-stars"
+                           id="rating--2-stars-id">
+                        <svg class="icons__svg" width="25" height="25" viewBox="0 0 1792 1792">
+                          <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
+                        </svg>
+                      </div>
+                    </div>
                   </div>
-                </div>
 
 
-                <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
-                     id="rating--2-wrapper-id"
-                     onclick="addSelectElement( event, 'rating--2-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--2-remove-button', 'hotels__dropdown-menu--button', 'hotel-stars--N' )">
-                  <div class="rating  rating--2-stars"
-                       id="rating--2-stars-id">
-
-                    <svg class="icons__svg" width="20" height="20" viewBox="0 0 1792 1792">
-                      <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
-                    </svg>
+                  <div class="item" data-value="hotel-stars--3-stars">
+                    <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
+                         id="rating--3-wrapper-id"
+                         onclick="addSelectElement( event, 'rating--3-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--3-remove-button', 'hotels__dropdown-menu--button', 'hotel-stars--N' )">
+                      <div class="rating  rating--3-stars"
+                           id="rating--3-stars-id">
+                        <svg class="icons__svg" width="25" height="25" viewBox="0 0 1792 1792">
+                          <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
+                        </svg>
+                      </div>
+                    </div>
                   </div>
+
+
+                  <div class="item" data-value="hotel-stars--4-stars">
+                    <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
+                         id="rating--4-wrapper-id"
+                         onclick="addSelectElement( event, 'rating--4-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--4-remove-button', 'hotels__dropdown-menu--button', 'hotel-stars--N' )">
+                      <div class="rating  rating--4-stars"
+                           id="rating--4-stars-id">
+                        <svg class="icons__svg" width="25" height="25" viewBox="0 0 1792 1792">
+                          <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="item" data-value="hotel-stars--5-stars">
+                    <div class="form__rating-hotels-wrapper  flex__container  flex__justify-content--space-between"
+                         id="rating--5-wrapper-id"
+                         onclick="addSelectElement( event, 'rating--5-wrapper-id' ,'hotels__dropdown-menu--placeholder-id', 'hotels__dropdown-menu--button', 'rating--5-remove-button', 'hotels__dropdown-menu--button', 'hotel-stars--N' )">
+                      <div class="rating  rating--5-stars"
+                           id="rating--5-stars-id">
+                        <svg class="icons__svg" width="25" height="25" viewBox="0 0 1792 1792">
+                          <path d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
-                -->
+              </div>
 
           </div>
 
@@ -561,61 +667,77 @@
                                                                                                        margin-bottom-30-xs">
             <label class="form__label"  for="hotel-rating">Рейтинг TopHotels</label>
 
-            <div class="flex__container
-                        flex__direction--column
-                        flex__justify-content--center">
-
-              <select class="ui  fluid  multiple  selection  dropdown
-                             form__dropdown-menu-button
+            <div class="ui fluid multiple selection dropdown
+                          form__dropdown-menu-button
                              semantic__dropdown-menu
                              flex__container
                              flex__wrap
                              flex__justify-content--flex-start
                              flex__align-items--center"
-                      name="regions"
-                      id="interests-form__selection-dropdown--hotels-rating">
-                <option class="form__dropdown-menu-placeholder" value="">Выберите рейтинг отеля</option>
+                 id="interests-form__selection-dropdown--hotels-rating">
+              <input name="hotel-ratings" type="hidden">
 
-                <option value="hotels-rating-1">
-                  <span class="hotels-rating-list__text">Не ниже</span>
-                  <div class="">
-                  <svg class="allign-bottom  icons__svg  hotels-rating-list__icon" width="20" height="20" viewBox="0 0 24 24" >
-                    <path d="M21 22h-18v-4h18v4zm-2.266-12.906c-3.749 2.293-5.296-2.125-6.734-7.094-1.433 4.951-2.984 9.388-6.734 7.094-1.305-.798-5.266-4.094-5.266-4.094 1.796 3.797 2.75 6.292 3 11h18c.25-4.708 1.203-7.203 3-11 0 0-3.961 3.296-5.266 4.094z"/>
+              <div class="dropdown icon  semantic__dropdown-menu-open-button">
+                <div class="icons__wrapper">
+                  <svg class="allign-middle
+                                icons
+                                icons__svg-template--chevron-down
+                                icons__svg
+                                buttons--open-dropdown-menu" viewBox="0 0 1792 1792" width="15" height="15">
+                    <path class="icons__svg-color" d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"></path>
                   </svg>
-                  </div>
-                  1.0
-                </option>
-                <option value="hotels-rating-2">
-                  <span class="hotels-rating-list__text">Не ниже</span>
-                  <svg class="allign-bottom  icons__svg  hotels-rating-list__icon" width="20" height="20" viewBox="0 0 24 24" >
-                    <path d="M21 22h-18v-4h18v4zm-2.266-12.906c-3.749 2.293-5.296-2.125-6.734-7.094-1.433 4.951-2.984 9.388-6.734 7.094-1.305-.798-5.266-4.094-5.266-4.094 1.796 3.797 2.75 6.292 3 11h18c.25-4.708 1.203-7.203 3-11 0 0-3.961 3.296-5.266 4.094z"/>
-                  </svg>
-                  2.0
-                </option>
-                <option value="hotels-rating-3">
-                  <span class="hotels-rating-list__text">Не ниже</span>
-                  <svg class="allign-bottom  icons__svg  hotels-rating-list__icon" width="20" height="20" viewBox="0 0 24 24" >
-                    <path d="M21 22h-18v-4h18v4zm-2.266-12.906c-3.749 2.293-5.296-2.125-6.734-7.094-1.433 4.951-2.984 9.388-6.734 7.094-1.305-.798-5.266-4.094-5.266-4.094 1.796 3.797 2.75 6.292 3 11h18c.25-4.708 1.203-7.203 3-11 0 0-3.961 3.296-5.266 4.094z"/>
-                  </svg>
-                  3.0
-                </option>
-                <option value="hotels-rating-4">
-                  <span class="hotels-rating-list__text">Не ниже</span>
-                  <svg class="allign-bottom  icons__svg  hotels-rating-list__icon" width="20" height="20" viewBox="0 0 24 24" >
-                    <path d="M21 22h-18v-4h18v4zm-2.266-12.906c-3.749 2.293-5.296-2.125-6.734-7.094-1.433 4.951-2.984 9.388-6.734 7.094-1.305-.798-5.266-4.094-5.266-4.094 1.796 3.797 2.75 6.292 3 11h18c.25-4.708 1.203-7.203 3-11 0 0-3.961 3.296-5.266 4.094z"/>
-                  </svg>
-                  4.0
-                </option>
-                <option value="hotels-rating-5">
-                  <span class="hotels-rating-list__text">Не ниже</span>
-                  <svg class="allign-bottom  icons__svg  hotels-rating-list__icon" width="20" height="20" viewBox="0 0 24 24" >
-                    <path d="M21 22h-18v-4h18v4zm-2.266-12.906c-3.749 2.293-5.296-2.125-6.734-7.094-1.433 4.951-2.984 9.388-6.734 7.094-1.305-.798-5.266-4.094-5.266-4.094 1.796 3.797 2.75 6.292 3 11h18c.25-4.708 1.203-7.203 3-11 0 0-3.961 3.296-5.266 4.094z"/>
-                  </svg>
-                  5.0
-                </option>
-              </select>
+                </div>
+              </div>
+              <div class="default text  form__dropdown-menu-placeholder">Выберите рейтинг отеля</div>
+              <div class="menu">
 
+                <div class="item" data-value="hotel-rating--1.0">
+                  <span class="allign-middle">Не ниже</span>
+                  <svg class="allign-bottom  icons__svg  hotels-rating-list__icon" width="20" height="20" viewBox="0 0 24 24" >
+                    <path d="M21 22h-18v-4h18v4zm-2.266-12.906c-3.749 2.293-5.296-2.125-6.734-7.094-1.433 4.951-2.984 9.388-6.734 7.094-1.305-.798-5.266-4.094-5.266-4.094 1.796 3.797 2.75 6.292 3 11h18c.25-4.708 1.203-7.203 3-11 0 0-3.961 3.296-5.266 4.094z"/>
+                  </svg>
+                  <span class="allign-middle">1.0</span>
+                </div>
+
+
+                <div class="item" data-value="hotel-rating--2.0">
+                  <span class="allign-middle">Не ниже</span>
+                  <svg class="allign-bottom  icons__svg  hotels-rating-list__icon" width="20" height="20" viewBox="0 0 24 24" >
+                    <path d="M21 22h-18v-4h18v4zm-2.266-12.906c-3.749 2.293-5.296-2.125-6.734-7.094-1.433 4.951-2.984 9.388-6.734 7.094-1.305-.798-5.266-4.094-5.266-4.094 1.796 3.797 2.75 6.292 3 11h18c.25-4.708 1.203-7.203 3-11 0 0-3.961 3.296-5.266 4.094z"/>
+                  </svg>
+                  <span class="allign-middle">2.0</span>
+                </div>
+
+
+                <div class="item" data-value="hotel-rating--3.0">
+                  <span class="allign-middle">Не ниже</span>
+                  <svg class="allign-bottom  icons__svg  hotels-rating-list__icon" width="20" height="20" viewBox="0 0 24 24" >
+                    <path d="M21 22h-18v-4h18v4zm-2.266-12.906c-3.749 2.293-5.296-2.125-6.734-7.094-1.433 4.951-2.984 9.388-6.734 7.094-1.305-.798-5.266-4.094-5.266-4.094 1.796 3.797 2.75 6.292 3 11h18c.25-4.708 1.203-7.203 3-11 0 0-3.961 3.296-5.266 4.094z"/>
+                  </svg>
+                  <span class="allign-middle">3.0</span>
+                </div>
+
+
+                <div class="item" data-value="hotel-rating--4.0">
+                  <span class="allign-middle">Не ниже</span>
+                  <svg class="allign-bottom  icons__svg  hotels-rating-list__icon" width="20" height="20" viewBox="0 0 24 24" >
+                    <path d="M21 22h-18v-4h18v4zm-2.266-12.906c-3.749 2.293-5.296-2.125-6.734-7.094-1.433 4.951-2.984 9.388-6.734 7.094-1.305-.798-5.266-4.094-5.266-4.094 1.796 3.797 2.75 6.292 3 11h18c.25-4.708 1.203-7.203 3-11 0 0-3.961 3.296-5.266 4.094z"/>
+                  </svg>
+                  <span class="allign-middle">4.0</span>
+                </div>
+
+
+                <div class="item" data-value="hotel-rating--5.0">
+                  <span class="allign-middle">Не ниже</span>
+                  <svg class="allign-bottom  icons__svg  hotels-rating-list__icon" width="20" height="20" viewBox="0 0 24 24" >
+                    <path d="M21 22h-18v-4h18v4zm-2.266-12.906c-3.749 2.293-5.296-2.125-6.734-7.094-1.433 4.951-2.984 9.388-6.734 7.094-1.305-.798-5.266-4.094-5.266-4.094 1.796 3.797 2.75 6.292 3 11h18c.25-4.708 1.203-7.203 3-11 0 0-3.961 3.296-5.266 4.094z"/>
+                  </svg>
+                  <span class="allign-middle">5.0</span>
+                </div>
+
+              </div>
             </div>
+
           </div>
 
 
@@ -634,7 +756,7 @@
                         flex__direction--column
                         flex__justify-content--center">
 
-              <select class="ui  fluid  multiple  selection  dropdown
+              <select class="ui  fluid  selection  dropdown
                              form__dropdown-menu-button
                              semantic__dropdown-menu
                              flex__container
@@ -642,6 +764,7 @@
                              flex__justify-content--flex-start
                              flex__align-items--center"
                       name="regions"
+                      multiple="multiple"
                       id="interests-form__selection-dropdown--nutrition">
                 <option class="form__dropdown-menu-placeholder" value="">Выберите тип питания</option>
 
@@ -672,13 +795,14 @@
                         flex__direction--column
                         flex__justify-content--center">
 
-              <select class="ui  fluid  multiple  selection  dropdown
+              <select class="ui  fluid  selection  dropdown
                              form__dropdown-menu-button
                              semantic__dropdown-menu
                              flex__container
                              flex__wrap
                              flex__justify-content--flex-start
                              flex__align-items--center"
+                      multiple="multiple"
                       name="regions"
                       id="interests-form__selection-dropdown--locations">
                 <option class="form__dropdown-menu-placeholder" value="">Выберите расположение</option>
