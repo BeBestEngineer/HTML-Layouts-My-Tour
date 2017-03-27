@@ -84,7 +84,9 @@
 
 
 
-
+.flex__justify-content--flex-start {
+  justify-content: flex-start;
+}
 .flex__justify-content--flex-end {
   justify-content: flex-end;
 }
@@ -109,4 +111,9 @@
 }
 .flex__align-items--center {
   align-items: center;
+}
+
+
+.flex__wrap {
+  flex-wrap: wrap;
 }
