@@ -6,16 +6,18 @@ ini_set('display_errors', 1);
 
 
 
-session_start();
+//session_start();
 
 if ( isset( $_POST['Button_pressed'] ) ) {
-    $_SESSION = $_POST;
+//    $_SESSION = $_POST;
 }
 
 
 
 
-if ( isset( $_GET['page'] ) ) {    
+if ( isset( $_GET['page'] ) ) {
+    
+    require_once 'modules/_modules-data/_modules-data-list.php';
     
     require_once 'pages/page-head.php';
     require_once 'pages/page-wrapper.php';
@@ -28,7 +30,7 @@ if ( isset( $_GET['page'] ) ) {
 
 
 
-$_SESSION[] = '';
+//$_SESSION[] = '';
 
 
 ?>
