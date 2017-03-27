@@ -96,9 +96,13 @@
         opacity: 0.8;
       }
     }
+    
     &--input-passengers {
       width: 20px;
       text-align: center;
+      border: 0;
+      border-bottom: 1px solid $color-13-layout;
+      background-color: $color-tr-layout;
     }
   }
 
