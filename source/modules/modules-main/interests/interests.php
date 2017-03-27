@@ -1,5 +1,6 @@
-<section class="section  section--interests">
+
   <div class="row__wrapper">
+    
 
     <div class="row  banner__top
                 col-direction-sm--row
@@ -135,6 +136,6 @@
       </aside>
 
     </div>
+    
 
-</div>
-</section>
+  </div>
