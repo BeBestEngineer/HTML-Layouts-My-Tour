@@ -56,9 +56,13 @@
   }
 
 
- .hotels-rating-list__item {
-   cursor: pointer;
- }
+  .hotels-rating-list__item {
+    cursor: pointer;
+  }
+
+  .semantic__dropdown-menu {
+    padding-right: 42px;
+  }
 
   /*Position ( end )*/
 /*Fonts ( begin )*/
@@ -71,6 +75,14 @@
            $backgroundColor: $color-4-layout,
            $iconsColor: $color-4-layout
   );
+
+  .semantic__dropdown-menu-open-button {
+    @include block__colors (
+            $backgroundColor: $color-4-layout,
+            $iconsColor: $color-2-layout
+    );
+  }
+
   .buttons__interests-form--submit {
     .icons {
       fill: $color-9-layout;
