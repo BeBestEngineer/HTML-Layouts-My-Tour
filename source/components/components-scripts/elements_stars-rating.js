@@ -18,7 +18,10 @@
 			insertElements( 3, 5 );
 		} else if ( singleRatingElement.classList.contains('rating--2-stars') ) {
 			insertElements( 2, 5 );
+		} else if ( singleRatingElement.classList.contains('rating--1-stars') ) {
+			insertElements( 1, 5 );
 		}
+
 	}
 
 
