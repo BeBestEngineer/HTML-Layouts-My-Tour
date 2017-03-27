@@ -62,7 +62,13 @@ html, body {
   &__img {
 
   }
-
+  &__svg-template--close {
+    @include absolute_alignment;
+  }
+  &__wrapper {
+    position: relative;
+    display: inline-block;
+  }
   &__wrapper {
     position: relative;
     display: inline-block;
@@ -284,4 +290,47 @@ html, body {
 .margin-bottom-20 {
   margin-bottom: 20px;
 }
+
+
+
+
+
+
+.semantic {
+  &__dropdown-menu {
+    position: relative;
+  }
+
+  &__dropdown-menu-placeholder {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__dropdown-menu-open-button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+
+    @include  buttons__text-and-icon-with-bg (
+            $height: 'auto',
+            $border: '1px solid #{$color-tr-layout}',
+            $padding: '0px 0px 0px 0px',
+            $color: $color-2-layout,
+            $backgroundColor: $color-tr-layout,
+            $iconWrapperColor: $color-tr-layout,
+            $widthIconWrapper:  '20px',
+            $heightIconWrapper: '20px',
+            $widthIcon: '20px',
+            $heightIcon: '20px',
+            $marginIconWrapper: '0px',
+            $iconColor: $color-2-layout
+    );
+  }
+}
+
 
