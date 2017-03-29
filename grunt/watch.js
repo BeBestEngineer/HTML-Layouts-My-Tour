@@ -31,7 +31,11 @@ module.exports = {
     files: [
       'source/**/*.js',
       '!source/components/components-scripts/collected-scripts/layout.js',
-      '!source/components/components-frameworks/SemanticUI/semantic.js'
+
+      '!source/components/components-frameworks/**/*.css',
+      '!source/components/components-libs/**/*.css',
+      '!source/components/components-frameworks/**/*.js',
+      '!source/components/components-libs/**/*.js'
     ],
     tasks: [
       'clean:sourceLayoutScripts', 'clean:buildLayoutScripts',
