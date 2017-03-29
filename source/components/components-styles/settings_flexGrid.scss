@@ -1,0 +1,31 @@
+//Fkexbox Grid
+.wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  margin: 0 auto;
+}
+
+.row__wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.col--order--1 {
+  order: -1;
+}
+
+
+.col--test {
+  //background-color: #85ffe7;
+  color: #309ac6;
+  font-size: 15px;
+
+  box-sizing: border-box;
+  border: 2px dotted #1b496c;
+}

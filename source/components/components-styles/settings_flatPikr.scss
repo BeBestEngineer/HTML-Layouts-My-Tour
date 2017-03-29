@@ -1,0 +1,62 @@
+.flatpickr {
+  &__field {
+    width: 100%;
+  }
+}
+
+.flatpickr-day {
+  border-radius: $border-radius-fields;
+}
+
+.flatpickr-day.today {
+  border-radius: $border-radius-fields;
+}
+
+.flatpickr-day.selected.startRange,
+.flatpickr-day.startRange.startRange,
+.flatpickr-day.endRange.startRange {
+  border-radius: $border-radius-fields;
+}
+.flatpickr-day.selected.endRange,
+.flatpickr-day.startRange.endRange,
+.flatpickr-day.endRange.endRange {
+  border-radius: $border-radius-fields;
+}
+
+.flatpickr-calendar::before,
+.flatpickr-calendar::after {
+  display: none;
+}
+
+.flatpickr-calendar,
+.flatpickr-days {
+  width: 100%;
+}
+
+.flatpickr-wrapper__interests-form--boarding-dates {
+  flex-grow: 1;
+  margin-left: -$padding-left-righr-fields;
+  margin-right: -$padding-left-righr-fields;
+}
+
+.flatpickr-calendar__interests-form--boarding-dates {
+  max-width: 450px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 3px;
+}
+
+.flatpickr-wrapper {
+  padding: 0px 5px;
+  .flatpickr-input {
+    padding: 0;
+  }
+}
+//todo сделать @media для .flatpickr-calendar
+
+@media ( max-width: 1199px ) {
+  .flatpickr-calendar__interests-form--boarding-dates {
+    max-width: 320px;
+  }
+}
