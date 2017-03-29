@@ -1,0 +1,85 @@
+.icons {
+  @include absolute_alignment;
+  display: block;
+
+  &__svg {
+
+    &--text {
+      margin-right: 0px;
+    }
+  }
+  &__svg-color {
+
+  }
+  &__img {
+
+  }
+  &__svg-template--close {
+    @include absolute_alignment;
+  }
+  &__wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  &__wrapper {
+    position: relative;
+    display: inline-block;
+  }
+}
+
+
+.icons {
+  &__cross-in-circle {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #ff583d;
+    border-radius: 50%;
+  }
+  &__cross-in-circle:before, &__cross-in-circle:after {
+    content: '';
+    @include absolute_alignment;
+
+    height: 10px;
+    width: 2px;
+    background-color: $color-4-layout;
+  }
+  &__cross-in-circle:before {
+    transform: rotate(45deg);
+  }
+  &__cross-in-circle:after {
+    transform: rotate(-45deg);
+  }
+
+
+  &__chevron:before {
+    content: '';
+    position: relative;
+    left: 2px;
+    top: 1px;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-style: solid;
+    border-width: 2px 2px 0 0;
+    vertical-align: top;
+    transform: rotate(-45deg);
+  }
+  &__chevron--bottom:before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__arrow--180-deg {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $color-4-layout;
+
+    .icons {
+      //fill: $color-4-layout;
+      //todo: сделать миксину для кнопки
+    }
+  }
+}

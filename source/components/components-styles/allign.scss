@@ -1,0 +1,22 @@
+.text {
+  &-left {
+    text-align: left;
+  }
+
+  &-right {
+    text-align: right;
+  }
+}
+
+
+/*Allign elements (begin)*/
+.allign-middle {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.allign-top {
+  display: inline-block;
+  vertical-align: top;
+}
+/*Allign elements (end)*/

@@ -1,0 +1,33 @@
+.main-nav {
+  font-size: 0px;
+  //todo пределать main-nav на flex элементах
+
+  &__item {
+    display: inline-block;
+  }
+  &__item:first-child {
+    //margin-left: -20px;
+  }
+  &__link {
+    display: inline-block;
+    padding: 15px;
+  }
+  &__item {
+    //todo: разделить слили на position fonts colors decoration. animation - в отдельный файл
+    .links {
+      @include font( $size: 15px );
+    }
+  }
+  &__item:hover {
+    background-color: $color-11-layout;
+
+    .links {
+      color: $color-10-layout;
+    }
+  }
+  &__item--active {
+    .links {
+      @include font( $family: $font-family-3-bold-typeface, $size: 15px );
+    }
+  }
+}
