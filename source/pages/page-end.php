@@ -20,12 +20,6 @@
     <script src="components/components-libs/wnumb-1.1.0/wNumb.js"></script>
 
 
-
-    <!--Fixed Nav-->
-    <script src="components/components-libs/fixedResponsiveNav/js/fastclick.js"></script>
-    <script src="components/components-libs/fixedResponsiveNav/js/scroll.js"></script>
-    <script src="components/components-libs/fixedResponsiveNav/js/fixed-responsive-nav.js"></script>
-
     <!--layout's scripts-->
     <script src="components/components-scripts/collected-scripts/layout.js"></script>
   </body>

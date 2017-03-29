@@ -19,14 +19,9 @@
     <!--Убрать не используемые модули в semantic-->
     <link rel="stylesheet" href="components/components-frameworks/SemanticUI/semantic.css">
 
-    <!--Fixed Nav-->
-    <link rel="stylesheet" href="components/components-libs/fixedResponsiveNav/css/fixed-nav-styles.css">
-
     <!--layout's styles-->
     <link rel="stylesheet" href="components/components-styles/collected-styles/css/layout.css">
 
-    <!--Fixed Nav-->
-    <script src="components/components-libs/fixedResponsiveNav/js/responsive-nav.js"></script>    
 
 
   </head>
