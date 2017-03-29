@@ -184,18 +184,14 @@
                                  flex__direction--column
                                                           form--clients-interests__input-wrapper--row-2
                                                                                                          margin-bottom-30-md">
-            <div class="flex__container">
-              <label class="form__label"  for="departure-date">Даты вылета</label>
-              <label class="form__label  form__label--hide"  for="arrival-date">Дата прилёта</label>
+            <div class="">
+              <label class="form__label"  for="flatpickr-input__interests-form--boarding-dates">Даты вылета</label>
             </div>
 
             <div class="flex__container  form__dropdown-menu-button  form__input-text">
-<!--              <input class="form__input  form__input--departure-date"  id="departure-date"   name="selection-departure-date"  type="text"  placeholder="дата вылета">-->
-<!--              <input class="form__input  form__input--arrival-date"    id="arrival-date"     name="selection-arrival-date"    type="text"  placeholder="дата прилёта">-->
-<!--              <div class="flatpickr__field" id="flatpickr__interests-form"></div>-->
               <input class="form__input"
-                     id="flatpickr__interests-form"
-                     placeholder="Select Date.."
+                     id="flatpickr-input__interests-form--boarding-dates"
+                     placeholder="Даты вылета и прилёта"
                      readonly="readonly"
                      type="text">
             </div>
