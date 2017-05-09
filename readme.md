@@ -22,7 +22,10 @@
 Библиотеки:
 
 * ``normalize.css``
-* ``noUIslider.css, noUIslider.js``
-* ``wNumb.js``
-* ``pikaday.css, pikaday.js``
-* ``moment.js``
+* ``noUIslider``
+* ``wNumb``
+* ``flatpickr``
+* ``SemanticUI``
+* ``flexboxgrid``
+* ``hamburgers-by-Jonathan Suh``
+* ``jQuery``
