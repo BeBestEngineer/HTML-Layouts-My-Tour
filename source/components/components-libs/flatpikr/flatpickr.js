@@ -50,6 +50,13 @@ function Flatpickr(element, config) {
 			updateValue();
 		}
 
+
+		// console.log( self.config.wrapperId );
+
+		// console.log( self.config.calendarId );
+
+
+
 		if (self.config.weekNumbers) {
 			self.calendarContainer.style.width = self.days.clientWidth + self.weekWrapper.clientWidth + "px";
 		}
@@ -296,6 +303,8 @@ function Flatpickr(element, config) {
 	function build() {
 		var fragment = window.document.createDocumentFragment();
 		self.calendarContainer = createElement("div", "flatpickr-calendar");
+		self.calendarContainer.classList.add( self.config.calendarClass );
+		self.calendarContainer.setAttribute( 'id', self.config.calendarId );
 		self.numInputType = navigator.userAgent.indexOf("MSIE 9.0") > 0 ? "text" : "number";
 
 		if (!self.config.noCalendar) {
@@ -336,6 +345,9 @@ function Flatpickr(element, config) {
 
 			if (self.config.static) {
 				var wrapper = createElement("div", "flatpickr-wrapper");
+				wrapper.setAttribute('id', self.config.wrapperId );
+				wrapper.classList.add( self.config.wrapperClass );
+
 				self.element.parentNode.insertBefore(wrapper, self.element);
 				wrapper.appendChild(self.element);
 
@@ -1582,7 +1594,12 @@ Flatpickr.defaultConfig = {
 
 	// position calendar inside wrapper and next to the input element
 	// leave at false unless you know what you"re doing
-	static: false,
+	static: true,
+
+	wrapperId: 		 null,
+	wrapperClass:  null,
+	calendarId: 	 null,
+	calendarClass: null,
 
 	// DOM node to append the calendar to in *static* mode
 	appendTo: null,
@@ -1644,6 +1661,10 @@ Flatpickr.defaultConfig = {
 	onKeyDown: []
 };
 
+//console.log( Flatpickr.defaultConfig );
+
+// console.log( config );
+
 /* istanbul ignore next */
 Flatpickr.l10ns = {
 	en: {
@@ -1671,7 +1692,7 @@ Flatpickr.l10ns = {
 					return "th";
 			}
 		},
-		rangeSeparator: " to ",
+		rangeSeparator: " - ",
 		weekAbbreviation: "Wk",
 		scrollTitle: "Scroll to increment",
 		toggleTitle: "Click to toggle"
