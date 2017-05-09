@@ -113,9 +113,9 @@
   &__dropdown-menu-button {
     //display: block; - т.к. задаётся стиле .flex__container
     width: 100%;
-    min-height: 50px;
+    min-height: 55px;
     padding: 0;
-    padding-left: 5px;
+    padding-left: 10px;
     padding-right: 5px;
     box-sizing: border-box;
     border: 1px solid $color-13-layout;
@@ -224,7 +224,6 @@
     top: 1px;
   }
 
-
   &__input-wrapper--row-1,
   &__input-wrapper--row-2,
   &__input-wrapper--row-3 {
@@ -233,82 +232,83 @@
   }
 
 
+
   &__input-wrapper--row-1:nth-child(1) .form__dropdown-menu-button {
-    border-top-left-radius:    $border-radius-fields;
+    border-top-left-radius: $border-radius-fields;
     border-bottom-left-radius: $border-radius-fields;
   }
   &__input-wrapper--row-1:nth-child(2) .form__dropdown-menu-button {
-    border-top-right-radius:    $border-radius-fields;
+    border-top-right-radius: $border-radius-fields;
     border-bottom-right-radius: $border-radius-fields;
   }
 
 
-  &__input-wrapper--row-2:nth-child(1) .form__dropdown-menu-button {
-    border-top-left-radius:    $border-radius-fields;
-    border-bottom-left-radius: $border-radius-fields;
-  }
-  &__input-wrapper--row-2:nth-child(4) .form__dropdown-menu-button {
-    border-top-right-radius:    $border-radius-fields;
-    border-bottom-right-radius: $border-radius-fields;
-  }
-
-
-  &__input-wrapper--row-3:nth-child(1) .form__dropdown-menu-button {
-    border-top-left-radius:    $border-radius-fields;
-    border-bottom-left-radius: $border-radius-fields;
-  }
-  &__input-wrapper--row-3:nth-child(4) .form__dropdown-menu-button {
-    border-top-right-radius:    $border-radius-fields;
-    border-bottom-right-radius: $border-radius-fields;
-  }
-}
-
-@media ( max-width: 1199px ) {
-  .form--clients-interests {
+  @media (min-width: 1200px) {
     &__input-wrapper--row-2:nth-child(1) .form__dropdown-menu-button {
-      border-top-left-radius:    $border-radius-fields;
-      border-bottom-left-radius: $border-radius-fields;
-    }
-    &__input-wrapper--row-2:nth-child(2) .form__dropdown-menu-button {
-      border-top-right-radius:    $border-radius-fields;
-      border-bottom-right-radius: $border-radius-fields;
-    }
-    &__input-wrapper--row-2:nth-child(3) .form__dropdown-menu-button {
-      border-top-left-radius:    $border-radius-fields;
+      border-top-left-radius: $border-radius-fields;
       border-bottom-left-radius: $border-radius-fields;
     }
     &__input-wrapper--row-2:nth-child(4) .form__dropdown-menu-button {
-      border-top-right-radius:    $border-radius-fields;
+      border-top-right-radius: $border-radius-fields;
       border-bottom-right-radius: $border-radius-fields;
     }
 
-
-    &__input-wrapper--row-3:nth-child(3) .form__dropdown-menu-button {
-      border-top-right-radius:    $border-radius-fields;
-      border-bottom-right-radius: $border-radius-fields;
+    &__input-wrapper--row-3:nth-child(1) .form__dropdown-menu-button {
+      border-top-left-radius: $border-radius-fields;
+      border-bottom-left-radius: $border-radius-fields;
     }
     &__input-wrapper--row-3:nth-child(4) .form__dropdown-menu-button {
-      border-radius: $border-radius-fields;
+      border-top-right-radius: $border-radius-fields;
+      border-bottom-right-radius: $border-radius-fields;
     }
   }
-}
 
-@media ( max-width: 991px ) {
-  .form--clients-interests {
-    &__input-wrapper--row-2 .form__dropdown-menu-button {
-      border-radius: $border-radius-fields;
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+      &__input-wrapper--row-2:nth-child(odd) .form__dropdown-menu-button {
+        border-top-left-radius: $border-radius-fields;
+        border-bottom-left-radius: $border-radius-fields;
+      }
+      &__input-wrapper--row-2:nth-child(even) .form__dropdown-menu-button {
+        border-top-right-radius: $border-radius-fields;
+        border-bottom-right-radius: $border-radius-fields;
+      }
+
+      &__input-wrapper--row-3:nth-child(1) .form__dropdown-menu-button {
+        border-top-left-radius: $border-radius-fields;
+        border-bottom-left-radius: $border-radius-fields;
+        /*Намутить миксину*/
+      }
+      &__input-wrapper--row-3:nth-child(3) .form__dropdown-menu-button {
+        border-top-right-radius: $border-radius-fields;
+        border-bottom-right-radius: $border-radius-fields;
+      }
+      &__input-wrapper--row-3:nth-child(4) .form__dropdown-menu-button {
+        border-radius: $border-radius-fields;
+      }
     }
 
-    &__input-wrapper--row-3 .form__dropdown-menu-button {
-      border-radius: $border-radius-fields;
-    }
-  }
-}
 
-@media ( max-width: 767px ) {
-  .form--clients-interests {
-    &__input-wrapper--row-1 .form__dropdown-menu-button {
-      border-radius: $border-radius-fields;
+  @media ( min-width: 768px ) and ( max-width: 991px ) {
+      &__input-wrapper--row-2:nth-child(odd) .form__dropdown-menu-button,
+      &__input-wrapper--row-3:nth-child(odd) .form__dropdown-menu-button {
+        border-top-left-radius: $border-radius-fields;
+        border-bottom-left-radius: $border-radius-fields;
+      }
+      &__input-wrapper--row-2:nth-child(even) .form__dropdown-menu-button,
+      &__input-wrapper--row-3:nth-child(even) .form__dropdown-menu-button {
+        border-top-right-radius: $border-radius-fields;
+        border-bottom-right-radius: $border-radius-fields;
+      }
     }
-  }
+
+
+  @media ( max-width: 767px ) {
+      &__input-wrapper--row-1 .form__dropdown-menu-button,
+      &__input-wrapper--row-2 .form__dropdown-menu-button,
+      &__input-wrapper--row-3 .form__dropdown-menu-button {
+        border-radius: $border-radius-fields;
+      }
+    }
+
 }

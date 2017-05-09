@@ -220,13 +220,13 @@
                     class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text  dropdown-menu__button">
               </span>
 
-              <span class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text">-</span>
+              <span class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text  margin-left-right-text-spacer-5">-</span>
 
               <span id="dates-max__dropdown-menu--button"
                     class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text  dropdown-menu__button">
               </span>
 
-              <span class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text">ночей</span>
+              <span class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text  margin-left-right-text-spacer-5">ночей</span>
 
 
               <div class="menu">
@@ -273,23 +273,23 @@
                  id="passengers-dropdown-id">
 
               <span id="parents__dropdown-menu--button"
-                    class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text  dropdown-menu__button">1
+                    class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text  dropdown-menu__button  margin-right-text-spacer-5">1
               </span>
               <span class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text"
                     id="parents__text">взрослый
               </span>
-              <span class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text">,</span>
+              <span class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text  margin-right-text-spacer-5">,</span>
               <span id="childs__dropdown-menu--button"
                     class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text  dropdown-menu__button">0
               </span>
-              <span class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text"
+              <span class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text  margin-left-right-text-spacer-5"
                     id="childs__text">детей
               </span>
 
 
               <div class="menu">
                 <div class="item">
-                  <div class="row__wrapper">
+<!--                  <div class="row__wrapper">-->
                     <div class="row">
                       <div class="col-xs-20">
                         <div class="widget__passengers-range  flex__container  flex__justify-content--space-between  flex__align-items--baseline">
@@ -362,7 +362,7 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+<!--                  </div>-->
                 </div>
               </div>
 
@@ -380,109 +380,6 @@
 
             </div>
 
-
-<!--
-            <div class="flex__container  form__dropdown-menu-button  form__input-text"
-                 onclick="openDropdownMenu( event, 'passengers__dropdown-menu--content-id', 'dropdown-menu__content' )">
-
-              <span id="parents__dropdown-menu--button"
-                    class="flex__container  flex__direction--column  flex__justify-content--center  form__input--passengers  dropdown-menu__button">1
-              </span>
-
-              <span class="flex__container  flex__direction--column  flex__justify-content--center" id="parents__text">взрослый</span>
-              <span class="flex__container  flex__direction--column  flex__justify-content--center  form__text--passengers-parents">,</span>
-
-              <span id="childs__dropdown-menu--button"
-                    class="flex__container  flex__direction--column  flex__justify-content--center  form__input--passengers  dropdown-menu__button">0
-              </span>
-
-              <span class="flex__container  flex__direction--column  flex__justify-content--center" id="childs__text">детей</span>
-
-            </div>
-            <div class="">
-              <div class="dropdown-menu__wrapper">
-                <div class="dropdown-menu__content  dropdown-menu__content--passengers" id="passengers__dropdown-menu--content-id">
-
-                  <div class="row__wrapper">
-                    <div class="row">
-                      <div class="col-xs-20">
-                        <div class="widget__passengers-range  flex__container  flex__justify-content--space-between  flex__align-items--baseline">
-                          <span class="allign-middle">Взрослые:</span>
-
-                          <div class="">
-                            <button class="allign-middle  buttons__interests-form--more-less-passengers"
-                                    id="widget__passengers-range--button-less"
-                                    onclick="ChangeInputValueLess( event, 'widget__passengers-range-parents--input', 'parents__dropdown-menu--button', 'parents__text' )"
-                                    type="button">
-                              <span class="allign-middle  icons__wrapper">
-                                <svg class="icons  icons__svg  icons--opacity" viewBox="0 0 100 100">
-                                  <rect height="16" width="100" x="0" y="42"></rect>
-                                </svg>
-                              </span>
-                            </button>
-
-                            <input class="allign-middle  buttons__interests-form--input-passengers"
-                                   id="widget__passengers-range-parents--input"
-                                   name="selection-passengers-parents"
-                                   value="1"
-                                   type="text">
-
-                            <button class="allign-middle  buttons__interests-form--more-less-passengers"
-                                    id="widget__passengers-range--button-more"
-                                    onclick="ChangeInputValueMore( event, 'widget__passengers-range-parents--input', 'parents__dropdown-menu--button', 'parents__text' )"
-                                    type="button">
-                              <span class="allign-middle  icons__wrapper">
-                                <svg class="icons  icons__svg  icons--rotate" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
-                                  <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
-                                </svg>
-                              </span>
-                            </button>
-                          </div>
-
-                        </div>
-                        <div class="widget__passengers-range  flex__container  flex__justify-content--space-between  flex__align-items--baseline">
-                          <span class="allign-middle">Дети:</span>
-
-                          <div class="">
-                            <button class="allign-middle  buttons__interests-form--more-less-passengers"
-                                    id="widget__passengers-range--button-less"
-                                    onclick="ChangeInputValueLess( event, 'widget__passengers-range-childs--input', 'childs__dropdown-menu--button', 'childs__text' )"
-                                    type="button">
-                              <span class="allign-middle  icons__wrapper">
-                                <svg class="icons  icons__svg  icons--opacity" viewBox="0 0 100 100">
-                                  <rect height="16" width="100" x="0" y="42"></rect>
-                                </svg>
-                              </span>
-                            </button>
-
-                            <input class="allign-middle  buttons__interests-form--input-passengers"
-                                   id="widget__passengers-range-childs--input"
-                                   name="selection-passengers-childs"
-                                   value="0"
-                                   type="text">
-
-                            <button class="allign-middle  buttons__interests-form--more-less-passengers"
-                                    id="widget__passengers-range--button-more"
-                                    onclick="ChangeInputValueMore( event, 'widget__passengers-range-childs--input', 'childs__dropdown-menu--button', 'childs__text' )"
-                                    type="button">
-                              <span class="allign-middle  icons__wrapper">
-                                <svg class="icons  icons__svg  icons--rotate" x="0px" y="0px" viewBox="0 0 32.526 32.526" width="8" height="8">
-                                  <polygon points="32.526,2.828 29.698,0 16.263,13.435 2.828,0 0,2.828 13.435,16.263 0,29.698 2.828,32.526 16.263,19.091 29.698,32.526 32.526,29.698 19.091,16.263 "></polygon>
-                                </svg>
-                              </span>
-                            </button>
-                          </div>
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
--->
           </div>
 
 
@@ -505,7 +402,7 @@
               <span id="prices-min__dropdown-menu--button"
                     class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text  dropdown-menu__button">
               </span>
-              <span class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text">-</span>
+              <span class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text  margin-left-right-text-spacer-5">-</span>
               <span id="prices-max__dropdown-menu--button"
                     class="flex__container  flex__direction--column  flex__justify-content--center  form__input-text  dropdown-menu__button">
               </span>
@@ -543,14 +440,15 @@
         <div class="row  form--clients-interests__fields-row"><!--последняя строка-->
 
           <div class="col
-                      col-lg-3
-                      col-md-5
+                      col-lg-5
+                      col-md-7
                       col-sm-10
                       col-xs-20
                                  flex__container
                                  flex__direction--column
                                                           form--clients-interests__input-wrapper--row-3
-                                                                                                         margin-bottom-30-md">
+                                                                                                         margin-bottom-30-md
+                                                                                                         margin-bottom-30-lg">
             <label class="form__label"  for="hotel-stars">Категория отелей от</label>
 
               <div class="ui fluid multiple selection dropdown
@@ -653,8 +551,8 @@
 
 
           <div class="col
-                      col-lg-4
-                      col-md-5
+                      col-lg-5
+                      col-md-6
                       col-sm-10
                       col-xs-20
                                  flex__container
@@ -738,14 +636,15 @@
 
 
           <div class="col
-                      col-lg-3
-                      col-md-10
+                      col-lg-5
+                      col-md-7
                       col-sm-10
                       col-xs-20
                                  flex__container
                                  flex__direction--column
                                                           form--clients-interests__input-wrapper--row-3
-                                                                                                         margin-bottom-30-xs">
+                                                                                                         margin-bottom-30-xs"
+               style="">
             <label class="form__label"  for="nutrition">Тип питания</label>
 
             <div class="flex__container
@@ -820,7 +719,7 @@
 
 
           <div class="col
-                      col-lg-5
+                      col-lg-20
                       col-md-10
                       col-sm-20
                       col-xs-20
