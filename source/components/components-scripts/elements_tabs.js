@@ -1,7 +1,7 @@
 /*Set height for tabs-wrapper block*/
 (function () {
 
-	recalculationTabHeight();
+	// recalculationTabHeight();
 
 })();
 

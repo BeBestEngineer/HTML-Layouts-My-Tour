@@ -1,3 +1,17 @@
+$('#multilevel-mainNav')
+		.dropdown({
+			action: 'hide'
+		})
+;
+
+/*todo: добавить условие - если открыто, иначе . . . */
+document.querySelector('#multilevel-mainNav').addEventListener( "click", function() {
+	document.querySelector('#multilevel-mainNav__button').classList.toggle("is-active");
+}, false);
+
+
+
+
 $('#passengers-dropdown-id')
 		.dropdown({
 			on: 'hover',
