@@ -19,6 +19,8 @@
     <!--Убрать не используемые модули в semantic-->
     <link rel="stylesheet" href="components/components-frameworks/SemanticUI/semantic.css">
 
+    <link rel="stylesheet" href="components/components-libs/hamburgers-by-Jonathan Suh/hamburgers.css">
+
     <!--layout's styles-->
     <link rel="stylesheet" href="components/components-styles/collected-styles/css/layout.css">
 
