@@ -7955,26 +7955,41 @@ $.fn.dropdown.settings.templates = {
 
   // generates dropdown from select values
   dropdown: function(select) {
+
+
     var
       placeholder = select.placeholder || false,
       values      = select.values || {},
       html        = ''
     ;
-    html +=  '<i class="dropdown icon"></i>';
+
+    // console.log( select );
+
+    html +=  '<div class="dropdown icon  semantic__dropdown-menu-open-button">' + templateIconsChevronDown() + '</div>';
     if(select.placeholder) {
-      html += '<div class="default text">' + placeholder + '</div>';
+      html += '<div class="default text  semantic__dropdown-menu-placeholder">' + placeholder + '</div>';
     }
     else {
       html += '<div class="text"></div>';
     }
+    // console.log( html ); - placeholder and chevron-down
+
+    // console.log( select.values );
+
     html += '<div class="menu">';
     $.each(select.values, function(index, option) {
+
+
+
       html += (option.disabled)
         ? '<div class="disabled item" data-value="' + option.value + '">' + option.name + '</div>'
         : '<div class="item" data-value="' + option.value + '">' + option.name + '</div>'
       ;
     });
     html += '</div>';
+
+    // console.log( html );
+
     return html;
   },
 
