@@ -267,7 +267,7 @@
   .tabs__title {
     padding: unquote( $paddingTopBottom + ' ' + $paddingLeftRight );
   }
-  .tabs__title:first-child {
+  .tabs__title {
     margin-left: 4px;
   }
   .tabs__title.active {

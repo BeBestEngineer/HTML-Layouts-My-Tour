@@ -36,8 +36,147 @@
 
     opacity: 0.8;
   }
+  &__dropdown-menu-placeholder {
+    @include font( $size: 15px);
+  }
+  &__dropdown-menu-placeholder {
+    color: $color-2-layout;
+  }
 }
 
 
 
 
+
+
+
+
+
+
+.ui.button.dropdown  .menu  .semantic__sub-menu {
+  position: relative              !important;
+  margin: 0rem 1.14285714rem      !important;
+  margin-top: 1.14285714rem       !important;
+  padding: 0                      !important;
+  left: -1.14285714rem            !important;
+  right: 0rem                     !important;
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.semantic__item--dropdown {
+  transition: opacity 0.1s ease;
+  will-change: height, transform, opacity;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  background-color: $color-4-layout;
+}
+
+
+
+
+.ui.semantic__main-nav {
+  padding: 0px;
+  background-color: transparent;
+}
+.ui.semantic__main-nav:hover,
+.ui.semantic__main-nav:focus {
+  background-color: transparent;
+}
+
+.ui.active.button.semantic__main-nav,
+.ui.active.button.semantic__main-nav:hover,
+.ui.active.button.semantic__main-nav:focus {
+  background-color: transparent;
+}
+
+.ui.dropdown .menu.semantic__main-menu {
+  display: none;
+  position: absolute;
+}
+
+
+
+
+
+
+
+//Phones
+@media ( min-width: 768px ) {
+  #multilevel-mainNav__button {
+    display: none;
+  }
+
+  .ui.fluid.semantic__main-nav {
+    display: flex;
+  }
+
+
+  .ui.dropdown .menu.semantic__main-menu {
+    display: flex;
+    position: relative;
+    visibility: visible;
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    min-width: 1px;
+    flex-wrap: wrap;
+    border: 0px;
+  }
+
+  .button.semantic__main-nav {
+    margin: 0;
+  }
+
+
+  .ui.semantic__main-nav  .menu > .semantic__main-nav-link {
+    padding: 15px !important;
+    color: $color-4-layout;
+    fill: $color-4-layout;
+
+    //border-top-left-radius:  $border-radius-buttons;
+    //border-top-right-radius: $border-radius-buttons;
+
+    border-bottom-color: transparent;
+
+    @include font( $size: 15px );
+  }
+
+  .ui.semantic__main-nav  .menu > .semantic__main-nav-link:hover,
+  .ui.semantic__main-nav  .menu > .semantic__main-nav-link:focus {
+    color: $color-10-layout;
+    fill: $color-10-layout;
+    background-color: $color-4-layout;
+  }
+
+  .ui.semantic__main-nav  .menu > .semantic__main-nav-link.active {
+    color: $color-4-layout;
+  }
+
+  .ui.button.dropdown .menu .semantic__sub-menu {
+    //todo: top= ???
+    position: absolute                          !important;
+    //top: -4px                                   !important;
+    left: 0rem                                  !important;
+    right: auto                                 !important;
+    margin: 0rem                                !important;
+    margin-left: -$sub-menu-border-width        !important;
+    margin-top: 50px                            !important;
+    padding: 0                                  !important;
+
+
+    border-top-left-radius: 0px     !important;
+    border-top-right-radius: 0px    !important;
+
+    background-color: $color-4-layout;
+    color: $color-2-layout;
+    border-color: $color-10-layout;
+
+    border-top-color: transparent;
+
+  }
+  
+  
+}

@@ -1,4 +1,7 @@
 .tabs {
+  padding-left: $gutter;
+  padding-right: $gutter;
+
   overflow: hidden;
   border-bottom: 1px solid $color-13-layout;
 }
@@ -22,7 +25,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -2px;
     display: block;
     height: 5px;
     background-color: $color-10-layout;
@@ -38,7 +41,7 @@
 
 
 .tabs__content {
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
   top: -10000px;

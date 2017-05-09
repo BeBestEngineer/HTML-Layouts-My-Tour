@@ -27,13 +27,12 @@
   transition: fill $transition-duration-svgs;
 }
 
-.main-nav {
-  &__item {
+  .semantic__main-nav-link {
     transition:
     color $transition-duration-links,
     background-color $transition-duration-links;
   }
-}
+
 
 
 .custom-checkbox {
